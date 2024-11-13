@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joluc</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <script src="https://unpkg.com/hydra-synth"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #hydra-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    #overlay-text {
+      position: relative;
+      z-index: 2;
+      color: white;
+      font-size: 10vw;
+      font-weight: 600;
+      font-family: 'Encode Sans', sans-serif;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div id="overlay-text">Joluc</div>
+
+<script>
+  var hydra = new Hydra({
+    canvas: document.createElement('canvas'),
+    detectAudio: false
+  });
+
+  document.body.appendChild(hydra.canvas);
+  hydra.canvas.id = "hydra-canvas";
+
+  voronoi(8, 1)
+    .mult(
+      osc(10, 0.1, () => Math.sin(time) * 3)
+      .saturate(100)
+      .kaleid(200)
+      .contrast(2)
+    )
+    .modulate(o0, 0.5)
+    .add(o0, 0.8)
+    .scrollY(-0.01)
+    .scale(1)
+    .modulate(voronoi(8, 1), 0.008)
+    .luma(0.5)
+    .out();
+
+speed = 0.1
+</script>
+
+</body>
+</html>

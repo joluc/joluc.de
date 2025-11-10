@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Joluc.de - Cloud Engineering &amp; Observability</title>
+    <link>http://localhost:1313/tags/git/</link>
+    <description>Recent content in Git on Joluc.de - Cloud Engineering &amp; Observability</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Feb 2024 13:30:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Workflow Strategies for Development Teams</title>
+      <link>http://localhost:1313/posts/git-workflow-strategies/</link>
+      <pubDate>Thu, 15 Feb 2024 13:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/git-workflow-strategies/</guid>
+      <description>&lt;h1 id=&#34;git-workflow-strategies-for-development-teams&#34;&gt;Git Workflow Strategies for Development Teams&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Choosing the right Git workflow is crucial for team productivity and code quality. Different strategies work better for different team sizes and project types.&lt;/p&gt;&#xA;&lt;h2 id=&#34;popular-git-workflows&#34;&gt;Popular Git Workflows&lt;/h2&gt;&#xA;&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Let&amp;rsquo;s explore the most common Git workflow strategies used by development teams.&lt;/p&gt;&#xA;&lt;h3 id=&#34;git-flow&#34;&gt;Git Flow&lt;/h3&gt;&#xA;&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Git Flow is a branching model that uses feature branches and multiple primary branches.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

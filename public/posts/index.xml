@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Developer Blog on Joluc.de - Cloud Engineering &amp; Observability</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Developer Blog on Joluc.de - Cloud Engineering &amp; Observability</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Mar 2024 10:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Comprehensive Observability Stack from Scratch</title>
+      <link>http://localhost:1313/posts/building-comprehensive-observability-stack/</link>
+      <pubDate>Fri, 15 Mar 2024 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/building-comprehensive-observability-stack/</guid>
+      <description>&lt;h1 id=&#34;building-a-comprehensive-observability-stack-from-scratch&#34;&gt;Building a Comprehensive Observability Stack from Scratch&lt;/h1&gt;&#xA;&lt;p&gt;In today&amp;rsquo;s complex distributed systems, observability isn&amp;rsquo;t just nice to have—it&amp;rsquo;s essential. After months of experimenting in my homelab, I&amp;rsquo;ve built a comprehensive observability stack that gives me complete visibility into my systems. Let me share what I&amp;rsquo;ve learned and how you can build something similar.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-three-pillars-of-observability&#34;&gt;The Three Pillars of Observability&lt;/h2&gt;&#xA;&lt;p&gt;Observability rests on three fundamental pillars: &lt;strong&gt;metrics&lt;/strong&gt;, &lt;strong&gt;logs&lt;/strong&gt;, and &lt;strong&gt;traces&lt;/strong&gt;. Each tells a different part of your system&amp;rsquo;s story, and together they provide the complete picture.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Getting Started with React Hooks</title>
+      <link>http://localhost:1313/posts/getting-started-with-react-hooks/</link>
+      <pubDate>Fri, 15 Mar 2024 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/getting-started-with-react-hooks/</guid>
+      <description>&lt;h1 id=&#34;getting-started-with-react-hooks&#34;&gt;Getting Started with React Hooks&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. React Hooks have revolutionized the way we write React components, making functional components more powerful than ever before. Globally incubate standards compliant channels before scalable benefits.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-are-react-hooks&#34;&gt;What are React Hooks?&lt;/h2&gt;&#xA;&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Quickly disseminate superior deliverables whereas web-enabled applications.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Homelab Monitoring Setup: From Chaos to Clarity</title>
+      <link>http://localhost:1313/posts/homelab-monitoring-setup/</link>
+      <pubDate>Tue, 12 Mar 2024 14:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/homelab-monitoring-setup/</guid>
+      <description>&lt;h1 id=&#34;my-homelab-monitoring-setup-from-chaos-to-clarity&#34;&gt;My Homelab Monitoring Setup: From Chaos to Clarity&lt;/h1&gt;&#xA;&lt;p&gt;Running a homelab is like having a mini data center in your house. It&amp;rsquo;s exciting, educational, and sometimes overwhelming. After months of trial and error, I&amp;rsquo;ve finally built a monitoring setup that gives me complete visibility into my infrastructure. Let me share the journey and the lessons learned.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-challenge-monitoring-distributed-chaos&#34;&gt;The Challenge: Monitoring Distributed Chaos&lt;/h2&gt;&#xA;&lt;p&gt;My homelab started simple—just a few VMs running basic services. But as I added more services, containers, and complexity, I quickly realized I needed proper monitoring. The challenge wasn&amp;rsquo;t just technical; it was about understanding what to monitor and why.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Beauty of LEGO Instructions</title>
+      <link>http://localhost:1313/posts/docker-best-practices/</link>
+      <pubDate>Sun, 10 Mar 2024 14:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/docker-best-practices/</guid>
+      <description>&lt;h1 id=&#34;how-simplicity-fuels-creativity-and-productivity&#34;&gt;How Simplicity Fuels Creativity and Productivity&lt;/h1&gt;&#xA;&lt;p&gt;There is a quiet magic in opening a new LEGO set.&#xA;The rustle of plastic bags, the rainbow of bricks, and the crisp instruction manual all promise endless possibilities.&#xA;Yet the true wonder lies not just in the finished creation, but in the journey of building it.&#xA;LEGO instructions, with their intuitive clarity and step-by-step simplicity, offer more than a blueprint for a toy—they embody a philosophy that resonates deeply with how we might approach life itself.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Metrics and Visualization: Turning Data into Insights</title>
+      <link>http://localhost:1313/posts/metrics-visualization-best-practices/</link>
+      <pubDate>Fri, 08 Mar 2024 16:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/metrics-visualization-best-practices/</guid>
+      <description>&lt;h1 id=&#34;metrics-and-visualization-turning-data-into-insights&#34;&gt;Metrics and Visualization: Turning Data into Insights&lt;/h1&gt;&#xA;&lt;p&gt;In the world of observability, collecting metrics is only half the battle. The real challenge lies in transforming raw data into actionable insights. After years of building dashboards and analyzing system behavior, I&amp;rsquo;ve learned that effective visualization is both an art and a science.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-art-of-metrics-design&#34;&gt;The Art of Metrics Design&lt;/h2&gt;&#xA;&lt;h3 id=&#34;choosing-the-right-metrics&#34;&gt;Choosing the Right Metrics&lt;/h3&gt;&#xA;&lt;p&gt;Not all metrics are created equal. The key is to focus on metrics that drive action and provide business value.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mastering Async Programming in Python</title>
+      <link>http://localhost:1313/posts/python-async-programming/</link>
+      <pubDate>Tue, 05 Mar 2024 09:15:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/python-async-programming/</guid>
+      <description>&lt;h1 id=&#34;mastering-async-programming-in-python&#34;&gt;Mastering Async Programming in Python&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Asynchronous programming in Python has become increasingly important for building scalable applications that can handle concurrent operations efficiently. Globally incubate standards compliant channels before scalable benefits. Quickly disseminate superior deliverables whereas web-enabled applications.&lt;/p&gt;&#xA;&lt;h2 id=&#34;understanding-asyncio&#34;&gt;Understanding Asyncio&lt;/h2&gt;&#xA;&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. The asyncio library provides a framework for writing concurrent code using the async/await syntax. Quickly drive clicks-and-mortar catalysts for change before vertical architectures.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Advanced TypeScript Types You Should Know</title>
+      <link>http://localhost:1313/posts/typescript-advanced-types/</link>
+      <pubDate>Wed, 28 Feb 2024 16:20:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/typescript-advanced-types/</guid>
+      <description>&lt;h1 id=&#34;advanced-typescript-types-you-should-know&#34;&gt;Advanced TypeScript Types You Should Know&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. TypeScript&amp;rsquo;s type system is incredibly powerful and goes far beyond basic string, number, and boolean types. Understanding advanced types can help you write more robust and maintainable code.&lt;/p&gt;&#xA;&lt;h2 id=&#34;union-and-intersection-types&#34;&gt;Union and Intersection Types&lt;/h2&gt;&#xA;&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Union types allow a value to be one of several types, while intersection types combine multiple types.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kubernetes Deployment Guide for Beginners</title>
+      <link>http://localhost:1313/posts/kubernetes-deployment-guide/</link>
+      <pubDate>Tue, 20 Feb 2024 11:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kubernetes-deployment-guide/</guid>
+      <description>&lt;h1 id=&#34;kubernetes-deployment-guide-for-beginners&#34;&gt;Kubernetes Deployment Guide for Beginners&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Kubernetes has become the de facto standard for container orchestration, enabling scalable and resilient application deployments. Globally incubate standards compliant channels before scalable benefits. Quickly disseminate superior deliverables whereas web-enabled applications.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-kubernetes&#34;&gt;What is Kubernetes?&lt;/h2&gt;&#xA;&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Kubernetes is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. Quickly drive clicks-and-mortar catalysts for change before vertical architectures.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Git Workflow Strategies for Development Teams</title>
+      <link>http://localhost:1313/posts/git-workflow-strategies/</link>
+      <pubDate>Thu, 15 Feb 2024 13:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/git-workflow-strategies/</guid>
+      <description>&lt;h1 id=&#34;git-workflow-strategies-for-development-teams&#34;&gt;Git Workflow Strategies for Development Teams&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Choosing the right Git workflow is crucial for team productivity and code quality. Different strategies work better for different team sizes and project types.&lt;/p&gt;&#xA;&lt;h2 id=&#34;popular-git-workflows&#34;&gt;Popular Git Workflows&lt;/h2&gt;&#xA;&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Let&amp;rsquo;s explore the most common Git workflow strategies used by development teams.&lt;/p&gt;&#xA;&lt;h3 id=&#34;git-flow&#34;&gt;Git Flow&lt;/h3&gt;&#xA;&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Git Flow is a branching model that uses feature branches and multiple primary branches.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>React on Joluc.de - Cloud Engineering &amp; Observability</title>
+    <link>http://localhost:1313/tags/react/</link>
+    <description>Recent content in React on Joluc.de - Cloud Engineering &amp; Observability</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Mar 2024 10:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Started with React Hooks</title>
+      <link>http://localhost:1313/posts/getting-started-with-react-hooks/</link>
+      <pubDate>Fri, 15 Mar 2024 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/getting-started-with-react-hooks/</guid>
+      <description>&lt;h1 id=&#34;getting-started-with-react-hooks&#34;&gt;Getting Started with React Hooks&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. React Hooks have revolutionized the way we write React components, making functional components more powerful than ever before. Globally incubate standards compliant channels before scalable benefits.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-are-react-hooks&#34;&gt;What are React Hooks?&lt;/h2&gt;&#xA;&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Quickly disseminate superior deliverables whereas web-enabled applications.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

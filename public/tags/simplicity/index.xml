@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Simplicity on Joluc.de - Cloud Engineering &amp; Observability</title>
+    <link>http://localhost:1313/tags/simplicity/</link>
+    <description>Recent content in Simplicity on Joluc.de - Cloud Engineering &amp; Observability</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Mar 2024 14:30:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/simplicity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Beauty of LEGO Instructions</title>
+      <link>http://localhost:1313/posts/docker-best-practices/</link>
+      <pubDate>Sun, 10 Mar 2024 14:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/docker-best-practices/</guid>
+      <description>&lt;h1 id=&#34;how-simplicity-fuels-creativity-and-productivity&#34;&gt;How Simplicity Fuels Creativity and Productivity&lt;/h1&gt;&#xA;&lt;p&gt;There is a quiet magic in opening a new LEGO set.&#xA;The rustle of plastic bags, the rainbow of bricks, and the crisp instruction manual all promise endless possibilities.&#xA;Yet the true wonder lies not just in the finished creation, but in the journey of building it.&#xA;LEGO instructions, with their intuitive clarity and step-by-step simplicity, offer more than a blueprint for a toy—they embody a philosophy that resonates deeply with how we might approach life itself.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

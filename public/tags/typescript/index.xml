@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Typescript on Joluc.de - Cloud Engineering &amp; Observability</title>
+    <link>http://localhost:1313/tags/typescript/</link>
+    <description>Recent content in Typescript on Joluc.de - Cloud Engineering &amp; Observability</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Feb 2024 16:20:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advanced TypeScript Types You Should Know</title>
+      <link>http://localhost:1313/posts/typescript-advanced-types/</link>
+      <pubDate>Wed, 28 Feb 2024 16:20:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/typescript-advanced-types/</guid>
+      <description>&lt;h1 id=&#34;advanced-typescript-types-you-should-know&#34;&gt;Advanced TypeScript Types You Should Know&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. TypeScript&amp;rsquo;s type system is incredibly powerful and goes far beyond basic string, number, and boolean types. Understanding advanced types can help you write more robust and maintainable code.&lt;/p&gt;&#xA;&lt;h2 id=&#34;union-and-intersection-types&#34;&gt;Union and Intersection Types&lt;/h2&gt;&#xA;&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Union types allow a value to be one of several types, while intersection types combine multiple types.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

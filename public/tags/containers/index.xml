@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Containers on Joluc.de - Cloud Engineering &amp; Observability</title>
+    <link>http://localhost:1313/tags/containers/</link>
+    <description>Recent content in Containers on Joluc.de - Cloud Engineering &amp; Observability</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Feb 2024 11:45:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/containers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes Deployment Guide for Beginners</title>
+      <link>http://localhost:1313/posts/kubernetes-deployment-guide/</link>
+      <pubDate>Tue, 20 Feb 2024 11:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kubernetes-deployment-guide/</guid>
+      <description>&lt;h1 id=&#34;kubernetes-deployment-guide-for-beginners&#34;&gt;Kubernetes Deployment Guide for Beginners&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Kubernetes has become the de facto standard for container orchestration, enabling scalable and resilient application deployments. Globally incubate standards compliant channels before scalable benefits. Quickly disseminate superior deliverables whereas web-enabled applications.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-kubernetes&#34;&gt;What is Kubernetes?&lt;/h2&gt;&#xA;&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Kubernetes is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. Quickly drive clicks-and-mortar catalysts for change before vertical architectures.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

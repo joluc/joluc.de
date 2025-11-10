@@ -1,0 +1,179 @@
+#-------------------------------
+# General Site Settings
+baseURL = "https://joluc.de"
+languageCode = "en-us"
+title = "Joluc.de - Cloud Engineering & Observability"
+googleAnalytics = "G-SPZ7BV0K85" # Add your identifier. For example UA-99631805-1.
+[pagination]
+  pagerSize = 9
+theme = ["hugo-flex", "hugo-shortcode-gallery"]
+timeout = 60000
+[params]
+  logo = "/images/WS.webp" # You can add own logo. For example "/images/logo.png".
+  author = "Jonathan - Cloud Engineer"
+  description = "Cloud engineer specializing in observability and signals. Passionate about building monitoring systems that transform telemetry data into actionable insights for production environments."
+  galleryLoadJQuery = true
+
+[imaging.exif]
+    includeFields = ".*"
+#-------------------------------
+# Main Menu
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "homelab"
+    name = "Homelab"
+    url = "/homelab/"
+    weight = 4
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+
+  #[[menu.main]]
+  #  identifier = "elements"
+  #  name = "Elements"
+  #  url = "/elements/"
+  #  weight = 5
+
+
+  #-------------------------------
+  # Hero Settings
+  [params.hero]
+    hero__title = "Hey, I am joluc!"
+    hero__description = "Cloud-native software developer with a deep love for signals, data patterns, and crafting meaning from noise. I live at the intersection of code,  infrastructure, and observability, transforming metrics, logs and traces into systems that guide teams from chaos → clarity → decisions."
+
+
+  #-------------------------------
+  # Portfolio Settings
+  [params.portfolio]
+    portfolio__title = "Portfolio"
+
+  [[params.gallery_item]]
+    image = "/images/gallery-image.jpg"
+    title = "Observability Stack"
+    description = "Complete monitoring setup with Prometheus, Grafana, and custom dashboards"
+
+  [[params.gallery_item]]
+    image = "/images/gallery-image.jpg"
+    title = "Distributed Tracing"
+    description = "Jaeger-based tracing system for microservices architecture"
+
+  [[params.gallery_item]]
+    image = "/images/gallery-image.jpg"
+    title = "Cloud Infrastructure"
+    description = "Kubernetes cluster with comprehensive monitoring and alerting"
+
+
+  #-------------------------------
+  # Subscribe Settings
+  #[params.mailchimp]
+  #  mailchimp__title = "Get updates and digital art inspiration" # Add your Title
+  #  mailchimp__identifier = "frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3" # Add your MailChimp form identifier. For example - frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3
+  #  mailchimp__input__text = "Email address" # Add your input text.
+  #  mailchimp__button__text = "Subscribe" # Add your button text.
+  #  mailchimp__bg__color = "#f2eef8" # To change the color of the figure, add a hexadecimal color code (HEX). For example - "#f2eef8".
+
+  #-------------------------------
+  # Footer Settings
+  [[params.social]]
+    icon = "ion-logo-github"
+    name = "GitHub"
+    link = "https://github.com/joluc"
+    color = "#333333"
+
+  [[params.social]]
+    icon = "ion-logo-linkedin"
+    name = "LinkedIn"
+    link = "https://linkedin.com/in/joluc"
+    color = "#0077b5"
+
+  [[params.social]]
+    icon = "ion-logo-instagram"
+    name = "Instagram"
+    link = "https://instagram.com/joluc"
+    color = "#e4405f"
+
+  #[[params.social]]
+  #  icon = "ion-logo-twitter"
+  #  name = "Twitter"
+  #  link = "https://twitter.com"
+  #  color = "#55acee"
+
+  #[[params.social]]
+  #  icon = "ion-logo-facebook"
+  #  name = "Facebook"
+  #  link = "https://facebook.com"
+  #  color = "#3b5999"
+
+  #[[params.social]]
+  #  icon = "ion-logo-pinterest"
+  #  name = "Pinterest"
+  #  link = "https://pinterest.com"
+  #  color = "#bd081c"
+
+  #[[params.social]]
+  #  icon = "ion-logo-dribbble"
+  #  name = "Dribbble"
+  #  link = "https://dribbble.com"
+  #  color = "#ea4c89"
+
+  #[[params.social]]
+  #  icon = "ion-logo-vimeo"
+  #  name = "Vimeo"
+  #  link = "https://vimeo.com"
+  #  color = "#1393cd"
+
+  # Example of adding a new link to the footer section:
+  # [[params.social]]
+  #   icon = "ion-logo-youtube"
+  #   name = "Youtube"
+  #   link = "https://youtube.com"
+  #   color = "#ff0000"
+
+  # Other icons can be found at https://ionicons.com/v4/
+
+
+  #-------------------------------
+  # Contact Settings
+  [params.contact]
+    email = "contact@joluc.de" # Add your form_id for contant form
+
+    # NOTE
+    # Clancy comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want.
+
+  #-------------------------------
+  # Comment Section (Disqus)
+  #[params.disqus]
+  #  disqusShortname = "anvodstudio-demo" # Add your shortname for Disqus Comment. For example anvodstudio-demo
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
+[markup.highlight]
+  codeFences = true
+  guessSyntax = true
+  noClasses = false

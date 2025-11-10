@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Joluc.de - Cloud Engineering &amp; Observability</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Joluc.de - Cloud Engineering &amp; Observability</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Mar 2024 10:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Frontend</title>
+      <link>http://localhost:1313/tags/frontend/</link>
+      <pubDate>Fri, 15 Mar 2024 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/frontend/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Grafana</title>
+      <link>http://localhost:1313/tags/grafana/</link>
+      <pubDate>Fri, 15 Mar 2024 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/grafana/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Homelab</title>
+      <link>http://localhost:1313/tags/homelab/</link>
+      <pubDate>Fri, 15 Mar 2024 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/homelab/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hooks</title>
+      <link>http://localhost:1313/tags/hooks/</link>
+      <pubDate>Fri, 15 Mar 2024 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/hooks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Javascript</title>
+      <link>http://localhost:1313/tags/javascript/</link>
+      <pubDate>Fri, 15 Mar 2024 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Monitoring</title>
+      <link>http://localhost:1313/tags/monitoring/</link>
+      <pubDate>Fri, 15 Mar 2024 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Observability</title>
+      <link>http://localhost:1313/tags/observability/</link>
+      <pubDate>Fri, 15 Mar 2024 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/observability/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prometheus</title>
+      <link>http://localhost:1313/tags/prometheus/</link>
+      <pubDate>Fri, 15 Mar 2024 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/prometheus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>http://localhost:1313/tags/react/</link>
+      <pubDate>Fri, 15 Mar 2024 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/react/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>http://localhost:1313/tags/kubernetes/</link>
+      <pubDate>Tue, 12 Mar 2024 14:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lego</title>
+      <link>http://localhost:1313/tags/lego/</link>
+      <pubDate>Sun, 10 Mar 2024 14:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/lego/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Productivity</title>
+      <link>http://localhost:1313/tags/productivity/</link>
+      <pubDate>Sun, 10 Mar 2024 14:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/productivity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Simplicity</title>
+      <link>http://localhost:1313/tags/simplicity/</link>
+      <pubDate>Sun, 10 Mar 2024 14:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/simplicity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dashboards</title>
+      <link>http://localhost:1313/tags/dashboards/</link>
+      <pubDate>Fri, 08 Mar 2024 16:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/dashboards/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Metrics</title>
+      <link>http://localhost:1313/tags/metrics/</link>
+      <pubDate>Fri, 08 Mar 2024 16:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/metrics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Visualization</title>
+      <link>http://localhost:1313/tags/visualization/</link>
+      <pubDate>Fri, 08 Mar 2024 16:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/visualization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Async</title>
+      <link>http://localhost:1313/tags/async/</link>
+      <pubDate>Tue, 05 Mar 2024 09:15:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/async/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Performance</title>
+      <link>http://localhost:1313/tags/performance/</link>
+      <pubDate>Tue, 05 Mar 2024 09:15:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/performance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>http://localhost:1313/tags/programming/</link>
+      <pubDate>Tue, 05 Mar 2024 09:15:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Tue, 05 Mar 2024 09:15:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Types</title>
+      <link>http://localhost:1313/tags/types/</link>
+      <pubDate>Wed, 28 Feb 2024 16:20:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/types/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Typescript</title>
+      <link>http://localhost:1313/tags/typescript/</link>
+      <pubDate>Wed, 28 Feb 2024 16:20:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/typescript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Containers</title>
+      <link>http://localhost:1313/tags/containers/</link>
+      <pubDate>Tue, 20 Feb 2024 11:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/containers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deployment</title>
+      <link>http://localhost:1313/tags/deployment/</link>
+      <pubDate>Tue, 20 Feb 2024 11:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/deployment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Devops</title>
+      <link>http://localhost:1313/tags/devops/</link>
+      <pubDate>Tue, 20 Feb 2024 11:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Collaboration</title>
+      <link>http://localhost:1313/tags/collaboration/</link>
+      <pubDate>Thu, 15 Feb 2024 13:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/collaboration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Development</title>
+      <link>http://localhost:1313/tags/development/</link>
+      <pubDate>Thu, 15 Feb 2024 13:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>http://localhost:1313/tags/git/</link>
+      <pubDate>Thu, 15 Feb 2024 13:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workflow</title>
+      <link>http://localhost:1313/tags/workflow/</link>
+      <pubDate>Thu, 15 Feb 2024 13:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/workflow/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

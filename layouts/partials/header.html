@@ -1,0 +1,46 @@
+<!-- begin header -->
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="header__inner col col-12">
+
+        <div class="logo">
+          <a class="logo__link" href="{{ .Site.BaseURL }}">
+            joluc
+          </a>
+        </div>
+
+        <nav class="main-nav">
+          <div class="main-nav__box">
+            <div class="nav__icon-close">
+              <i class="ion ion-md-close"></i>
+            </div>
+            <div class="nav__title">Menu</div>
+            <ul class="nav__list list-reset">
+              {{ range.Site.Menus.main }}
+              {{ $active := eq $.RelPermalink (.URL | relLangURL) }}
+              <li class="nav__item">
+                <a href="{{ .URL }}" class="nav__link {{ if $active }}nav__link--current{{ end }}">{{ .Name }}</a>
+              </li>
+              {{ end }}
+              <li class="nav__item">
+                <div class="toggle-theme">
+                  <div class="toggle-moon" title="Enable dark mode"><i class="ion ion-ios-moon"></i></div>
+                  <div class="toggle-sun" title="Enable light mode"><i class="ion ion-ios-sunny"></i></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="nav-button">
+          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+</header>
+<!-- end header -->

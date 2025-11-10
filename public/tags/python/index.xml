@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Joluc.de - Cloud Engineering &amp; Observability</title>
+    <link>http://localhost:1313/tags/python/</link>
+    <description>Recent content in Python on Joluc.de - Cloud Engineering &amp; Observability</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Mar 2024 09:15:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mastering Async Programming in Python</title>
+      <link>http://localhost:1313/posts/python-async-programming/</link>
+      <pubDate>Tue, 05 Mar 2024 09:15:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/python-async-programming/</guid>
+      <description>&lt;h1 id=&#34;mastering-async-programming-in-python&#34;&gt;Mastering Async Programming in Python&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Asynchronous programming in Python has become increasingly important for building scalable applications that can handle concurrent operations efficiently. Globally incubate standards compliant channels before scalable benefits. Quickly disseminate superior deliverables whereas web-enabled applications.&lt;/p&gt;&#xA;&lt;h2 id=&#34;understanding-asyncio&#34;&gt;Understanding Asyncio&lt;/h2&gt;&#xA;&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. The asyncio library provides a framework for writing concurrent code using the async/await syntax. Quickly drive clicks-and-mortar catalysts for change before vertical architectures.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

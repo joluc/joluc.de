@@ -1,0 +1,36 @@
+
+{{ define "main" }}
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12">
+      <div class="page__info">
+        <h1 class="page__title">Page not found</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- begin page -->
+<div class="container">
+  <article class="page">
+    <div class="page__content">
+      <div class="container">
+        <div class="row">
+          <div class="col col-12">
+            <div class="error">
+              <h2 class="error__title">404</h2>
+              <p class="error__text">The requested page could not be found.</p>
+              <a class="button" href="/">Back to homepage</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+<!-- end page -->
+
+{{ partial "section-subscribe.html" . }}
+
+{{ end }}

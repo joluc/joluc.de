@@ -1,0 +1,37 @@
+// *****************
+// Global Variables
+// *****************
+
+// Spaces
+$base-spacing-unit: 16px;
+
+// Border radius
+$global-radius: 3px;
+
+// Transition
+$global-transition: all .35s;
+
+
+// *****************
+// Typography
+// *****************
+$base-font-size: 20px;
+$base-font-style: normal;
+$base-font-variant: normal;
+$base-font-weight: normal;
+$base-font-family: 'Lelo', 'Work Sans', 'Inter', Helvetica Neue, Helvetica, Arial, sans-serif;
+$base-line-height: 1.6;
+
+// Headings
+$heading-font-weight: 500;
+$heading-font-family: 'Lelo', 'Work Sans', 'Space Grotesk', Helvetica Neue, Helvetica, Arial, sans-serif;
+
+$font-size-h1:  32px;
+$font-size-h2:  26px;
+$font-size-h3:  22px;
+$font-size-h4:  18px;
+$font-size-h5:  16px;
+$font-size-h6:  14px;
+
+$heading-line-height: 1.4;
+$heading-letter-spacing: -0.5px;

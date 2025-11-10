@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monitoring on Joluc.de - Cloud Engineering &amp; Observability</title>
+    <link>http://localhost:1313/tags/monitoring/</link>
+    <description>Recent content in Monitoring on Joluc.de - Cloud Engineering &amp; Observability</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Mar 2024 10:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Comprehensive Observability Stack from Scratch</title>
+      <link>http://localhost:1313/posts/building-comprehensive-observability-stack/</link>
+      <pubDate>Fri, 15 Mar 2024 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/building-comprehensive-observability-stack/</guid>
+      <description>&lt;h1 id=&#34;building-a-comprehensive-observability-stack-from-scratch&#34;&gt;Building a Comprehensive Observability Stack from Scratch&lt;/h1&gt;&#xA;&lt;p&gt;In today&amp;rsquo;s complex distributed systems, observability isn&amp;rsquo;t just nice to have—it&amp;rsquo;s essential. After months of experimenting in my homelab, I&amp;rsquo;ve built a comprehensive observability stack that gives me complete visibility into my systems. Let me share what I&amp;rsquo;ve learned and how you can build something similar.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-three-pillars-of-observability&#34;&gt;The Three Pillars of Observability&lt;/h2&gt;&#xA;&lt;p&gt;Observability rests on three fundamental pillars: &lt;strong&gt;metrics&lt;/strong&gt;, &lt;strong&gt;logs&lt;/strong&gt;, and &lt;strong&gt;traces&lt;/strong&gt;. Each tells a different part of your system&amp;rsquo;s story, and together they provide the complete picture.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Homelab Monitoring Setup: From Chaos to Clarity</title>
+      <link>http://localhost:1313/posts/homelab-monitoring-setup/</link>
+      <pubDate>Tue, 12 Mar 2024 14:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/homelab-monitoring-setup/</guid>
+      <description>&lt;h1 id=&#34;my-homelab-monitoring-setup-from-chaos-to-clarity&#34;&gt;My Homelab Monitoring Setup: From Chaos to Clarity&lt;/h1&gt;&#xA;&lt;p&gt;Running a homelab is like having a mini data center in your house. It&amp;rsquo;s exciting, educational, and sometimes overwhelming. After months of trial and error, I&amp;rsquo;ve finally built a monitoring setup that gives me complete visibility into my infrastructure. Let me share the journey and the lessons learned.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-challenge-monitoring-distributed-chaos&#34;&gt;The Challenge: Monitoring Distributed Chaos&lt;/h2&gt;&#xA;&lt;p&gt;My homelab started simple—just a few VMs running basic services. But as I added more services, containers, and complexity, I quickly realized I needed proper monitoring. The challenge wasn&amp;rsquo;t just technical; it was about understanding what to monitor and why.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kubernetes Deployment Guide for Beginners</title>
+      <link>http://localhost:1313/posts/kubernetes-deployment-guide/</link>
+      <pubDate>Tue, 20 Feb 2024 11:45:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kubernetes-deployment-guide/</guid>
+      <description>&lt;h1 id=&#34;kubernetes-deployment-guide-for-beginners&#34;&gt;Kubernetes Deployment Guide for Beginners&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Kubernetes has become the de facto standard for container orchestration, enabling scalable and resilient application deployments. Globally incubate standards compliant channels before scalable benefits. Quickly disseminate superior deliverables whereas web-enabled applications.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-kubernetes&#34;&gt;What is Kubernetes?&lt;/h2&gt;&#xA;&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Kubernetes is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. Quickly drive clicks-and-mortar catalysts for change before vertical architectures.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

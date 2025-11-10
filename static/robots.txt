@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Hidden Easter egg page - not for robots
+Disallow: /secret-dev-corner/
+
+Sitemap: https://joluc.de/sitemap.xml

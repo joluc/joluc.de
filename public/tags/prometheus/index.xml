@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prometheus on Joluc.de - Cloud Engineering &amp; Observability</title>
+    <link>http://localhost:1313/tags/prometheus/</link>
+    <description>Recent content in Prometheus on Joluc.de - Cloud Engineering &amp; Observability</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Mar 2024 10:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/prometheus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Comprehensive Observability Stack from Scratch</title>
+      <link>http://localhost:1313/posts/building-comprehensive-observability-stack/</link>
+      <pubDate>Fri, 15 Mar 2024 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/building-comprehensive-observability-stack/</guid>
+      <description>&lt;h1 id=&#34;building-a-comprehensive-observability-stack-from-scratch&#34;&gt;Building a Comprehensive Observability Stack from Scratch&lt;/h1&gt;&#xA;&lt;p&gt;In today&amp;rsquo;s complex distributed systems, observability isn&amp;rsquo;t just nice to have—it&amp;rsquo;s essential. After months of experimenting in my homelab, I&amp;rsquo;ve built a comprehensive observability stack that gives me complete visibility into my systems. Let me share what I&amp;rsquo;ve learned and how you can build something similar.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-three-pillars-of-observability&#34;&gt;The Three Pillars of Observability&lt;/h2&gt;&#xA;&lt;p&gt;Observability rests on three fundamental pillars: &lt;strong&gt;metrics&lt;/strong&gt;, &lt;strong&gt;logs&lt;/strong&gt;, and &lt;strong&gt;traces&lt;/strong&gt;. Each tells a different part of your system&amp;rsquo;s story, and together they provide the complete picture.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Homelab Monitoring Setup: From Chaos to Clarity</title>
+      <link>http://localhost:1313/posts/homelab-monitoring-setup/</link>
+      <pubDate>Tue, 12 Mar 2024 14:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/homelab-monitoring-setup/</guid>
+      <description>&lt;h1 id=&#34;my-homelab-monitoring-setup-from-chaos-to-clarity&#34;&gt;My Homelab Monitoring Setup: From Chaos to Clarity&lt;/h1&gt;&#xA;&lt;p&gt;Running a homelab is like having a mini data center in your house. It&amp;rsquo;s exciting, educational, and sometimes overwhelming. After months of trial and error, I&amp;rsquo;ve finally built a monitoring setup that gives me complete visibility into my infrastructure. Let me share the journey and the lessons learned.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-challenge-monitoring-distributed-chaos&#34;&gt;The Challenge: Monitoring Distributed Chaos&lt;/h2&gt;&#xA;&lt;p&gt;My homelab started simple—just a few VMs running basic services. But as I added more services, containers, and complexity, I quickly realized I needed proper monitoring. The challenge wasn&amp;rsquo;t just technical; it was about understanding what to monitor and why.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

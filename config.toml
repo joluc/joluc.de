@@ -5,14 +5,21 @@ languageCode = "en-us"
 title = "Joluc.de - Cloud Engineering & Observability"
 googleAnalytics = "G-SPZ7BV0K85" # Add your identifier. For example UA-99631805-1.
 [pagination]
-  pagerSize = 9
+  pagerSize = 6
 theme = ["hugo-flex", "hugo-shortcode-gallery"]
 timeout = 60000
 [params]
   logo = "/images/WS.webp" # You can add own logo. For example "/images/logo.png".
-  author = "Jonathan - Cloud Engineer"
+  author = "Jonathan"
   description = "Cloud engineer specializing in observability and signals. Passionate about building monitoring systems that transform telemetry data into actionable insights for production environments."
   galleryLoadJQuery = true
+
+  # SEO Settings
+  schema = true
+  opengraph = true
+
+  # Default social image for Open Graph
+  images = ["/images/og-default.jpg"]
 
 [imaging.exif]
     includeFields = ".*"
@@ -21,31 +28,31 @@ timeout = 60000
 [menu]
   [[menu.main]]
     identifier = "home"
-    name = "Home"
+    name = "home"
     url = "/"
     weight = 1
 
   [[menu.main]]
     identifier = "blog"
-    name = "Blog"
+    name = "blog"
     url = "/posts/"
     weight = 2
 
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
+    identifier = "homelab"
+    name = "lab"
+    url = "/homelab/"
     weight = 3
 
   [[menu.main]]
-    identifier = "homelab"
-    name = "Homelab"
-    url = "/homelab/"
+    identifier = "about"
+    name = "about"
+    url = "/about/"
     weight = 4
 
   [[menu.main]]
     identifier = "contact"
-    name = "Contact"
+    name = "contact"
     url = "/contact/"
     weight = 5
 

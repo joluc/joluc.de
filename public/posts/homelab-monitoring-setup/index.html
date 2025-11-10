@@ -1,14 +1,28 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" prefix="og: https://ogp.me/ns#">
 
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 
   <title>My homelab monitoring setup from chaos to clarity | Joluc.de - Cloud Engineering &amp; Observability</title>
-  <meta name="description" content="">
+  <meta name="description" content="My Homelab Monitoring Setup: From Chaos to Clarity
+Running a homelab is like having a mini data center in your house. It&rsquo;s exciting, educational, and sometimes overwhelming. After months of trial and error, I&rsquo;ve finally built a monitoring setup that gives me complete visibility into my infrastructure. Let me share the journey and the lessons learned.
+The Challenge: Monitoring Distributed Chaos
+My homelab started simple—just a few VMs running basic services. But as I added more services, containers, and complexity, I quickly realized I needed proper monitoring. The challenge wasn&rsquo;t just technical; it was about understanding what to monitor and why.">
+
+  
+  <link rel="canonical" href="http://localhost:1313/posts/homelab-monitoring-setup/">
+
+  
+  <meta name="author" content="Jonathan">
 
   
 
@@ -18,7 +32,61 @@
 Running a homelab is like having a mini data center in your house. It&rsquo;s exciting, educational, and sometimes overwhelming. After months of trial and error, I&rsquo;ve finally built a monitoring setup that gives me complete visibility into my infrastructure. Let me share the journey and the lessons learned.
 The Challenge: Monitoring Distributed Chaos
 My homelab started simple—just a few VMs running basic services. But as I added more services, containers, and complexity, I quickly realized I needed proper monitoring. The challenge wasn&rsquo;t just technical; it was about understanding what to monitor and why.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://localhost:1313/posts/homelab-monitoring-setup/">
+  <meta property="og:site_name" content="Joluc.de - Cloud Engineering &amp; Observability">
+  
   <meta property="og:image" content="http://localhost:1313/images/gallery-image.jpg">
+  
+  
+  <meta property="article:published_time" content="2024-03-12T14:30:00Z">
+  <meta property="article:modified_time" content="2024-03-12T14:30:00Z">
+  <meta property="article:author" content="Jonathan">
+  
+  <meta property="article:tag" content="homelab">
+  
+  <meta property="article:tag" content="monitoring">
+  
+  <meta property="article:tag" content="kubernetes">
+  
+  <meta property="article:tag" content="prometheus">
+  
+  <meta property="article:tag" content="grafana">
+  
+  
+
+  
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "My Homelab Monitoring Setup: From Chaos to Clarity",
+    "description": "\u003ch1 id=\"my-homelab-monitoring-setup-from-chaos-to-clarity\"\u003eMy Homelab Monitoring Setup: From Chaos to Clarity\u003c/h1\u003e\n\u003cp\u003eRunning a homelab is like having a mini data center in your house. It\u0026rsquo;s exciting, educational, and sometimes overwhelming. After months of trial and error, I\u0026rsquo;ve finally built a monitoring setup that gives me complete visibility into my infrastructure. Let me share the journey and the lessons learned.\u003c/p\u003e\n\u003ch2 id=\"the-challenge-monitoring-distributed-chaos\"\u003eThe Challenge: Monitoring Distributed Chaos\u003c/h2\u003e\n\u003cp\u003eMy homelab started simple—just a few VMs running basic services. But as I added more services, containers, and complexity, I quickly realized I needed proper monitoring. The challenge wasn\u0026rsquo;t just technical; it was about understanding what to monitor and why.\u003c/p\u003e",
+    "author": {
+      "@type": "Person",
+      "name": "Jonathan"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Joluc.de - Cloud Engineering \u0026 Observability",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://localhost:1313/images/WS.webp"
+      }
+    },
+    "datePublished": "2024-03-12T14:30:00Z",
+    "dateModified": "2024-03-12T14:30:00Z",
+    
+    "image": "http://localhost:1313/images/gallery-image.jpg",
+    
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http://localhost:1313/posts/homelab-monitoring-setup/"
+    }
+  }
+  </script>
+  
 
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -100,27 +168,27 @@ My homelab started simple—just a few VMs running basic services. But as I adde
               
               
               <li class="nav__item">
-                <a href="/" class="nav__link ">Home</a>
+                <a href="/" class="nav__link ">home</a>
               </li>
               
               
               <li class="nav__item">
-                <a href="/posts/" class="nav__link ">Blog</a>
+                <a href="/posts/" class="nav__link ">blog</a>
               </li>
               
               
               <li class="nav__item">
-                <a href="/about/" class="nav__link ">About</a>
+                <a href="/homelab/" class="nav__link ">lab</a>
               </li>
               
               
               <li class="nav__item">
-                <a href="/homelab/" class="nav__link ">Homelab</a>
+                <a href="/about/" class="nav__link ">about</a>
               </li>
               
               
               <li class="nav__item">
-                <a href="/contact/" class="nav__link ">Contact</a>
+                <a href="/contact/" class="nav__link ">contact</a>
               </li>
               
               <li class="nav__item">
@@ -175,7 +243,7 @@ My homelab started simple—just a few VMs running basic services. But as I adde
         <h1 class="post__title">My Homelab Monitoring Setup: From Chaos to Clarity</h1>
 
         <div class="post__meta">
-          <a class="post__author" href="/about/">Jonathan - Cloud Engineer</a> – <time class="post__date" datetime=" 2024-03-12T14:30:00Z">12 March 2024</time>
+          <a class="post__author" href="/about/">Jonathan</a> – <time class="post__date" datetime=" 2024-03-12T14:30:00Z">12 March 2024</time>
         </div>
 
       </div>
@@ -612,9 +680,6 @@ My homelab started simple—just a few VMs running basic services. But as I adde
         <a href="/posts/building-comprehensive-observability-stack/">Building a Comprehensive Observability Stack from Scratch</a>
       </h2>
 
-      <p class="article__excerpt"><h1 id="building-a-comprehensive-observability-stack-from-scratch">Building a Comprehensive Observability Stack from Scratch</h1>
-<p>In today&rsquo;s complex distributed …</p></p>
-
     </div>
   </div>
 </div>
@@ -640,9 +705,6 @@ My homelab started simple—just a few VMs running basic services. But as I adde
         <a href="/posts/metrics-visualization-best-practices/">Metrics and Visualization: Turning Data into Insights</a>
       </h2>
 
-      <p class="article__excerpt"><h1 id="metrics-and-visualization-turning-data-into-insights">Metrics and Visualization: Turning Data into Insights</h1>
-<p>In the world of observability, collecting …</p></p>
-
     </div>
   </div>
 </div>
@@ -667,9 +729,6 @@ My homelab started simple—just a few VMs running basic services. But as I adde
       <h2 class="article__title">
         <a href="/posts/kubernetes-deployment-guide/">Kubernetes Deployment Guide for Beginners</a>
       </h2>
-
-      <p class="article__excerpt"><h1 id="kubernetes-deployment-guide-for-beginners">Kubernetes Deployment Guide for Beginners</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing …</p></p>
 
     </div>
   </div>

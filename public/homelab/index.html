@@ -1,14 +1,108 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" prefix="og: https://ogp.me/ns#">
 
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 
   <title>Homelab | Joluc.de - Cloud Engineering &amp; Observability</title>
-  <meta name="description" content="">
+  <meta name="description" content="My Homelab: A Cloud Engineer&rsquo;s Playground
+Welcome to my homelab—a constantly evolving infrastructure that serves as my testing ground for cloud technologies, observability tools, and distributed systems. This is where I experiment, learn, and break things (safely) to understand how modern infrastructure works.
+Current Infrastructure
+Hardware Stack
+
+Main Server: Intel NUC 11 Pro (i7-1165G7, 32GB RAM, 1TB NVMe SSD)
+Storage: Synology DS920&#43; with 4x 4TB drives in RAID 5
+Network: Ubiquiti Dream Machine Pro with 10G SFP&#43; uplink
+Backup: Raspberry Pi 4 (8GB) running critical services
+Power: APC Smart-UPS 1500VA for power protection
+
+Software Stack
+Orchestration
+
+Kubernetes: 3-node cluster (1 master, 2 workers)
+Container Runtime: containerd with CRI-O
+Service Mesh: Istio for traffic management
+Ingress: Traefik with Let&rsquo;s Encrypt certificates
+
+Observability Stack
+
+Metrics: Prometheus &#43; Grafana
+Logging: Loki &#43; Promtail
+Tracing: Jaeger
+APM: Custom OpenTelemetry instrumentation
+Alerting: AlertManager with Slack integration
+
+Storage &amp; Backup
+
+Primary Storage: Ceph cluster (3 nodes)
+Backup: Velero for Kubernetes backups
+File Storage: Nextcloud with S3 backend
+Database: PostgreSQL with streaming replication
+
+Services Running
+Core Infrastructure
+
+DNS: Pi-hole for ad blocking and local DNS
+VPN: WireGuard for secure remote access
+Monitoring: Prometheus, Grafana, AlertManager
+Logging: Loki, Fluentd, Elasticsearch
+Tracing: Jaeger, OpenTelemetry Collector
+
+Development Tools
+
+Git: Gitea for private repositories
+CI/CD: GitLab Runner with Kubernetes executor
+Artifacts: Harbor for container registry
+Documentation: GitBook for project documentation
+
+Personal Services
+
+Media: Plex for media streaming
+File Sync: Nextcloud for file synchronization
+Password Manager: Bitwarden (self-hosted)
+Note Taking: Joplin with S3 backend
+Task Management: Wekan for project management
+
+Monitoring Dashboard
+Infrastructure Metrics
+
+CPU Usage: Real-time CPU utilization across all nodes
+Memory Usage: RAM usage and swap utilization
+Disk I/O: Storage performance and capacity
+Network Traffic: Bandwidth usage and latency
+Power Consumption: Energy usage monitoring
+
+Application Metrics
+
+Service Health: Uptime and response times
+Error Rates: Application error tracking
+Performance: Response time percentiles
+Business Metrics: User activity and feature usage
+
+Security Monitoring
+
+Failed Logins: Authentication failure tracking
+Network Anomalies: Unusual traffic patterns
+Certificate Expiry: SSL certificate monitoring
+Vulnerability Scanning: Security patch status
+
+Current Projects
+1. Service Mesh Implementation
+Implementing Istio service mesh for advanced traffic management and observability.">
+
+  
+  <link rel="canonical" href="http://localhost:1313/homelab/">
+
+  
+  <meta name="author" content="Jonathan">
 
   
 
@@ -98,7 +192,49 @@ Vulnerability Scanning: Security patch status
 Current Projects
 1. Service Mesh Implementation
 Implementing Istio service mesh for advanced traffic management and observability.">
-  <meta property="og:image" content="http://localhost:1313/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://localhost:1313/homelab/">
+  <meta property="og:site_name" content="Joluc.de - Cloud Engineering &amp; Observability">
+  
+  <meta property="og:image" content="http://localhost:1313/images/og-default.jpg">
+  
+  
+  <meta property="article:published_time" content="2024-03-15T12:00:00Z">
+  <meta property="article:modified_time" content="2024-03-15T12:00:00Z">
+  <meta property="article:author" content="Jonathan">
+  
+  
+
+  
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Homelab",
+    "description": "\u003ch1 id=\"my-homelab-a-cloud-engineers-playground\"\u003eMy Homelab: A Cloud Engineer\u0026rsquo;s Playground\u003c/h1\u003e\n\u003cp\u003eWelcome to my homelab—a constantly evolving infrastructure that serves as my testing ground for cloud technologies, observability tools, and distributed systems. This is where I experiment, learn, and break things (safely) to understand how modern infrastructure works.\u003c/p\u003e\n\u003ch2 id=\"current-infrastructure\"\u003eCurrent Infrastructure\u003c/h2\u003e\n\u003ch3 id=\"hardware-stack\"\u003eHardware Stack\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eMain Server\u003c/strong\u003e: Intel NUC 11 Pro (i7-1165G7, 32GB RAM, 1TB NVMe SSD)\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eStorage\u003c/strong\u003e: Synology DS920+ with 4x 4TB drives in RAID 5\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eNetwork\u003c/strong\u003e: Ubiquiti Dream Machine Pro with 10G SFP+ uplink\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eBackup\u003c/strong\u003e: Raspberry Pi 4 (8GB) running critical services\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003ePower\u003c/strong\u003e: APC Smart-UPS 1500VA for power protection\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"software-stack\"\u003eSoftware Stack\u003c/h3\u003e\n\u003ch4 id=\"orchestration\"\u003eOrchestration\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eKubernetes\u003c/strong\u003e: 3-node cluster (1 master, 2 workers)\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eContainer Runtime\u003c/strong\u003e: containerd with CRI-O\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eService Mesh\u003c/strong\u003e: Istio for traffic management\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eIngress\u003c/strong\u003e: Traefik with Let\u0026rsquo;s Encrypt certificates\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"observability-stack\"\u003eObservability Stack\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eMetrics\u003c/strong\u003e: Prometheus + Grafana\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eLogging\u003c/strong\u003e: Loki + Promtail\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eTracing\u003c/strong\u003e: Jaeger\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eAPM\u003c/strong\u003e: Custom OpenTelemetry instrumentation\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eAlerting\u003c/strong\u003e: AlertManager with Slack integration\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"storage--backup\"\u003eStorage \u0026amp; Backup\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003ePrimary Storage\u003c/strong\u003e: Ceph cluster (3 nodes)\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eBackup\u003c/strong\u003e: Velero for Kubernetes backups\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eFile Storage\u003c/strong\u003e: Nextcloud with S3 backend\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eDatabase\u003c/strong\u003e: PostgreSQL with streaming replication\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"services-running\"\u003eServices Running\u003c/h2\u003e\n\u003ch3 id=\"core-infrastructure\"\u003eCore Infrastructure\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eDNS\u003c/strong\u003e: Pi-hole for ad blocking and local DNS\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eVPN\u003c/strong\u003e: WireGuard for secure remote access\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eMonitoring\u003c/strong\u003e: Prometheus, Grafana, AlertManager\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eLogging\u003c/strong\u003e: Loki, Fluentd, Elasticsearch\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eTracing\u003c/strong\u003e: Jaeger, OpenTelemetry Collector\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"development-tools\"\u003eDevelopment Tools\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eGit\u003c/strong\u003e: Gitea for private repositories\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eCI/CD\u003c/strong\u003e: GitLab Runner with Kubernetes executor\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eArtifacts\u003c/strong\u003e: Harbor for container registry\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eDocumentation\u003c/strong\u003e: GitBook for project documentation\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"personal-services\"\u003ePersonal Services\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eMedia\u003c/strong\u003e: Plex for media streaming\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eFile Sync\u003c/strong\u003e: Nextcloud for file synchronization\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003ePassword Manager\u003c/strong\u003e: Bitwarden (self-hosted)\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eNote Taking\u003c/strong\u003e: Joplin with S3 backend\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eTask Management\u003c/strong\u003e: Wekan for project management\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"monitoring-dashboard\"\u003eMonitoring Dashboard\u003c/h2\u003e\n\u003ch3 id=\"infrastructure-metrics\"\u003eInfrastructure Metrics\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eCPU Usage\u003c/strong\u003e: Real-time CPU utilization across all nodes\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eMemory Usage\u003c/strong\u003e: RAM usage and swap utilization\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eDisk I/O\u003c/strong\u003e: Storage performance and capacity\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eNetwork Traffic\u003c/strong\u003e: Bandwidth usage and latency\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003ePower Consumption\u003c/strong\u003e: Energy usage monitoring\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"application-metrics\"\u003eApplication Metrics\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eService Health\u003c/strong\u003e: Uptime and response times\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eError Rates\u003c/strong\u003e: Application error tracking\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003ePerformance\u003c/strong\u003e: Response time percentiles\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eBusiness Metrics\u003c/strong\u003e: User activity and feature usage\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"security-monitoring\"\u003eSecurity Monitoring\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eFailed Logins\u003c/strong\u003e: Authentication failure tracking\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eNetwork Anomalies\u003c/strong\u003e: Unusual traffic patterns\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eCertificate Expiry\u003c/strong\u003e: SSL certificate monitoring\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eVulnerability Scanning\u003c/strong\u003e: Security patch status\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"current-projects\"\u003eCurrent Projects\u003c/h2\u003e\n\u003ch3 id=\"1-service-mesh-implementation\"\u003e1. Service Mesh Implementation\u003c/h3\u003e\n\u003cp\u003eImplementing Istio service mesh for advanced traffic management and observability.\u003c/p\u003e",
+    "author": {
+      "@type": "Person",
+      "name": "Jonathan"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Joluc.de - Cloud Engineering \u0026 Observability",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://localhost:1313/images/WS.webp"
+      }
+    },
+    "datePublished": "2024-03-15T12:00:00Z",
+    "dateModified": "2024-03-15T12:00:00Z",
+    
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http://localhost:1313/homelab/"
+    }
+  }
+  </script>
+  
 
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -180,27 +316,27 @@ Implementing Istio service mesh for advanced traffic management and observabilit
               
               
               <li class="nav__item">
-                <a href="/" class="nav__link ">Home</a>
+                <a href="/" class="nav__link ">home</a>
               </li>
               
               
               <li class="nav__item">
-                <a href="/posts/" class="nav__link ">Blog</a>
+                <a href="/posts/" class="nav__link ">blog</a>
               </li>
               
               
               <li class="nav__item">
-                <a href="/about/" class="nav__link ">About</a>
+                <a href="/homelab/" class="nav__link nav__link--current">lab</a>
               </li>
               
               
               <li class="nav__item">
-                <a href="/homelab/" class="nav__link nav__link--current">Homelab</a>
+                <a href="/about/" class="nav__link ">about</a>
               </li>
               
               
               <li class="nav__item">
-                <a href="/contact/" class="nav__link ">Contact</a>
+                <a href="/contact/" class="nav__link ">contact</a>
               </li>
               
               <li class="nav__item">

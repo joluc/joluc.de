@@ -10,8 +10,7 @@
             <div class="portfolio__toggle">
               <div class="icon">
                 <div class="icon-bar"></div>
-                <div class="icon-bar"></div>
-                <div class="icon-bar"></div>
+
               </div>
             </div>
           </div>
@@ -75,8 +74,8 @@
         const step = 3600;
 
         loadChart('chartCPU', 'status-cpu', 'rate(process_cpu_seconds_total[1m])', 'CPU', 200, start, now, step);
-        loadChart('chartMem', 'status-mem', 'process_resident_memory_bytes', 'Bytes', 140, start, now, step);
-        loadChart('chartGo', 'status-go', 'go_goroutines', 'Routines', 340, start, now, step);
+        loadChart('chartMem', 'status-mem', 'process_resident_memory_bytes', 'Bytes', 340, start, now, step);
+        loadChart('chartGo', 'status-go', 'go_goroutines', 'Routines', 140, start, now, step);
       }
 
       function loadChart(canvasId, statusId, query, label, colorHue, start, now, step) {

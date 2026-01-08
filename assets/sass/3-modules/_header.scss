@@ -6,7 +6,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 60px $base-spacing-unit;
-  
+
     @media only screen and (max-width: $tablet) {
       padding: 40px $base-spacing-unit;
     }
@@ -204,6 +204,37 @@
         will-change: transform;
         transition: all 0.25s;
         background: var(--link-color);
+      }
+
+      // Custom colors per user request: Blue, Red, Yellow, Green, Purple
+      &.nav__link--home {
+        &::after {
+          background: hsl(200, 70%, 50%); // Blue
+        }
+      }
+
+      &.nav__link--blog {
+        &::after {
+          background: hsl(340, 70%, 50%); // Red
+        }
+      }
+
+      &.nav__link--homelab {
+        &::after {
+          background: #FFEEAD; // Yellow
+        }
+      }
+
+      &.nav__link--about {
+        &::after {
+          background: hsl(140, 70%, 50%); // Green
+        }
+      }
+
+      &.nav__link--contact {
+        &::after {
+          background: #9B59B6; // Purple
+        }
       }
     }
   }

@@ -1,0 +1,98 @@
+{{ $seed := now.UnixNano }}
+{{ $id := printf "hydra-canvas-%d-%d" $seed (len (seq 10 | shuffle)) }}
+{{ $preset := .Get "preset" | default "default" }}
+
+<div class="hydra-container"
+    style="position: relative; width: 100%; height: 500px; background: #000; overflow: hidden; margin: 2rem 0; border-radius: 8px;">
+    <canvas id="{{ $id }}" style="width: 100%; height: 100%; display: block;"></canvas>
+
+    <div class="hydra-title-overlay"
+        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; pointer-events: none; mix-blend-mode: difference; text-align: center;">
+        <h2
+            style="color: white; font-family: 'Encode Sans', sans-serif; font-size: 4rem; margin: 0; text-transform: uppercase; letter-spacing: 0.1em;">
+            {{ .Inner | default "Joluc" }}
+        </h2>
+    </div>
+</div>
+
+<script src="https://unpkg.com/hydra-synth"></script>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@600&display=swap" rel="stylesheet">
+
+<script>
+    (function () {
+        const canvasId = "{{ $id }}";
+        const canvas = document.getElementById(canvasId);
+        if (!canvas) return;
+
+        const container = canvas.parentElement;
+
+        const hydra = new Hydra({
+            canvas: canvas,
+            detectAudio: false,
+            makeGlobal: false
+        });
+
+        // Resize handler
+        function reportWindowSize() {
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = width * dpr;
+            canvas.height = height * dpr;
+            if (hydra && hydra.setResolution) {
+                hydra.setResolution(width * dpr, height * dpr);
+            }
+        }
+        reportWindowSize();
+        window.addEventListener('resize', reportWindowSize);
+
+        const synth = hydra.synth;
+        const presetName = "{{ $preset }}";
+
+        const presets = {
+            default: (s) => {
+                s.voronoi(8, 1)
+                    .mult(
+                        s.osc(10, 0.1, () => Math.sin(s.time) * 3)
+                            .saturate(100)
+                            .kaleid(200)
+                            .contrast(2)
+                    )
+                    .modulate(s.o0, 0.5)
+                    .add(s.o0, 0.8)
+                    .scrollY(-0.01)
+                    .scale(1)
+                    .modulate(s.voronoi(8, 1), 0.008)
+                    .luma(0.5)
+                    .out();
+                s.speed = 0.1;
+            },
+            pixel: (s) => {
+                s.osc(60, 0.03, 0.8)
+                    .color(0.9, 0.2, 0.5)
+                    .diff(s.o0)
+                    .modulate(s.osc(45).kaleid(200).scale(0.5), 0.01)
+                    .pixelate(20, 10)
+                    .out();
+                s.speed = 0.2;
+            },
+            waves: (s) => {
+                s.osc(20, 0.01, 1.1)
+                    .kaleid(5)
+                    .color(0.5, 0.8, 1.0)
+                    .rotate(0.5, 0.1)
+                    .modulate(s.o0, () => Math.sin(s.time) * 0.1)
+                    .scale(1.05)
+                    .out();
+                s.speed = 0.5;
+            }
+        };
+
+        if (presets[presetName]) {
+            presets[presetName](synth);
+        } else {
+            console.warn('Hydra preset not found:', presetName);
+            presets['default'](synth);
+        }
+    })();
+</script>

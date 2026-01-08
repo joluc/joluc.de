@@ -20,24 +20,178 @@
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <div class="portfolio__gallery animate">
     <div class="container">
       <div class="row">
-      {{ with .Site.Params.gallery_item }}
-        {{ range . }}
-        <div class="col col-4 col-d-6 col-t-12">
-          <div class="portfolio__item">
-            <a href="{{ .image }}" class="portfolio__link glightbox" data-glightbox='title: {{ .title }}; description: {{ .description}}; descPosition: bottom;'>
-              <span class="portfolio__icon"><i class="ion ion-ios-eye"></i></span>
-              <img data-src="{{ .image }}" class="portfolio__image lazy" alt="{{ .title }}">
-            </a>
-            </div>
+
+        <!-- Chart 1: CPU -->
+        <div class="col col-4 col-d-6 col-t-12" style="margin-bottom: 30px;">
+          <div style="text-align: center; margin-bottom: 10px; font-weight: bold;">CPU Usage</div>
+          <div id="status-cpu" style="text-align: center; color: #888;">Loading...</div>
+          <div style="position: relative; height: 250px; width: 100%;">
+            <canvas id="chartCPU"></canvas>
+          </div>
         </div>
-        {{ end }}
-      {{ end }}
+
+        <!-- Chart 2: Memory -->
+        <div class="col col-4 col-d-6 col-t-12" style="margin-bottom: 30px;">
+          <div style="text-align: center; margin-bottom: 10px; font-weight: bold;">Memory Usage</div>
+          <div id="status-mem" style="text-align: center; color: #888;">Loading...</div>
+          <div style="position: relative; height: 250px; width: 100%;">
+            <canvas id="chartMem"></canvas>
+          </div>
+        </div>
+
+        <!-- Chart 3: Goroutines -->
+        <div class="col col-4 col-d-6 col-t-12" style="margin-bottom: 30px;">
+          <div style="text-align: center; margin-bottom: 10px; font-weight: bold;">Goroutines</div>
+          <div id="status-go" style="text-align: center; color: #888;">Loading...</div>
+          <div style="position: relative; height: 250px; width: 100%;">
+            <canvas id="chartGo"></canvas>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof Chart === 'undefined') {
+        console.error('Chart.js not loaded');
+        return;
+      }
+
+      const chartInstances = {};
+      let isExpanded = false;
+
+      function fetchAllCharts(hours) {
+        const now = Math.floor(Date.now() / 1000);
+        const start = now - (hours * 3600);
+        // If range is large (e.g. 24h), use larger step (e.g. 1 hour = 3600s)
+        // For 3h, we used 3600s
+        const step = 3600;
+
+        loadChart('chartCPU', 'status-cpu', 'rate(process_cpu_seconds_total[1m])', 'CPU', 200, start, now, step);
+        loadChart('chartMem', 'status-mem', 'process_resident_memory_bytes', 'Bytes', 140, start, now, step);
+        loadChart('chartGo', 'status-go', 'go_goroutines', 'Routines', 340, start, now, step);
+      }
+
+      function loadChart(canvasId, statusId, query, label, colorHue, start, now, step) {
+        const statusDiv = document.getElementById(statusId);
+        const canvas = document.getElementById(canvasId);
+        const ctx = canvas.getContext('2d');
+
+        // Show updating state
+        if (chartInstances[canvasId]) {
+          statusDiv.style.display = 'block';
+          statusDiv.innerText = 'Loading...';
+        }
+
+        fetch(`https://prometheus.demo.prometheus.io/api/v1/query_range?query=${encodeURIComponent(query)}&start=${start}&end=${now}&step=${step}`)
+          .then(res => {
+            if (!res.ok) throw new Error(res.statusText);
+            return res.json();
+          })
+          .then(data => {
+            statusDiv.style.display = 'none';
+
+            if (data.status === 'success' && data.data.result.length > 0) {
+
+              if (chartInstances[canvasId]) {
+                chartInstances[canvasId].destroy();
+              }
+
+              // Take first series
+              const result = data.data.result[0];
+              const labels = result.values.map(v => {
+                const date = new Date(v[0] * 1000);
+                return date.getHours().toString().padStart(2, '0') + ':' + date.getMinutes().toString().padStart(2, '0');
+              });
+              const points = result.values.map(v => parseFloat(v[1]));
+              const color = `hsl(${colorHue}, 70%, 50%)`;
+
+              chartInstances[canvasId] = new Chart(ctx, {
+                type: 'line',
+                data: {
+                  labels: labels,
+                  datasets: [{
+                    label: label,
+                    data: points,
+                    borderColor: color,
+                    backgroundColor: color,
+                    borderWidth: 2,
+                    fill: false,
+                    pointRadius: 0,
+                    tension: 0.2
+                  }]
+                },
+                options: {
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  plugins: {
+                    legend: { display: false }
+                  },
+                  scales: {
+                    x: {
+                      display: true,
+                      grid: { color: 'rgba(255,255,255,0.1)' },
+                      ticks: {
+                        color: '#aaa',
+                        maxTicksLimit: 6,
+                        maxRotation: 0
+                      }
+                    },
+                    y: {
+                      display: false, // User requested hidden Y axis
+                      grid: { color: 'rgba(255,255,255,0.1)' },
+                      ticks: { color: '#aaa', maxTicksLimit: 5 }
+                    }
+                  }
+                }
+              });
+
+            } else {
+              statusDiv.innerText = 'No data';
+              statusDiv.style.display = 'block';
+              if (chartInstances[canvasId]) {
+                chartInstances[canvasId].destroy();
+                delete chartInstances[canvasId];
+              }
+            }
+          })
+          .catch(err => {
+            console.error(err);
+            statusDiv.innerText = 'Error';
+            statusDiv.style.color = 'red';
+            statusDiv.style.display = 'block';
+          });
+      }
+
+      // Initial Load: 3 hours
+      fetchAllCharts(3);
+
+      // Handle Toggle Click
+      const toggleBtn = document.querySelector('.portfolio__toggle');
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', function () {
+          isExpanded = !isExpanded;
+          // Toggle visual state (add/remove active class)
+          this.classList.toggle('active');
+
+          if (isExpanded) {
+            // Show "more data" -> let's say 24 hours
+            fetchAllCharts(24);
+          } else {
+            // Revert to 3 hours
+            fetchAllCharts(3);
+          }
+        });
+      }
+    });
+  </script>
 
 </section>
 <!-- end portfolio -->

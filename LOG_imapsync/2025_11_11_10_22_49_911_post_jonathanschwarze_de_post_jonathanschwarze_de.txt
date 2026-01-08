@@ -1,0 +1,723 @@
+Here is imapsync 2.314 /opt/homebrew/Cellar/imapsync/2.314/libexec/bin/imapsync on host J2T2N32DN4, a darwin system with 0.1/32.0 free GiB of RAM, 75.07% used by processes.
+with Perl 5.34.1 and Mail::IMAPClient 3.43
+Transfer started at Dienstag 11 November 2025-11-11 10:22:49 +0100 CET
+PID is 63669 my PPID is 3125
+Log file is LOG_imapsync/2025_11_11_10_22_49_911_post_jonathanschwarze_de_post_jonathanschwarze_de.txt ( to change it, use --logfile path ; or use --nolog to turn off logging )
+Load is 6.47 7.81 9.77 on 10 cores
+Real user id is d071390 (uid 501)
+Effective user id is d071390 (euid 501)
+$RCSfile: imapsync,v $ $Revision: 2.314 $ $Date: 2025/09/23 16:55:17 $ 
+Command line used, run by /usr/bin/perl5.34:
+/opt/homebrew/Cellar/imapsync/2.314/libexec/bin/imapsync --host1 premium61.web-hosting.com --user1 post@jonathanschwarze.de --password1 MASKED --host2 mxe97a.netcup.net --user2 post@jonathanschwarze.de --password2 MASKED --ssl1 --ssl2
+Current directory is /Users/d071390/dev/src/github.com/joluc/joluc.de
+Temp directory is /Users/d071390/tmp ( to change it use --tmpdir dirpath )
+Creating temp directory /Users/d071390/tmp
+kill -QUIT 63669 # special behavior: call to sub catch_exit
+kill -TERM 63669 # special behavior: call to sub catch_exit
+kill -INT 63669 # special behavior: call to sub catch_reconnect
+kill -HUP 63669 # special behavior: call to sub catch_print
+kill -USR1 63669 # special behavior: call to sub toggle_sleep
+Logging to a logfile by default. To turn off logging, use --nolog
+Creating directory LOG_imapsync (current directory is /Users/d071390/dev/src/github.com/joluc/joluc.de)
+Directory LOG_imapsync is writable and readable and gointoable. Good.
+File /Users/d071390/tmp/imapsync.pid does not exist
+PID file is /Users/d071390/tmp/imapsync.pid ( to change it, use --pidfile filepath ; to avoid it use --pidfile "" )
+Writing my PID 63669 in /Users/d071390/tmp/imapsync.pid
+Writing also my logfile name in /Users/d071390/tmp/imapsync.pid : LOG_imapsync/2025_11_11_10_22_49_911_post_jonathanschwarze_de_post_jonathanschwarze_de.txt
+Modules version list ( use --no-modulesversion to turn off printing this Perl modules list ):
+Authen::NTLM         1.09
+CGI                  4.48
+Compress::Zlib       2.102
+Crypt::OpenSSL::RSA  0.31
+Digest::HMAC_MD5     1.01
+Digest::HMAC_SHA1    1.03
+Digest::MD5          2.58
+Digest::SHA          6.02
+Encode               3.0801
+Encode::IMAPUTF7     1.07
+File::Copy::Recursive 0.45
+File::Spec           3.80
+Getopt::Long         2.52
+HTML::Entities       3.69
+IO::Socket           1.46
+IO::Socket::INET     1.46
+IO::Socket::INET6    2.72
+IO::Socket::IP       0.43
+IO::Socket::SSL      2.068
+IO::Tee              0.65
+JSON                 4.10
+JSON::WebToken       0.10
+LWP                  6.44
+MIME::Base64         3.16
+Mail::IMAPClient     3.43
+Net::Ping            2.74
+Net::SSLeay          1.88
+Term::ReadKey        2.38
+Test::MockObject     1.20200122
+Time::HiRes          1.9767
+Unicode::String      2.10
+
+Info: will resync flags for already transferred messages. Use --noresyncflags to not resync flags.
+SSL debug mode level is --debugssl 1 (can be set from 0 meaning no debug to 4 meaning max debug)
+Host1: SSL default mode is like --sslargs1 "SSL_verify_mode=0", meaning for host1 SSL_VERIFY_NONE, ie, do not check the server certificate.
+Host1: Use --sslargs1 SSL_verify_mode=1 to have SSL_VERIFY_PEER, ie, check the server certificate. of host1
+Host2: SSL default mode is like --sslargs2 "SSL_verify_mode=0", meaning for host2 SSL_VERIFY_NONE, ie, do not check the server certificate.
+Host2: Use --sslargs2 SSL_verify_mode=1 to have SSL_VERIFY_PEER, ie, check the server certificate. of host2
+Info: turned ON syncinternaldates, will set the internal dates (arrival dates) on host2 same as host1.
+Host1: will try to use LOGIN authentication on host1
+Host2: will try to use LOGIN authentication on host2
+Host1: imap connection timeout is 120 seconds
+Host2: imap connection timeout is 120 seconds
+Host1: imap connection keepalive is on on host1. Use --nokeepalive1 to disable it.
+Host2: imap connection keepalive is on on host2. Use --nokeepalive2 to disable it.
+Host1: IMAP server [premium61.web-hosting.com] port [993] user [post@jonathanschwarze.de]
+Host2: IMAP server [mxe97a.netcup.net] port [993] user [post@jonathanschwarze.de]
+Host1: connecting and login on host1 [premium61.web-hosting.com] port [993] with user [post@jonathanschwarze.de]
+DEBUG: .../IO/Socket/SSL.pm:1177: global error: Undefined SSL object
+DEBUG: .../IO/Socket/SSL.pm:1177: global error: Undefined SSL object
+Host1 IP address: 185.61.154.52 Local IP address: 192.168.178.42
+Host1 banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE NAMESPACE LITERAL+ AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+Host1 capability before authentication: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE NAMESPACE LITERAL+ AUTH=PLAIN AUTH=LOGIN AUTH
+Host1: premium61.web-hosting.com says it has CAPABILITY for AUTHENTICATE LOGIN
+Host1: success login on [premium61.web-hosting.com] with user [post@jonathanschwarze.de] auth [LOGIN] or [LOGIN]
+Host2: connecting and login on host2 [mxe97a.netcup.net] port [993] with user [post@jonathanschwarze.de]
+DEBUG: .../IO/Socket/SSL.pm:1177: global error: Undefined SSL object
+DEBUG: .../IO/Socket/SSL.pm:1177: global error: Undefined SSL object
+Host2 IP address: 202.61.233.122 Local IP address: 192.168.178.42
+Host2 banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ AUTH=PLAIN AUTH=LOGIN AUTH=DIGEST-MD5 AUTH=CRAM-MD5] Dovecot ready.
+Host2 capability before authentication: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ AUTH=PLAIN AUTH=LOGIN AUTH=DIGEST-MD5 AUTH=CRAM-MD5 AUTH
+Host2: mxe97a.netcup.net says it has CAPABILITY for AUTHENTICATE LOGIN
+Host2: success login on [mxe97a.netcup.net] with user [post@jonathanschwarze.de] auth [LOGIN] or [LOGIN]
+Host1: state Authenticated
+Host2: state Authenticated
+Host1 capability once authenticated: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS THREAD=ORDEREDSUBJECT MULTIAPPEND URL-PARTIAL CATENATE UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS BINARY MOVE SNIPPET=FUZZY PREVIEW=FUZZY PREVIEW STATUS=SIZE SAVEDATE NAMESPACE LITERAL+ NOTIFY SPECIAL-USE COMPRESS=DEFLATE QUOTA THREAD I18NLEVEL CONTEXT SNIPPET PREVIEW STATUS COMPRESS
+Host2 capability once authenticated: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS THREAD=ORDEREDSUBJECT MULTIAPPEND URL-PARTIAL CATENATE UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS BINARY MOVE SNIPPET=FUZZY PREVIEW=FUZZY PREVIEW STATUS=SIZE SAVEDATE LITERAL+ NOTIFY SPECIAL-USE QUOTA THREAD I18NLEVEL CONTEXT SNIPPET PREVIEW STATUS
+Host1: found ID capability. Sending/receiving ID, presented in raw IMAP for now.
+In order to avoid sending/receiving ID, use option --noid
+Sending: 4 ID ("name" "imapsync" "version" "2.314" "os" "darwin" "vendor" "Gilles LAMIRAL" "support-url" "https://imapsync.lamiral.info/" "date" "23-Sep-2025 16:55:17 +0000" "side" "host1")
+Sent 182 bytes
+Read: 	* ID ("name" "Dovecot")
+  	4 OK ID completed (0.001 + 0.000 secs).
+Host2: found ID capability. Sending/receiving ID, presented in raw IMAP for now.
+In order to avoid sending/receiving ID, use option --noid
+Sending: 4 ID ("name" "imapsync" "version" "2.314" "os" "darwin" "vendor" "Gilles LAMIRAL" "support-url" "https://imapsync.lamiral.info/" "date" "23-Sep-2025 16:55:17 +0000" "side" "host2")
+Sent 182 bytes
+Read: 	* ID ("name" "Dovecot")
+  	4 OK ID completed (0.001 + 0.000 secs).
+
+Host2: QUOTA capability found, presented in raw IMAP on next lines
+Sending: 5 GETQUOTAROOT INBOX
+Sent 22 bytes
+Read: 	5 OK No quota (0.001 + 0.000 secs).
+
+Host2: Quota current storage is 0 bytes. Limit is 0 bytes. So 0 % full
+Host1: Compression is off. Use --compress1 to allow compression on host1
+Host2: Compression is off. Use --compress2 to allow compression on host2
+Compression often generates annoying errors, especially with SSL connexions, Gmail, Office365. So, avoid it.
+Host1: found 16 folders.
+Host2: found 18 folders.
+Host1: guessing separator from folder listing: [.]
+Host1: separator given by NAMESPACE: [.]
+Host2: guessing separator from folder listing: [/]
+Host2: separator given by NAMESPACE: [/]
+Host1: guessing prefix from folder listing: [INBOX.]
+Host1: prefix given by NAMESPACE: [INBOX.]
+Host2: guessing prefix from folder listing: []
+Host2: prefix given by NAMESPACE: []
+Host1: separator and prefix: [.][INBOX.]
+Host2: separator and prefix: [/][]
+Looking at INBOX or Inbox on both sides and deciding of the mapping to apply. Use --nofixInboxINBOX to avoid this behavior.
+INBOX INBOX on both sides so no mapping applied.
+Including all folders found by default. Use --subscribed or --folder or --folderrec or --include to select specific folders. Use --exclude to unselect specific folders.
+Host1: Checking wanted folders exist. Use --nocheckfoldersexist to avoid this check (shared of public namespace targeted).
+Host1: Checking wanted folders are selectable. Use --nocheckselectable to avoid this check.
+Turned off automapping folders ( use --automap to turn on automapping )
+
+++++ Listing folders
+All foldernames are presented between brackets like [X] where X is the foldername.
+When a foldername contains non-ASCII characters it is presented in the form
+[X] = [Y] where
+X is the imap foldername you have to use in command line options and
+Y is the utf8 output just printed for convenience, to recognize it.
+
+Host1: folders list (first the raw imap format then the [X] = [Y]):
+* LIST (\HasChildren) "." INBOX
+* LIST (\HasNoChildren \UnMarked \Sent) "." "INBOX.Sent Messages"
+* LIST (\HasChildren \UnMarked) "." INBOX.[Airmail]
+* LIST (\HasNoChildren \UnMarked) "." "INBOX.[Airmail].Send Later"
+* LIST (\HasNoChildren \UnMarked) "." INBOX.[Airmail].Snooze
+* LIST (\HasNoChildren \UnMarked) "." INBOX.[Airmail].Done
+* LIST (\HasNoChildren \UnMarked) "." INBOX.[Airmail].Memo
+* LIST (\HasNoChildren \UnMarked) "." "INBOX.[Airmail].To Do"
+* LIST (\HasNoChildren \UnMarked) "." "INBOX.Black Hole"
+* LIST (\HasNoChildren \UnMarked) "." INBOX.backupdatenwald
+* LIST (\HasNoChildren \UnMarked \Archive) "." INBOX.Archive
+* LIST (\HasNoChildren \UnMarked \Junk) "." INBOX.spam
+* LIST (\HasNoChildren \UnMarked) "." INBOX.Junk
+* LIST (\HasNoChildren \UnMarked \Drafts) "." INBOX.Drafts
+* LIST (\HasNoChildren \UnMarked \Sent) "." INBOX.Sent
+* LIST (\HasNoChildren \UnMarked \Trash) "." INBOX.Trash
+25 OK List completed (0.001 + 0.000 secs).
+
+[INBOX]
+[INBOX.Archive]
+[INBOX.Black Hole]
+[INBOX.Drafts]
+[INBOX.Junk]
+[INBOX.Sent]
+[INBOX.Sent Messages]
+[INBOX.Trash]
+[INBOX.[Airmail]]
+[INBOX.[Airmail].Done]
+[INBOX.[Airmail].Memo]
+[INBOX.[Airmail].Send Later]
+[INBOX.[Airmail].Snooze]
+[INBOX.[Airmail].To Do]
+[INBOX.backupdatenwald]
+[INBOX.spam]
+
+Host2: folders list (first the raw imap format then the [X] = [Y]):
+* LIST (\HasNoChildren) "/" spam
+* LIST (\HasNoChildren) "/" backupdatenwald
+* LIST (\HasChildren) "/" [Airmail]
+* LIST (\HasNoChildren) "/" "[Airmail]/To Do"
+* LIST (\HasNoChildren) "/" [Airmail]/Snooze
+* LIST (\HasNoChildren) "/" "[Airmail]/Send Later"
+* LIST (\HasNoChildren) "/" [Airmail]/Memo
+* LIST (\HasNoChildren) "/" [Airmail]/Done
+* LIST (\HasNoChildren \Sent) "/" "Sent Messages"
+* LIST (\HasNoChildren) "/" Junk
+* LIST (\HasNoChildren) "/" "Black Hole"
+* LIST (\HasNoChildren \Archive) "/" Archive
+* LIST (\HasNoChildren \Archive) "/" Archives
+* LIST (\HasNoChildren \Drafts) "/" Drafts
+* LIST (\HasNoChildren \Sent) "/" Sent
+* LIST (\HasNoChildren \UnMarked \Junk) "/" Spam
+* LIST (\HasNoChildren \Trash) "/" Trash
+* LIST (\HasNoChildren) "/" INBOX
+10 OK List completed (0.001 + 0.000 secs).
+
+[Archive]
+[Archives]
+[Black Hole]
+[Drafts]
+[INBOX]
+[Junk]
+[Sent]
+[Sent Messages]
+[Spam]
+[Trash]
+[[Airmail]]
+[[Airmail]/Done]
+[[Airmail]/Memo]
+[[Airmail]/Send Later]
+[[Airmail]/Snooze]
+[[Airmail]/To Do]
+[backupdatenwald]
+[spam]
+
+Folders in host2 not in host1:
+[Spam]
+[Archives]
+
+Checking SEARCH ALL works on both accounts. To avoid that check, use --nochecknoabletosearch
+Host1: checking if SEARCH ALL works on INBOX
+Host1: folder [INBOX] has 51552 messages mentioned by SELECT
+Host1: folder [INBOX] has 51552 messages found by SEARCH ALL
+Host1: folder [INBOX] has the same messages count (51552) by SELECT and SEARCH ALL
+Host2: checking if SEARCH ALL works on INBOX
+Host2: folder [INBOX] has 51421 messages mentioned by SELECT
+Host2: folder [INBOX] has 51421 messages found by SEARCH ALL
+Host2: folder [INBOX] has the same messages count (51421) by SELECT and SEARCH ALL
+Good! SEARCH ALL works on both accounts.
+
+Folders sizes before the synchronization. It can take some time. Be patient.
+You can remove foldersizes listings by using "--nofoldersizes" and "--nofoldersizesatend"
+but then you will also lose the ETA (Estimation Time of Arrival) given after each message copy.
+Host1 folder    1/16 [INBOX]                             Size: 4730326209 Messages: 51552 Biggest:  30198419
+Host2 folder    1/16 [INBOX]                             Size: 4718621284 Messages: 51421 Biggest:  30198419
+Host2-Host1                                                    -11704925            -131                  0
+
+Host1 folder    2/16 [INBOX.Archive]                     Size:    838835 Messages:    13 Biggest:    136864
+Host2 folder    2/16 [Archive]                           Size:    838835 Messages:    13 Biggest:    136864
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    3/16 [INBOX.Black Hole]                  Size:         0 Messages:     0 Biggest:         0
+Host2 folder    3/16 [Black Hole]                        Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    4/16 [INBOX.Drafts]                      Size:    474153 Messages:    28 Biggest:    147021
+Host2 folder    4/16 [Drafts]                            Size:    473437 Messages:    27 Biggest:    147021
+Host2-Host1                                                         -716              -1                  0
+
+Host1 folder    5/16 [INBOX.Junk]                        Size:         0 Messages:     0 Biggest:         0
+Host2 folder    5/16 [Junk]                              Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    6/16 [INBOX.Sent]                        Size: 193948485 Messages:   799 Biggest:  16696123
+Host2 folder    6/16 [Sent]                              Size: 193616593 Messages:   793 Biggest:  16696123
+Host2-Host1                                                      -331892              -6                  0
+
+Host1 folder    7/16 [INBOX.Sent Messages]               Size:         0 Messages:     0 Biggest:         0
+Host2 folder    7/16 [Sent Messages]                     Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    8/16 [INBOX.Trash]                       Size:   1304721 Messages:    15 Biggest:    678555
+Host2 folder    8/16 [Trash]                             Size:   2130500 Messages:    54 Biggest:    678555
+Host2-Host1                                                       825779              39                  0
+
+Host1 folder    9/16 [INBOX.[Airmail]]                   Size:         0 Messages:     0 Biggest:         0
+Host2 folder    9/16 [[Airmail]]                         Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder   10/16 [INBOX.[Airmail].Done]              Size:         0 Messages:     0 Biggest:         0
+Host2 folder   10/16 [[Airmail]/Done]                    Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder   11/16 [INBOX.[Airmail].Memo]              Size:         0 Messages:     0 Biggest:         0
+Host2 folder   11/16 [[Airmail]/Memo]                    Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder   12/16 [INBOX.[Airmail].Send Later]        Size:         0 Messages:     0 Biggest:         0
+Host2 folder   12/16 [[Airmail]/Send Later]              Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder   13/16 [INBOX.[Airmail].Snooze]            Size:         0 Messages:     0 Biggest:         0
+Host2 folder   13/16 [[Airmail]/Snooze]                  Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder   14/16 [INBOX.[Airmail].To Do]             Size:         0 Messages:     0 Biggest:         0
+Host2 folder   14/16 [[Airmail]/To Do]                   Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder   15/16 [INBOX.backupdatenwald]             Size:   6863684 Messages:   445 Biggest:    942201
+Host2 folder   15/16 [backupdatenwald]                   Size:   6861206 Messages:   444 Biggest:    942201
+Host2-Host1                                                        -2478              -1                  0
+
+Host1 folder   16/16 [INBOX.spam]                        Size:   7683383 Messages:   120 Biggest:    278078
+Host2 folder   16/16 [spam]                              Size:   7672042 Messages:   119 Biggest:    278078
+Host2-Host1                                                       -11341              -1                  0
+
+Host1 Nb folders:                    16 folders
+Host2 Nb folders:                    16 folders
+
+Host1 Nb messages:                52972 messages
+Host2 Nb messages:                52871 messages
+
+Host1 Total size:            4941439470 bytes (4.602 GiB)
+Host2 Total size:            4930213897 bytes (4.592 GiB)
+
+Host1 Biggest message:         30198419 bytes (28.799 MiB)
+Host2 Biggest message:         30198419 bytes (28.799 MiB)
+
+Time spent on sizing:        26.6 seconds
+++++ Looping on each one of 16 folders to sync
+ETA: Dienstag 11 November 2025-11-11 10:23:17 +0100 CET  1 s  52972/52972 msgs left
+Folder    1/16 [INBOX]                             -> [INBOX]                            
+Host1: folder [INBOX] has 51552 messages in total (mentioned by SELECT)
+Host2: folder [INBOX] has 51421 messages in total (mentioned by SELECT)
+Host2: folder [INBOX] permanentflags: 
+Host1: folder [INBOX] considering 51552 messages
+Host2: folder [INBOX] considering 51421 messages
+Host1: parsing headers of folder [INBOX]. It can take time for huge folders. Be patient.
+Host1: folder [INBOX] selected 51552 messages, duplicates 1
+Host2: parsing headers of folder [INBOX]. It can take time for huge folders. Be patient.
+Host2: folder [INBOX] selected 51421 messages, duplicates 0
+msg INBOX/53921 {15080}       copied to INBOX/51422      0.01 msgs/s  0.131 KiB/s 14.727 KiB copied ETA: Donnerstag 13 November 2025-11-13 10:51:16 +0100 CET  174368 s  1555/52972 msgs left
+msg INBOX/53922 {24202}       copied to INBOX/51423      0.02 msgs/s  0.341 KiB/s 38.361 KiB copied ETA: Mittwoch 12 November 2025-11-12 10:44:04 +0100 CET  87535 s  1554/52972 msgs left
+msg INBOX/53923 {24638}       copied to INBOX/51424      0.03 msgs/s  0.551 KiB/s 62.422 KiB copied ETA: Mittwoch 12 November 2025-11-12 02:42:07 +0100 CET  58618 s  1553/52972 msgs left
+msg INBOX/53924 {32288}       copied to INBOX/51425      0.04 msgs/s  0.825 KiB/s 93.953 KiB copied ETA: Dienstag 11 November 2025-11-11 22:41:30 +0100 CET  44180 s  1552/52972 msgs left
+msg INBOX/53925 {113583}      copied to INBOX/51426      0.04 msgs/s  1.781 KiB/s 204.874 KiB copied ETA: Dienstag 11 November 2025-11-11 20:19:47 +0100 CET  35676 s  1551/52972 msgs left
+msg INBOX/53926 {62300}       copied to INBOX/51427      0.05 msgs/s  2.290 KiB/s 265.714 KiB copied ETA: Dienstag 11 November 2025-11-11 18:44:52 +0100 CET  29980 s  1550/52972 msgs left
+msg INBOX/53927 {78932}       copied to INBOX/51428      0.06 msgs/s  2.926 KiB/s 342.796 KiB copied ETA: Dienstag 11 November 2025-11-11 17:37:15 +0100 CET  25921 s  1549/52972 msgs left
+msg INBOX/53928 {214273}      copied to INBOX/51429      0.07 msgs/s  4.654 KiB/s 552.047 KiB copied ETA: Dienstag 11 November 2025-11-11 16:47:49 +0100 CET  22954 s  1548/52972 msgs left
+msg INBOX/53929 {51971}       copied to INBOX/51430      0.08 msgs/s  5.060 KiB/s 602.800 KiB copied ETA: Dienstag 11 November 2025-11-11 16:06:33 +0100 CET  20478 s  1547/52972 msgs left
+msg INBOX/53930 {80481}       copied to INBOX/51431      0.08 msgs/s  5.678 KiB/s 681.395 KiB copied ETA: Dienstag 11 November 2025-11-11 15:34:28 +0100 CET  18552 s  1546/52972 msgs left
+msg INBOX/53931 {16815}       copied to INBOX/51432      0.09 msgs/s  5.798 KiB/s 697.815 KiB copied ETA: Dienstag 11 November 2025-11-11 15:06:59 +0100 CET  16903 s  1545/52972 msgs left
+msg INBOX/53932 {1836}        copied to INBOX/51433      0.10 msgs/s  5.798 KiB/s 699.608 KiB copied ETA: Dienstag 11 November 2025-11-11 14:44:02 +0100 CET  15525 s  1544/52972 msgs left
+msg INBOX/53933 {97163}       copied to INBOX/51434      0.11 msgs/s  6.526 KiB/s 794.494 KiB copied ETA: Dienstag 11 November 2025-11-11 14:26:07 +0100 CET  14449 s  1543/52972 msgs left
+msg INBOX/53934 {1814}        copied to INBOX/51435      0.11 msgs/s  6.522 KiB/s 796.266 KiB copied ETA: Dienstag 11 November 2025-11-11 14:09:26 +0100 CET  13448 s  1542/52972 msgs left
+msg INBOX/53935 {57606}       copied to INBOX/51436      0.12 msgs/s  6.941 KiB/s 852.521 KiB copied ETA: Dienstag 11 November 2025-11-11 13:55:38 +0100 CET  12619 s  1541/52972 msgs left
+msg INBOX/53936 {131579}      copied to INBOX/51437      0.13 msgs/s  7.929 KiB/s 981.017 KiB copied ETA: Dienstag 11 November 2025-11-11 13:43:48 +0100 CET  11909 s  1540/52972 msgs left
+msg INBOX/53937 {131586}      copied to INBOX/51438      0.14 msgs/s  8.910 KiB/s 1.084 MiB copied ETA: Dienstag 11 November 2025-11-11 13:33:14 +0100 CET  11274 s  1539/52972 msgs left
+msg INBOX/53938 {61452}       copied to INBOX/51439      0.14 msgs/s  9.357 KiB/s 1.142 MiB copied ETA: Dienstag 11 November 2025-11-11 13:23:20 +0100 CET  10679 s  1538/52972 msgs left
+msg INBOX/53939 {107997}      copied to INBOX/51440      0.15 msgs/s  10.120 KiB/s 1.245 MiB copied ETA: Dienstag 11 November 2025-11-11 13:15:14 +0100 CET  10192 s  1537/52972 msgs left
+msg INBOX/53940 {82348}       copied to INBOX/51441      0.16 msgs/s  10.683 KiB/s 1.324 MiB copied ETA: Dienstag 11 November 2025-11-11 13:07:47 +0100 CET  9744 s  1536/52972 msgs left
+msg INBOX/53941 {41002}       copied to INBOX/51442      0.16 msgs/s  10.959 KiB/s 1.363 MiB copied ETA: Dienstag 11 November 2025-11-11 13:00:31 +0100 CET  9308 s  1535/52972 msgs left
+msg INBOX/53942 {105230}      copied to INBOX/51443      0.17 msgs/s  11.700 KiB/s 1.463 MiB copied ETA: Dienstag 11 November 2025-11-11 12:54:13 +0100 CET  8929 s  1534/52972 msgs left
+msg INBOX/53943 {114996}      copied to INBOX/51444      0.18 msgs/s  12.510 KiB/s 1.573 MiB copied ETA: Dienstag 11 November 2025-11-11 12:48:26 +0100 CET  8581 s  1533/52972 msgs left
+msg INBOX/53944 {48513}       copied to INBOX/51445      0.19 msgs/s  12.836 KiB/s 1.619 MiB copied ETA: Dienstag 11 November 2025-11-11 12:42:50 +0100 CET  8244 s  1532/52972 msgs left
+msg INBOX/53945 {105807}      copied to INBOX/51446      0.19 msgs/s  13.548 KiB/s 1.720 MiB copied ETA: Dienstag 11 November 2025-11-11 12:38:07 +0100 CET  7961 s  1531/52972 msgs left
+msg INBOX/53946 {17384}       copied to INBOX/51447      0.20 msgs/s  13.648 KiB/s 1.737 MiB copied ETA: Dienstag 11 November 2025-11-11 12:33:13 +0100 CET  7667 s  1530/52972 msgs left
+msg INBOX/53947 {91850}       copied to INBOX/51448      0.21 msgs/s  14.258 KiB/s 1.824 MiB copied ETA: Dienstag 11 November 2025-11-11 12:29:06 +0100 CET  7419 s  1529/52972 msgs left
+msg INBOX/53948 {16809}       copied to INBOX/51449      0.21 msgs/s  14.351 KiB/s 1.840 MiB copied ETA: Dienstag 11 November 2025-11-11 12:24:53 +0100 CET  7165 s  1528/52972 msgs left
+msg INBOX/53949 {78853}       copied to INBOX/51450      0.22 msgs/s  14.828 KiB/s 1.915 MiB copied ETA: Dienstag 11 November 2025-11-11 12:21:33 +0100 CET  6965 s  1527/52972 msgs left
+msg INBOX/53950 {104590}      copied to INBOX/51451      0.22 msgs/s  15.463 KiB/s 2.015 MiB copied ETA: Dienstag 11 November 2025-11-11 12:18:37 +0100 CET  6788 s  1526/52972 msgs left
+msg INBOX/53951 {28359}       copied to INBOX/51452      0.23 msgs/s  15.588 KiB/s 2.042 MiB copied ETA: Dienstag 11 November 2025-11-11 12:15:30 +0100 CET  6600 s  1525/52972 msgs left
+msg INBOX/53952 {98272}       copied to INBOX/51453      0.24 msgs/s  16.127 KiB/s 2.136 MiB copied ETA: Dienstag 11 November 2025-11-11 12:13:11 +0100 CET  6459 s  1524/52972 msgs left
+msg INBOX/53953 {82704}       copied to INBOX/51454      0.24 msgs/s  16.608 KiB/s 2.215 MiB copied ETA: Dienstag 11 November 2025-11-11 12:10:35 +0100 CET  6302 s  1523/52972 msgs left
+msg INBOX/53954 {221047}      copied to INBOX/51455      0.25 msgs/s  17.949 KiB/s 2.426 MiB copied ETA: Dienstag 11 November 2025-11-11 12:08:49 +0100 CET  6194 s  1522/52972 msgs left
+msg INBOX/53955 {233616}      copied to INBOX/51456      0.25 msgs/s  19.354 KiB/s 2.648 MiB copied ETA: Dienstag 11 November 2025-11-11 12:07:05 +0100 CET  6089 s  1521/52972 msgs left
+msg INBOX/53956 {66519}       copied to INBOX/51457      0.26 msgs/s  19.743 KiB/s 2.712 MiB copied ETA: Dienstag 11 November 2025-11-11 12:04:35 +0100 CET  5938 s  1520/52972 msgs left
+msg INBOX/53957 {91849}       copied to INBOX/51458      0.26 msgs/s  20.289 KiB/s 2.799 MiB copied ETA: Dienstag 11 November 2025-11-11 12:02:18 +0100 CET  5800 s  1519/52972 msgs left
+msg INBOX/53958 {181283}      copied to INBOX/51459      0.27 msgs/s  21.241 KiB/s 2.972 MiB copied ETA: Dienstag 11 November 2025-11-11 12:01:03 +0100 CET  5724 s  1518/52972 msgs left
+msg INBOX/53959 {69192}       copied to INBOX/51460      0.27 msgs/s  21.510 KiB/s 3.038 MiB copied ETA: Dienstag 11 November 2025-11-11 11:59:27 +0100 CET  5626 s  1517/52972 msgs left
+msg INBOX/53960 {100197}      copied to INBOX/51461      0.27 msgs/s  22.013 KiB/s 3.134 MiB copied ETA: Dienstag 11 November 2025-11-11 11:57:47 +0100 CET  5525 s  1516/52972 msgs left
+msg INBOX/53961 {102316}      copied to INBOX/51462      0.28 msgs/s  22.519 KiB/s 3.231 MiB copied ETA: Dienstag 11 November 2025-11-11 11:56:13 +0100 CET  5430 s  1515/52972 msgs left
+msg INBOX/53962 {101292}      copied to INBOX/51463      0.28 msgs/s  23.039 KiB/s 3.328 MiB copied ETA: Dienstag 11 November 2025-11-11 11:54:36 +0100 CET  5332 s  1514/52972 msgs left
+msg INBOX/53963 {99650}       copied to INBOX/51464      0.29 msgs/s  23.566 KiB/s 3.423 MiB copied ETA: Dienstag 11 November 2025-11-11 11:52:58 +0100 CET  5233 s  1513/52972 msgs left
+msg INBOX/53964 {96543}       copied to INBOX/51465      0.29 msgs/s  24.081 KiB/s 3.515 MiB copied ETA: Dienstag 11 November 2025-11-11 11:51:22 +0100 CET  5136 s  1512/52972 msgs left
+msg INBOX/53965 {421655}      copied to INBOX/51466      0.30 msgs/s  26.458 KiB/s 3.917 MiB copied ETA: Dienstag 11 November 2025-11-11 11:50:38 +0100 CET  5091 s  1511/52972 msgs left
+msg INBOX/53966 {47336}       copied to INBOX/51467      0.30 msgs/s  26.667 KiB/s 3.962 MiB copied ETA: Dienstag 11 November 2025-11-11 11:49:03 +0100 CET  4995 s  1510/52972 msgs left
+msg INBOX/53967 {75901}       copied to INBOX/51468      0.31 msgs/s  27.033 KiB/s 4.035 MiB copied ETA: Dienstag 11 November 2025-11-11 11:47:36 +0100 CET  4907 s  1509/52972 msgs left
+msg INBOX/53968 {27112}       copied to INBOX/51469      0.31 msgs/s  27.131 KiB/s 4.061 MiB copied ETA: Dienstag 11 November 2025-11-11 11:46:04 +0100 CET  4815 s  1508/52972 msgs left
+msg INBOX/53969 {129636}      copied to INBOX/51470      0.32 msgs/s  27.645 KiB/s 4.184 MiB copied ETA: Dienstag 11 November 2025-11-11 11:45:18 +0100 CET  4767 s  1507/52972 msgs left
+msg INBOX/53970 {45945}       copied to INBOX/51471      0.32 msgs/s  27.764 KiB/s 4.228 MiB copied ETA: Dienstag 11 November 2025-11-11 11:44:09 +0100 CET  4697 s  1506/52972 msgs left
+msg INBOX/53971 {10349}       copied to INBOX/51472      0.33 msgs/s  27.765 KiB/s 4.238 MiB copied ETA: Dienstag 11 November 2025-11-11 11:42:45 +0100 CET  4612 s  1505/52972 msgs left
+msg INBOX/53972 {8114}        copied to INBOX/51473      0.33 msgs/s  27.769 KiB/s 4.246 MiB copied ETA: Dienstag 11 November 2025-11-11 11:41:21 +0100 CET  4528 s  1504/52972 msgs left
+msg INBOX/53973 {107795}      copied to INBOX/51474      0.34 msgs/s  28.227 KiB/s 4.348 MiB copied ETA: Dienstag 11 November 2025-11-11 11:40:27 +0100 CET  4474 s  1503/52972 msgs left
+msg INBOX/53974 {58352}       copied to INBOX/51475      0.34 msgs/s  28.463 KiB/s 4.404 MiB copied ETA: Dienstag 11 November 2025-11-11 11:39:22 +0100 CET  4407 s  1502/52972 msgs left
+msg INBOX/53975 {60965}       copied to INBOX/51476      0.34 msgs/s  28.639 KiB/s 4.462 MiB copied ETA: Dienstag 11 November 2025-11-11 11:38:30 +0100 CET  4354 s  1501/52972 msgs left
+msg INBOX/53976 {2063}        copied to INBOX/51477      0.35 msgs/s  28.599 KiB/s 4.464 MiB copied ETA: Dienstag 11 November 2025-11-11 11:37:17 +0100 CET  4282 s  1500/52972 msgs left
+msg INBOX/53977 {125823}      copied to INBOX/51478      0.35 msgs/s  29.116 KiB/s 4.584 MiB copied ETA: Dienstag 11 November 2025-11-11 11:36:37 +0100 CET  4240 s  1499/52972 msgs left
+msg INBOX/53978 {92908}       copied to INBOX/51479      0.36 msgs/s  29.484 KiB/s 4.673 MiB copied ETA: Dienstag 11 November 2025-11-11 11:35:50 +0100 CET  4191 s  1498/52972 msgs left
+msg INBOX/53979 {124577}      copied to INBOX/51480      0.36 msgs/s  30.061 KiB/s 4.792 MiB copied ETA: Dienstag 11 November 2025-11-11 11:35:01 +0100 CET  4141 s  1497/52972 msgs left
+msg INBOX/53980 {206134}      copied to INBOX/51481      0.36 msgs/s  30.989 KiB/s 4.988 MiB copied ETA: Dienstag 11 November 2025-11-11 11:34:31 +0100 CET  4110 s  1496/52972 msgs left
+msg INBOX/53981 {98670}       copied to INBOX/51482      0.37 msgs/s  31.401 KiB/s 5.082 MiB copied ETA: Dienstag 11 November 2025-11-11 11:33:44 +0100 CET  4062 s  1495/52972 msgs left
+msg INBOX/53982 {79564}       copied to INBOX/51483      0.37 msgs/s  31.735 KiB/s 5.158 MiB copied ETA: Dienstag 11 November 2025-11-11 11:32:53 +0100 CET  4011 s  1494/52972 msgs left
+msg INBOX/53983 {108645}      copied to INBOX/51484      0.38 msgs/s  32.166 KiB/s 5.262 MiB copied ETA: Dienstag 11 November 2025-11-11 11:32:13 +0100 CET  3970 s  1493/52972 msgs left
+msg INBOX/53984 {63848}       copied to INBOX/51485      0.38 msgs/s  32.398 KiB/s 5.323 MiB copied ETA: Dienstag 11 November 2025-11-11 11:31:26 +0100 CET  3922 s  1492/52972 msgs left
+msg INBOX/53985 {155892}      copied to INBOX/51486      0.38 msgs/s  33.069 KiB/s 5.471 MiB copied ETA: Dienstag 11 November 2025-11-11 11:30:52 +0100 CET  3886 s  1491/52972 msgs left
+msg INBOX/53986 {20892}       copied to INBOX/51487      0.39 msgs/s  33.104 KiB/s 5.491 MiB copied ETA: Dienstag 11 November 2025-11-11 11:30:01 +0100 CET  3835 s  1490/52972 msgs left
+msg INBOX/53987 {18722}       copied to INBOX/51488      0.39 msgs/s  33.149 KiB/s 5.509 MiB copied ETA: Dienstag 11 November 2025-11-11 11:29:08 +0100 CET  3782 s  1489/52972 msgs left
+msg INBOX/53988 {77298}       copied to INBOX/51489      0.40 msgs/s  33.343 KiB/s 5.583 MiB copied ETA: Dienstag 11 November 2025-11-11 11:28:39 +0100 CET  3752 s  1488/52972 msgs left
+msg INBOX/53989 {71956}       copied to INBOX/51490      0.40 msgs/s  33.562 KiB/s 5.651 MiB copied ETA: Dienstag 11 November 2025-11-11 11:28:04 +0100 CET  3716 s  1487/52972 msgs left
+msg INBOX/53990 {130149}      copied to INBOX/51491      0.40 msgs/s  34.035 KiB/s 5.776 MiB copied ETA: Dienstag 11 November 2025-11-11 11:27:39 +0100 CET  3689 s  1486/52972 msgs left
+msg INBOX/53991 {52374}       copied to INBOX/51492      0.41 msgs/s  34.170 KiB/s 5.826 MiB copied ETA: Dienstag 11 November 2025-11-11 11:27:02 +0100 CET  3651 s  1485/52972 msgs left
+msg INBOX/53992 {19331}       copied to INBOX/51493      0.41 msgs/s  34.218 KiB/s 5.844 MiB copied ETA: Dienstag 11 November 2025-11-11 11:26:16 +0100 CET  3605 s  1484/52972 msgs left
+msg INBOX/53993 {88079}       copied to INBOX/51494      0.42 msgs/s  34.570 KiB/s 5.928 MiB copied ETA: Dienstag 11 November 2025-11-11 11:25:39 +0100 CET  3567 s  1483/52972 msgs left
+msg INBOX/53994 {20913}       copied to INBOX/51495      0.42 msgs/s  34.635 KiB/s 5.948 MiB copied ETA: Dienstag 11 November 2025-11-11 11:24:54 +0100 CET  3522 s  1482/52972 msgs left
+msg INBOX/53995 {79273}       copied to INBOX/51496      0.42 msgs/s  34.923 KiB/s 6.023 MiB copied ETA: Dienstag 11 November 2025-11-11 11:24:20 +0100 CET  3488 s  1481/52972 msgs left
+msg INBOX/53996 {158189}      copied to INBOX/51497      0.43 msgs/s  35.539 KiB/s 6.174 MiB copied ETA: Dienstag 11 November 2025-11-11 11:23:58 +0100 CET  3464 s  1480/52972 msgs left
+msg INBOX/53997 {74701}       copied to INBOX/51498      0.43 msgs/s  35.785 KiB/s 6.246 MiB copied ETA: Dienstag 11 November 2025-11-11 11:23:28 +0100 CET  3433 s  1479/52972 msgs left
+msg INBOX/53998 {74884}       copied to INBOX/51499      0.43 msgs/s  36.051 KiB/s 6.317 MiB copied ETA: Dienstag 11 November 2025-11-11 11:22:55 +0100 CET  3400 s  1478/52972 msgs left
+msg INBOX/53999 {105205}      copied to INBOX/51500      0.44 msgs/s  36.449 KiB/s 6.417 MiB copied ETA: Dienstag 11 November 2025-11-11 11:22:27 +0100 CET  3371 s  1477/52972 msgs left
+msg INBOX/54000 {199333}      copied to INBOX/51501      0.44 msgs/s  37.337 KiB/s 6.607 MiB copied ETA: Dienstag 11 November 2025-11-11 11:22:01 +0100 CET  3343 s  1476/52972 msgs left
+msg INBOX/54001 {44554}       copied to INBOX/51502      0.45 msgs/s  37.501 KiB/s 6.650 MiB copied ETA: Dienstag 11 November 2025-11-11 11:21:24 +0100 CET  3307 s  1475/52972 msgs left
+msg INBOX/54002 {29195}       copied to INBOX/51503      0.45 msgs/s  37.576 KiB/s 6.678 MiB copied ETA: Dienstag 11 November 2025-11-11 11:20:49 +0100 CET  3271 s  1474/52972 msgs left
+msg INBOX/54003 {80784}       copied to INBOX/51504      0.45 msgs/s  37.785 KiB/s 6.755 MiB copied ETA: Dienstag 11 November 2025-11-11 11:20:28 +0100 CET  3249 s  1473/52972 msgs left
+msg INBOX/54004 {108069}      copied to INBOX/51505      0.46 msgs/s  38.157 KiB/s 6.858 MiB copied ETA: Dienstag 11 November 2025-11-11 11:20:05 +0100 CET  3225 s  1472/52972 msgs left
+msg INBOX/54005 {217508}      copied to INBOX/51506      0.46 msgs/s  39.045 KiB/s 7.065 MiB copied ETA: Dienstag 11 November 2025-11-11 11:19:48 +0100 CET  3207 s  1471/52972 msgs left
+msg INBOX/54006 {217463}      copied to INBOX/51507      0.46 msgs/s  39.850 KiB/s 7.273 MiB copied ETA: Dienstag 11 November 2025-11-11 11:19:37 +0100 CET  3194 s  1470/52972 msgs left
+msg INBOX/54007 {235648}      copied to INBOX/51508      0.46 msgs/s  40.766 KiB/s 7.497 MiB copied ETA: Dienstag 11 November 2025-11-11 11:19:24 +0100 CET  3180 s  1469/52972 msgs left
+msg INBOX/54008 {38759}       copied to INBOX/51509      0.47 msgs/s  40.824 KiB/s 7.534 MiB copied ETA: Dienstag 11 November 2025-11-11 11:18:58 +0100 CET  3153 s  1468/52972 msgs left
+msg INBOX/54009 {225951}      copied to INBOX/51510      0.47 msgs/s  41.621 KiB/s 7.750 MiB copied ETA: Dienstag 11 November 2025-11-11 11:18:50 +0100 CET  3143 s  1467/52972 msgs left
+msg INBOX/54010 {163645}      copied to INBOX/51511      0.47 msgs/s  42.194 KiB/s 7.906 MiB copied ETA: Dienstag 11 November 2025-11-11 11:18:33 +0100 CET  3125 s  1466/52972 msgs left
+msg INBOX/54011 {102414}      copied to INBOX/51512      0.47 msgs/s  42.532 KiB/s 8.004 MiB copied ETA: Dienstag 11 November 2025-11-11 11:18:11 +0100 CET  3102 s  1465/52972 msgs left
+msg INBOX/54012 {136270}      copied to INBOX/51513      0.47 msgs/s  43.001 KiB/s 8.134 MiB copied ETA: Dienstag 11 November 2025-11-11 11:17:52 +0100 CET  3082 s  1464/52972 msgs left
+msg INBOX/54013 {71879}       copied to INBOX/51514      0.48 msgs/s  43.079 KiB/s 8.202 MiB copied ETA: Dienstag 11 November 2025-11-11 11:17:38 +0100 CET  3067 s  1463/52972 msgs left
+msg INBOX/54014 {52092}       copied to INBOX/51515      0.48 msgs/s  43.140 KiB/s 8.252 MiB copied ETA: Dienstag 11 November 2025-11-11 11:17:18 +0100 CET  3046 s  1462/52972 msgs left
+msg INBOX/54015 {56768}       copied to INBOX/51516      0.48 msgs/s  43.221 KiB/s 8.306 MiB copied ETA: Dienstag 11 November 2025-11-11 11:16:59 +0100 CET  3026 s  1461/52972 msgs left
+msg INBOX/54016 {84739}       copied to INBOX/51517      0.49 msgs/s  43.490 KiB/s 8.387 MiB copied ETA: Dienstag 11 November 2025-11-11 11:16:37 +0100 CET  3003 s  1460/52972 msgs left
+msg INBOX/54017 {75042}       copied to INBOX/51518      0.49 msgs/s  43.652 KiB/s 8.458 MiB copied ETA: Dienstag 11 November 2025-11-11 11:16:19 +0100 CET  2984 s  1459/52972 msgs left
+msg INBOX/54018 {80867}       copied to INBOX/51519      0.49 msgs/s  43.865 KiB/s 8.535 MiB copied ETA: Dienstag 11 November 2025-11-11 11:16:00 +0100 CET  2964 s  1458/52972 msgs left
+msg INBOX/54019 {238709}      copied to INBOX/51520      0.49 msgs/s  44.702 KiB/s 8.763 MiB copied ETA: Dienstag 11 November 2025-11-11 11:15:51 +0100 CET  2954 s  1457/52972 msgs left
+msg INBOX/54020 {19168}       copied to INBOX/51521      0.50 msgs/s  44.701 KiB/s 8.781 MiB copied ETA: Dienstag 11 November 2025-11-11 11:15:26 +0100 CET  2929 s  1456/52972 msgs left
+msg INBOX/54021 {14760}       copied to INBOX/51522      0.50 msgs/s  44.701 KiB/s 8.795 MiB copied ETA: Dienstag 11 November 2025-11-11 11:15:00 +0100 CET  2903 s  1455/52972 msgs left
+msg INBOX/54022 {16469}       copied to INBOX/51523      0.51 msgs/s  44.685 KiB/s 8.811 MiB copied ETA: Dienstag 11 November 2025-11-11 11:14:36 +0100 CET  2878 s  1454/52972 msgs left
+msg INBOX/54023 {47581}       copied to INBOX/51524      0.51 msgs/s  44.763 KiB/s 8.857 MiB copied ETA: Dienstag 11 November 2025-11-11 11:14:17 +0100 CET  2858 s  1453/52972 msgs left
+msg INBOX/54024 {47639}       copied to INBOX/51525      0.51 msgs/s  44.848 KiB/s 8.902 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:57 +0100 CET  2838 s  1452/52972 msgs left
+msg INBOX/54025 {47361}       copied to INBOX/51526      0.52 msgs/s  44.977 KiB/s 8.947 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:35 +0100 CET  2815 s  1451/52972 msgs left
+msg INBOX/54026 {3675}        copied to INBOX/51527      0.52 msgs/s  44.913 KiB/s 8.951 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:12 +0100 CET  2792 s  1450/52972 msgs left
+msg INBOX/54027 {62704}       copied to INBOX/51528      0.52 msgs/s  45.079 KiB/s 9.010 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:52 +0100 CET  2772 s  1449/52972 msgs left
+msg INBOX/54028 {39196}       copied to INBOX/51529      0.53 msgs/s  45.080 KiB/s 9.048 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:37 +0100 CET  2756 s  1448/52972 msgs left
+msg INBOX/54029 {116790}      copied to INBOX/51530      0.53 msgs/s  45.261 KiB/s 9.159 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:34 +0100 CET  2751 s  1447/52972 msgs left
+msg INBOX/54030 {199616}      copied to INBOX/51531      0.53 msgs/s  45.806 KiB/s 9.350 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:33 +0100 CET  2748 s  1446/52972 msgs left
+msg INBOX/54031 {57172}       copied to INBOX/51532      0.53 msgs/s  45.904 KiB/s 9.404 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:17 +0100 CET  2731 s  1445/52972 msgs left
+msg INBOX/54032 {63192}       copied to INBOX/51533      0.53 msgs/s  45.962 KiB/s 9.464 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:05 +0100 CET  2719 s  1444/52972 msgs left
+msg INBOX/54033 {15450}       copied to INBOX/51534      0.53 msgs/s  45.883 KiB/s 9.479 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:49 +0100 CET  2701 s  1443/52972 msgs left
+msg INBOX/54035 {107113}      copied to INBOX/51535      0.54 msgs/s  46.085 KiB/s 9.581 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:42 +0100 CET  2693 s  1442/52972 msgs left
+msg INBOX/54038 {61164}       copied to INBOX/51536      0.54 msgs/s  46.193 KiB/s 9.640 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:27 +0100 CET  2678 s  1441/52972 msgs left
+msg INBOX/54039 {67373}       copied to INBOX/51537      0.54 msgs/s  46.376 KiB/s 9.704 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:10 +0100 CET  2660 s  1440/52972 msgs left
+msg INBOX/54040 {146532}      copied to INBOX/51538      0.54 msgs/s  46.735 KiB/s 9.844 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:04 +0100 CET  2653 s  1439/52972 msgs left
+msg INBOX/54041 {34496}       copied to INBOX/51539      0.55 msgs/s  46.778 KiB/s 9.876 MiB copied ETA: Dienstag 11 November 2025-11-11 11:10:47 +0100 CET  2635 s  1438/52972 msgs left
+msg INBOX/54042 {55093}       copied to INBOX/51540      0.55 msgs/s  46.827 KiB/s 9.929 MiB copied ETA: Dienstag 11 November 2025-11-11 11:10:35 +0100 CET  2622 s  1437/52972 msgs left
+msg INBOX/54043 {124526}      copied to INBOX/51541      0.55 msgs/s  47.169 KiB/s 10.048 MiB copied ETA: Dienstag 11 November 2025-11-11 11:10:24 +0100 CET  2610 s  1436/52972 msgs left
+msg INBOX/54044 {99979}       copied to INBOX/51542      0.55 msgs/s  47.462 KiB/s 10.143 MiB copied ETA: Dienstag 11 November 2025-11-11 11:10:10 +0100 CET  2595 s  1435/52972 msgs left
+msg INBOX/54045 {48542}       copied to INBOX/51543      0.56 msgs/s  47.564 KiB/s 10.189 MiB copied ETA: Dienstag 11 November 2025-11-11 11:09:54 +0100 CET  2578 s  1434/52972 msgs left
+msg INBOX/54046 {37367}       copied to INBOX/51544      0.56 msgs/s  47.628 KiB/s 10.225 MiB copied ETA: Dienstag 11 November 2025-11-11 11:09:37 +0100 CET  2561 s  1433/52972 msgs left
+msg INBOX/54047 {110634}      copied to INBOX/51545      0.56 msgs/s  47.940 KiB/s 10.331 MiB copied ETA: Dienstag 11 November 2025-11-11 11:09:25 +0100 CET  2548 s  1432/52972 msgs left
+msg INBOX/54048 {112096}      copied to INBOX/51546      0.56 msgs/s  48.136 KiB/s 10.437 MiB copied ETA: Dienstag 11 November 2025-11-11 11:09:20 +0100 CET  2542 s  1431/52972 msgs left
+msg INBOX/54049 {35046}       copied to INBOX/51547      0.57 msgs/s  48.158 KiB/s 10.471 MiB copied ETA: Dienstag 11 November 2025-11-11 11:09:06 +0100 CET  2527 s  1430/52972 msgs left
+msg INBOX/54050 {66975}       copied to INBOX/51548      0.57 msgs/s  48.303 KiB/s 10.535 MiB copied ETA: Dienstag 11 November 2025-11-11 11:08:52 +0100 CET  2513 s  1429/52972 msgs left
+msg INBOX/54051 {55780}       copied to INBOX/51549      0.57 msgs/s  48.397 KiB/s 10.588 MiB copied ETA: Dienstag 11 November 2025-11-11 11:08:39 +0100 CET  2499 s  1428/52972 msgs left
+msg INBOX/54052 {95288}       copied to INBOX/51550      0.57 msgs/s  48.632 KiB/s 10.679 MiB copied ETA: Dienstag 11 November 2025-11-11 11:08:28 +0100 CET  2487 s  1427/52972 msgs left
+msg INBOX/54053 {749529}      copied to INBOX/51551      0.57 msgs/s  51.229 KiB/s 11.394 MiB copied ETA: Dienstag 11 November 2025-11-11 11:08:42 +0100 CET  2498 s  1426/52972 msgs left
+msg INBOX/54054 {37123}       copied to INBOX/51552      0.57 msgs/s  51.263 KiB/s 11.429 MiB copied ETA: Dienstag 11 November 2025-11-11 11:08:28 +0100 CET  2483 s  1425/52972 msgs left
+msg INBOX/54055 {32945}       copied to INBOX/51553      0.58 msgs/s  51.304 KiB/s 11.460 MiB copied ETA: Dienstag 11 November 2025-11-11 11:08:12 +0100 CET  2468 s  1424/52972 msgs left
+msg INBOX/54056 {42646}       copied to INBOX/51554      0.58 msgs/s  51.357 KiB/s 11.501 MiB copied ETA: Dienstag 11 November 2025-11-11 11:07:59 +0100 CET  2454 s  1423/52972 msgs left
+msg INBOX/54057 {1826}        copied to INBOX/51555      0.58 msgs/s  51.289 KiB/s 11.503 MiB copied ETA: Dienstag 11 November 2025-11-11 11:07:43 +0100 CET  2437 s  1422/52972 msgs left
+msg INBOX/54058 {100618}      copied to INBOX/51556      0.59 msgs/s  51.501 KiB/s 11.599 MiB copied ETA: Dienstag 11 November 2025-11-11 11:07:34 +0100 CET  2427 s  1421/52972 msgs left
+msg INBOX/54059 {58414}       copied to INBOX/51557      0.59 msgs/s  51.631 KiB/s 11.655 MiB copied ETA: Dienstag 11 November 2025-11-11 11:07:21 +0100 CET  2413 s  1420/52972 msgs left
+ETA: Dienstag 11 November 2025-11-11 11:07:27 +0100 CET  2420 s  1420/52972 msgs left
+Folder    2/16 [INBOX.Archive]                     -> [Archive]                          
+Host1: folder [INBOX.Archive] has 13 messages in total (mentioned by SELECT)
+Host2: folder [Archive] has 13 messages in total (mentioned by SELECT)
+Host2: folder [Archive] permanentflags: 
+Host1: folder [INBOX.Archive] considering 13 messages
+Host2: folder [Archive] considering 13 messages
+Host1: folder [INBOX.Archive] selected 13 messages, duplicates 0
+Host2: folder [Archive] selected 13 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 11:07:20 +0100 CET  2411 s  1407/52972 msgs left
+Folder    3/16 [INBOX.Black Hole]                  -> [Black Hole]                       
+Host1: folder [INBOX.Black Hole] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Black Hole] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Black Hole] permanentflags: 
+Host1: folder [INBOX.Black Hole] considering 0 messages
+Host2: folder [Black Hole] considering 0 messages
+Host1: folder [INBOX.Black Hole] selected 0 messages, duplicates 0
+Host2: folder [Black Hole] selected 0 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 11:07:25 +0100 CET  2416 s  1407/52972 msgs left
+Folder    4/16 [INBOX.Drafts]                      -> [Drafts]                           
+Host1: folder [INBOX.Drafts] has 28 messages in total (mentioned by SELECT)
+Host2: folder [Drafts] has 27 messages in total (mentioned by SELECT)
+Host2: folder [Drafts] permanentflags: 
+Host1: folder [INBOX.Drafts] considering 28 messages
+Host2: folder [Drafts] considering 27 messages
+Host1: folder [INBOX.Drafts] selected 28 messages, duplicates 1
+Host2: folder [Drafts] selected 27 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 11:06:48 +0100 CET  2377 s  1379/52972 msgs left
+Folder    5/16 [INBOX.Junk]                        -> [Junk]                             
+Host1: folder [INBOX.Junk] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Junk] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Junk] permanentflags: 
+Host1: folder [INBOX.Junk] considering 0 messages
+Host2: folder [Junk] considering 0 messages
+Host1: folder [INBOX.Junk] selected 0 messages, duplicates 0
+Host2: folder [Junk] selected 0 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 11:06:53 +0100 CET  2382 s  1379/52972 msgs left
+Folder    6/16 [INBOX.Sent]                        -> [Sent]                             
+Host1: folder [INBOX.Sent] has 799 messages in total (mentioned by SELECT)
+Host2: folder [Sent] has 793 messages in total (mentioned by SELECT)
+Host2: folder [Sent] permanentflags: 
+Host1: folder [INBOX.Sent] considering 799 messages
+Host2: folder [Sent] considering 793 messages
+Host1: folder [INBOX.Sent] selected 799 messages, duplicates 4
+Host2: folder [Sent] selected 793 messages, duplicates 0
+msg INBOX.Sent/801 {4956}          copied to Sent/794        0.58 msgs/s  50.335 KiB/s 11.659 MiB copied ETA: Dienstag 11 November 2025-11-11 10:43:59 +0100 CET  1006 s  581/52972 msgs left
+msg INBOX.Sent/802 {17857}         copied to Sent/795        0.58 msgs/s  50.320 KiB/s 11.676 MiB copied ETA: Dienstag 11 November 2025-11-11 10:43:52 +0100 CET  999 s  580/52972 msgs left
+ETA: Dienstag 11 November 2025-11-11 10:43:52 +0100 CET  999 s  580/52972 msgs left
+Folder    7/16 [INBOX.Sent Messages]               -> [Sent Messages]                    
+Host1: folder [INBOX.Sent Messages] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Sent Messages] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Sent Messages] permanentflags: 
+Host1: folder [INBOX.Sent Messages] considering 0 messages
+Host2: folder [Sent Messages] considering 0 messages
+Host1: folder [INBOX.Sent Messages] selected 0 messages, duplicates 0
+Host2: folder [Sent Messages] selected 0 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 10:43:55 +0100 CET  1001 s  580/52972 msgs left
+Folder    8/16 [INBOX.Trash]                       -> [Trash]                            
+Host1: folder [INBOX.Trash] has 15 messages in total (mentioned by SELECT)
+Host2: folder [Trash] has 54 messages in total (mentioned by SELECT)
+Host2: folder [Trash] permanentflags: 
+Host1: folder [INBOX.Trash] considering 15 messages
+Host2: folder [Trash] considering 54 messages
+Host1: folder [INBOX.Trash] selected 15 messages, duplicates 0
+Host2: folder [Trash] selected 54 messages, duplicates 0
+msg INBOX.Trash/2231 {16191}        copied to Trash/55         0.58 msgs/s  49.955 KiB/s 11.692 MiB copied ETA: Dienstag 11 November 2025-11-11 10:43:33 +0100 CET  978 s  567/52972 msgs left
+msg INBOX.Trash/2232 {71604}        copied to Trash/56         0.58 msgs/s  49.714 KiB/s 11.760 MiB copied ETA: Dienstag 11 November 2025-11-11 10:43:38 +0100 CET  979 s  566/52972 msgs left
+msg INBOX.Trash/2233 {125020}       copied to Trash/57         0.58 msgs/s  49.884 KiB/s 11.879 MiB copied ETA: Dienstag 11 November 2025-11-11 10:43:37 +0100 CET  977 s  565/52972 msgs left
+ETA: Dienstag 11 November 2025-11-11 10:43:37 +0100 CET  977 s  565/52972 msgs left
+Folder    9/16 [INBOX.[Airmail]]                   -> [[Airmail]]                        
+Host1: folder [INBOX.[Airmail]] has 0 messages in total (mentioned by SELECT)
+Host2: folder [[Airmail]] has 0 messages in total (mentioned by SELECT)
+Host2: folder [[Airmail]] permanentflags: 
+Host1: folder [INBOX.[Airmail]] considering 0 messages
+Host2: folder [[Airmail]] considering 0 messages
+Host1: folder [INBOX.[Airmail]] selected 0 messages, duplicates 0
+Host2: folder [[Airmail]] selected 0 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 10:43:39 +0100 CET  979 s  565/52972 msgs left
+Folder   10/16 [INBOX.[Airmail].Done]              -> [[Airmail]/Done]                   
+Host1: folder [INBOX.[Airmail].Done] has 0 messages in total (mentioned by SELECT)
+Host2: folder [[Airmail]/Done] has 0 messages in total (mentioned by SELECT)
+Host2: folder [[Airmail]/Done] permanentflags: 
+Host1: folder [INBOX.[Airmail].Done] considering 0 messages
+Host2: folder [[Airmail]/Done] considering 0 messages
+Host1: folder [INBOX.[Airmail].Done] selected 0 messages, duplicates 0
+Host2: folder [[Airmail]/Done] selected 0 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 10:43:42 +0100 CET  981 s  565/52972 msgs left
+Folder   11/16 [INBOX.[Airmail].Memo]              -> [[Airmail]/Memo]                   
+Host1: folder [INBOX.[Airmail].Memo] has 0 messages in total (mentioned by SELECT)
+Host2: folder [[Airmail]/Memo] has 0 messages in total (mentioned by SELECT)
+Host2: folder [[Airmail]/Memo] permanentflags: 
+Host1: folder [INBOX.[Airmail].Memo] considering 0 messages
+Host2: folder [[Airmail]/Memo] considering 0 messages
+Host1: folder [INBOX.[Airmail].Memo] selected 0 messages, duplicates 0
+Host2: folder [[Airmail]/Memo] selected 0 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 10:43:44 +0100 CET  983 s  565/52972 msgs left
+Folder   12/16 [INBOX.[Airmail].Send Later]        -> [[Airmail]/Send Later]             
+Host1: folder [INBOX.[Airmail].Send Later] has 0 messages in total (mentioned by SELECT)
+Host2: folder [[Airmail]/Send Later] has 0 messages in total (mentioned by SELECT)
+Host2: folder [[Airmail]/Send Later] permanentflags: 
+Host1: folder [INBOX.[Airmail].Send Later] considering 0 messages
+Host2: folder [[Airmail]/Send Later] considering 0 messages
+Host1: folder [INBOX.[Airmail].Send Later] selected 0 messages, duplicates 0
+Host2: folder [[Airmail]/Send Later] selected 0 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 10:43:46 +0100 CET  984 s  565/52972 msgs left
+Folder   13/16 [INBOX.[Airmail].Snooze]            -> [[Airmail]/Snooze]                 
+Host1: folder [INBOX.[Airmail].Snooze] has 0 messages in total (mentioned by SELECT)
+Host2: folder [[Airmail]/Snooze] has 0 messages in total (mentioned by SELECT)
+Host2: folder [[Airmail]/Snooze] permanentflags: 
+Host1: folder [INBOX.[Airmail].Snooze] considering 0 messages
+Host2: folder [[Airmail]/Snooze] considering 0 messages
+Host1: folder [INBOX.[Airmail].Snooze] selected 0 messages, duplicates 0
+Host2: folder [[Airmail]/Snooze] selected 0 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 10:43:48 +0100 CET  986 s  565/52972 msgs left
+Folder   14/16 [INBOX.[Airmail].To Do]             -> [[Airmail]/To Do]                  
+Host1: folder [INBOX.[Airmail].To Do] has 0 messages in total (mentioned by SELECT)
+Host2: folder [[Airmail]/To Do] has 0 messages in total (mentioned by SELECT)
+Host2: folder [[Airmail]/To Do] permanentflags: 
+Host1: folder [INBOX.[Airmail].To Do] considering 0 messages
+Host2: folder [[Airmail]/To Do] considering 0 messages
+Host1: folder [INBOX.[Airmail].To Do] selected 0 messages, duplicates 0
+Host2: folder [[Airmail]/To Do] selected 0 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 10:43:51 +0100 CET  988 s  565/52972 msgs left
+Folder   15/16 [INBOX.backupdatenwald]             -> [backupdatenwald]                  
+Host1: folder [INBOX.backupdatenwald] has 445 messages in total (mentioned by SELECT)
+Host2: folder [backupdatenwald] has 444 messages in total (mentioned by SELECT)
+Host2: folder [backupdatenwald] permanentflags: 
+Host1: folder [INBOX.backupdatenwald] considering 445 messages
+Host2: folder [backupdatenwald] considering 444 messages
+Host1: folder [INBOX.backupdatenwald] selected 445 messages, duplicates 1
+Host2: folder [backupdatenwald] selected 444 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 10:30:57 +0100 CET  212 s  120/52972 msgs left
+Folder   16/16 [INBOX.spam]                        -> [spam]                             
+Host1: folder [INBOX.spam] has 120 messages in total (mentioned by SELECT)
+Host2: folder [spam] has 119 messages in total (mentioned by SELECT)
+Host2: folder [spam] permanentflags: 
+Host1: folder [INBOX.spam] considering 120 messages
+Host2: folder [spam] considering 119 messages
+Host1: folder [INBOX.spam] selected 120 messages, duplicates 0
+Host2: folder [spam] selected 119 messages, duplicates 0
+msg INBOX.spam/532 {11341}         copied to spam/120        0.57 msgs/s  48.525 KiB/s 11.890 MiB copied ETA: Dienstag 11 November 2025-11-11 10:27:27 +0100 CET  0 s  0/52972 msgs left
+ETA: Dienstag 11 November 2025-11-11 10:27:27 +0100 CET  0 s  0/52972 msgs left
+++++ End looping on each folder
+
+Folders sizes after the synchronization.
+You can remove this foldersizes listing by using  "--nofoldersizesatend"
+Host1 folder    1/16 [INBOX]                             Size: 4730326209 Messages: 51552 Biggest:  30198419
+Host2 folder    1/16 [INBOX]                             Size: 4730841918 Messages: 51557 Biggest:  30198419
+Host2-Host1                                                       515709               5                  0
+
+Host1 folder    2/16 [INBOX.Archive]                     Size:    838835 Messages:    13 Biggest:    136864
+Host2 folder    2/16 [Archive]                           Size:    838835 Messages:    13 Biggest:    136864
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    3/16 [INBOX.Black Hole]                  Size:         0 Messages:     0 Biggest:         0
+Host2 folder    3/16 [Black Hole]                        Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    4/16 [INBOX.Drafts]                      Size:    474153 Messages:    28 Biggest:    147021
+Host2 folder    4/16 [Drafts]                            Size:    473437 Messages:    27 Biggest:    147021
+Host2-Host1                                                         -716              -1                  0
+
+Host1 folder    5/16 [INBOX.Junk]                        Size:         0 Messages:     0 Biggest:         0
+Host2 folder    5/16 [Junk]                              Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    6/16 [INBOX.Sent]                        Size: 193948485 Messages:   799 Biggest:  16696123
+Host2 folder    6/16 [Sent]                              Size: 193639406 Messages:   795 Biggest:  16696123
+Host2-Host1                                                      -309079              -4                  0
+
+Host1 folder    7/16 [INBOX.Sent Messages]               Size:         0 Messages:     0 Biggest:         0
+Host2 folder    7/16 [Sent Messages]                     Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    8/16 [INBOX.Trash]                       Size:   1304721 Messages:    15 Biggest:    678555
+Host2 folder    8/16 [Trash]                             Size:   2343315 Messages:    57 Biggest:    678555
+Host2-Host1                                                      1038594              42                  0
+
+Host1 folder    9/16 [INBOX.[Airmail]]                   Size:         0 Messages:     0 Biggest:         0
+Host2 folder    9/16 [[Airmail]]                         Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder   10/16 [INBOX.[Airmail].Done]              Size:         0 Messages:     0 Biggest:         0
+Host2 folder   10/16 [[Airmail]/Done]                    Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder   11/16 [INBOX.[Airmail].Memo]              Size:         0 Messages:     0 Biggest:         0
+Host2 folder   11/16 [[Airmail]/Memo]                    Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder   12/16 [INBOX.[Airmail].Send Later]        Size:         0 Messages:     0 Biggest:         0
+Host2 folder   12/16 [[Airmail]/Send Later]              Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder   13/16 [INBOX.[Airmail].Snooze]            Size:         0 Messages:     0 Biggest:         0
+Host2 folder   13/16 [[Airmail]/Snooze]                  Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder   14/16 [INBOX.[Airmail].To Do]             Size:         0 Messages:     0 Biggest:         0
+Host2 folder   14/16 [[Airmail]/To Do]                   Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder   15/16 [INBOX.backupdatenwald]             Size:   6863684 Messages:   445 Biggest:    942201
+Host2 folder   15/16 [backupdatenwald]                   Size:   6861206 Messages:   444 Biggest:    942201
+Host2-Host1                                                        -2478              -1                  0
+
+Host1 folder   16/16 [INBOX.spam]                        Size:   7683383 Messages:   120 Biggest:    278078
+Host2 folder   16/16 [spam]                              Size:   7683383 Messages:   120 Biggest:    278078
+Host2-Host1                                                            0               0                  0
+
+Host1 Nb folders:                    16 folders
+Host2 Nb folders:                    16 folders
+
+Host1 Nb messages:                52972 messages
+Host2 Nb messages:                53013 messages
+
+Host1 Total size:            4941439470 bytes (4.602 GiB)
+Host2 Total size:            4942681500 bytes (4.603 GiB)
+
+Host1 Biggest message:         30198419 bytes (28.799 MiB)
+Host2 Biggest message:         30198419 bytes (28.799 MiB)
+
+Time spent on sizing:        19.5 seconds
+++++ Statistics
+Transfer started on                     : Dienstag 11 November 2025-11-11 10:22:49 +0100 CET
+Transfer ended on                       : Dienstag 11 November 2025-11-11 10:27:46 +0100 CET
+Transfer time                           : 297.0 sec
+Folders synced                          : 16/16 synced
+Folders deleted on host2                : 0 
+Messages transferred                    : 142 
+Messages skipped                        : 52830
+Messages found duplicate on host1       : 7
+Messages found duplicate on host2       : 0
+Messages found crossduplicate on host2  : 0
+Messages void (noheader) on host1       : 0  
+Messages void (noheader) on host2       : 0
+Messages found in host1 not in host2    : 0 messages
+Messages found in host2 not in host1    : 48 messages
+Messages deleted on host1               : 0
+Messages deleted on host2               : 0
+Total bytes transferred                 : 12467603 (11.890 MiB)
+Total bytes skipped                     : 4928600632 (4.590 GiB)
+Message rate                            : 0.5 messages/s
+Average bandwidth rate                  : 41.0 KiB/s
+Reconnections to host1                  : 0
+Reconnections to host2                  : 0
+Memory consumption at the end           : 170.6 MiB (*time 14.1 MiB*h) (started with 190.5 MiB)
+Load end is                             : 10.86 9.70 10.05 on 10 cores
+CPU time and %cpu                       : 38.1 sec 12.8 %cpu 1.3 %allcpus
+Biggest message transferred             : 749529 bytes (731.962 KiB)
+Memory/biggest message ratio            : 238.6
+Start difference host2 - host1          : -101 messages, -11225573 bytes (-10.706 MiB)
+Final difference host2 - host1          : 41 messages, 1242030 bytes (1.184 MiB)
+The sync looks good, all 52965 identified messages in host1 are on host2.
+There is no unidentified message on host1.
+The sync is not strict, there are 48 among 53013 identified messages in host2 that are not on host1. Use --delete2 and sync again to delete them and have a strict sync.
+Detected 0 errors
+This imapsync is up to date. ( local 2.314 >= official 2.314 )( Use --noreleasecheck to avoid this release check. )
+Homepage: https://imapsync.lamiral.info/
+Exiting with return value 0 (EX_OK: successful termination) 0/50 nb_errors/max_errors PID 63669
+Removing pidfile /Users/d071390/tmp/imapsync.pid
+Log file is LOG_imapsync/2025_11_11_10_22_49_911_post_jonathanschwarze_de_post_jonathanschwarze_de.txt ( to change it, use --logfile filepath ; or use --nolog to turn off logging )

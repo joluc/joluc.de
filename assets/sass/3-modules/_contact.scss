@@ -58,7 +58,7 @@
 .contact__info {
   padding: 40px 32px;
   background: var(--background-alt-color);
-  border-radius: 8px;
+  border-radius: 0;
 
   @media only screen and (max-width: $tablet) {
     margin-top: 40px;
@@ -92,7 +92,7 @@
     font-size: 20px;
     color: var(--white);
     background: var(--brand-color);
-    border-radius: 50%;
+    border-radius: 0;
     flex-shrink: 0;
   }
 
@@ -161,7 +161,7 @@
   font-weight: 500;
   color: var(--white);
   background: var(--brand-color);
-  border-radius: 16px;
+  border-radius: 0;
   transition: all 0.25s ease;
 
   &:hover {
@@ -173,7 +173,7 @@
 .terminal-commands {
   padding: 16px;
   background: var(--dark);
-  border-radius: 8px;
+  border-radius: 0;
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
   font-size: 13px;
   line-height: 1.4;
@@ -205,7 +205,7 @@
   padding: 20px;
   background: var(--background-color);
   border-left: 4px solid var(--brand-color);
-  border-radius: 4px;
+  border-radius: 0;
 
   p {
     margin: 0;
@@ -234,7 +234,7 @@
   font-size: 16px;
   font-weight: 500;
   border: 2px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 0;
   outline: none;
   transition: all 0.25s ease;
   resize: vertical;
@@ -261,7 +261,7 @@
   color: var(--white);
   background: var(--brand-color);
   border: none;
-  border-radius: 8px;
+  border-radius: 0;
   cursor: pointer;
   transition: all 0.25s ease;
 

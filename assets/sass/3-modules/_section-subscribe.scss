@@ -5,7 +5,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 136px 68px;
-  border-radius: 16px;
+  border-radius: 0;
   overflow: hidden;
   background: var(--background-alt-color);
 
@@ -73,7 +73,7 @@
   font-size: 16px;
   line-height: 1;
   border: none;
-  border-radius: 8px;
+  border-radius: 0;
   outline: 0;
   cursor: text;
   color: var(--heading-font-color);

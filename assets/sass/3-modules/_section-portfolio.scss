@@ -1,7 +1,7 @@
 /* Portfolio */
 .portfolio__view {
   padding-left: 20px;
-  border-radius: 12px;
+  border-radius: 0;
   background: var(--background-color);
 }
 
@@ -12,7 +12,7 @@
   min-width: 48px;
   height: 48px;
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 0;
   background: var(--background-alt-color);
   transition: transform 0.15s ease;
   cursor: pointer;
@@ -101,7 +101,7 @@
 .portfolio__item {
   padding: 32px;
   margin-bottom: ($base-spacing-unit * 2);
-  border-radius: 16px;
+  border-radius: 0;
   background: var(--background-alt-color);
 }
 
@@ -110,7 +110,7 @@
   transform: translate(0);
   display: block;
   padding-top: 87%;
-  border-radius: 16px;
+  border-radius: 0;
   background: var(--background-color);
   transition: none;
 
@@ -136,7 +136,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    border-radius: 16px;
+    border-radius: 0;
     opacity: 0;
     visibility: hidden;
     background: rgba(0, 0, 0, 0.1);
@@ -155,7 +155,7 @@
   align-items: center;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 0;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.07);
   color: var(--heading-font-color);
   background: var(--border-color-alt);
@@ -171,6 +171,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 0;
   box-shadow: 0px 103px 80px rgba(27, 22, 50, 0.07), 0px 37.6px 29.2px rgba(27, 22, 50, 0.0483), 0px 18.25px 14.18px rgba(27, 22, 50, 0.0389), 0px 8.95px 6.95px rgba(27, 22, 50, 0.0311), 0px 3.54px 2.75px rgba(27, 22, 50, 0.0217);
 }

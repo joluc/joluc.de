@@ -1,0 +1,958 @@
+Here is imapsync 2.314 /opt/homebrew/Cellar/imapsync/2.314/libexec/bin/imapsync on host J2T2N32DN4, a darwin system with 0.1/32.0 free GiB of RAM, 96.27% used by processes.
+with Perl 5.34.1 and Mail::IMAPClient 3.43
+Transfer started at Dienstag 11 November 2025-11-11 11:06:22 +0100 CET
+PID is 67696 my PPID is 3125
+Log file is LOG_imapsync/2025_11_11_11_06_22_379_post_janrobertmenz_de_post_janrobertmenz_de.txt ( to change it, use --logfile path ; or use --nolog to turn off logging )
+Load is 30.92 48.92 38.39 on 10 cores
+Real user id is d071390 (uid 501)
+Effective user id is d071390 (euid 501)
+$RCSfile: imapsync,v $ $Revision: 2.314 $ $Date: 2025/09/23 16:55:17 $ 
+Command line used, run by /usr/bin/perl5.34:
+/opt/homebrew/Cellar/imapsync/2.314/libexec/bin/imapsync --host1 premium61.web-hosting.com --user1 post@janrobertmenz.de --password1 MASKED --host2 mxe97a.netcup.net --user2 post@janrobertmenz.de --password2 MASKED --ssl1 --ssl2
+Current directory is /Users/d071390/dev/src/github.com/joluc/joluc.de
+Temp directory is /Users/d071390/tmp ( to change it use --tmpdir dirpath )
+Creating temp directory /Users/d071390/tmp
+kill -QUIT 67696 # special behavior: call to sub catch_exit
+kill -TERM 67696 # special behavior: call to sub catch_exit
+kill -INT 67696 # special behavior: call to sub catch_reconnect
+kill -HUP 67696 # special behavior: call to sub catch_print
+kill -USR1 67696 # special behavior: call to sub toggle_sleep
+Logging to a logfile by default. To turn off logging, use --nolog
+Directory LOG_imapsync is writable and readable and gointoable. Good.
+Removing old /Users/d071390/tmp/imapsync.pid since its PID 66103 is not running anymore (oo-killed?)
+Removed old /Users/d071390/tmp/imapsync.pid
+PID file is /Users/d071390/tmp/imapsync.pid ( to change it, use --pidfile filepath ; to avoid it use --pidfile "" )
+Writing my PID 67696 in /Users/d071390/tmp/imapsync.pid
+Writing also my logfile name in /Users/d071390/tmp/imapsync.pid : LOG_imapsync/2025_11_11_11_06_22_379_post_janrobertmenz_de_post_janrobertmenz_de.txt
+Modules version list ( use --no-modulesversion to turn off printing this Perl modules list ):
+Authen::NTLM         1.09
+CGI                  4.48
+Compress::Zlib       2.102
+Crypt::OpenSSL::RSA  0.31
+Digest::HMAC_MD5     1.01
+Digest::HMAC_SHA1    1.03
+Digest::MD5          2.58
+Digest::SHA          6.02
+Encode               3.0801
+Encode::IMAPUTF7     1.07
+File::Copy::Recursive 0.45
+File::Spec           3.80
+Getopt::Long         2.52
+HTML::Entities       3.69
+IO::Socket           1.46
+IO::Socket::INET     1.46
+IO::Socket::INET6    2.72
+IO::Socket::IP       0.43
+IO::Socket::SSL      2.068
+IO::Tee              0.65
+JSON                 4.10
+JSON::WebToken       0.10
+LWP                  6.44
+MIME::Base64         3.16
+Mail::IMAPClient     3.43
+Net::Ping            2.74
+Net::SSLeay          1.88
+Term::ReadKey        2.38
+Test::MockObject     1.20200122
+Time::HiRes          1.9767
+Unicode::String      2.10
+
+Info: will resync flags for already transferred messages. Use --noresyncflags to not resync flags.
+SSL debug mode level is --debugssl 1 (can be set from 0 meaning no debug to 4 meaning max debug)
+Host1: SSL default mode is like --sslargs1 "SSL_verify_mode=0", meaning for host1 SSL_VERIFY_NONE, ie, do not check the server certificate.
+Host1: Use --sslargs1 SSL_verify_mode=1 to have SSL_VERIFY_PEER, ie, check the server certificate. of host1
+Host2: SSL default mode is like --sslargs2 "SSL_verify_mode=0", meaning for host2 SSL_VERIFY_NONE, ie, do not check the server certificate.
+Host2: Use --sslargs2 SSL_verify_mode=1 to have SSL_VERIFY_PEER, ie, check the server certificate. of host2
+Info: turned ON syncinternaldates, will set the internal dates (arrival dates) on host2 same as host1.
+Host1: will try to use LOGIN authentication on host1
+Host2: will try to use LOGIN authentication on host2
+Host1: imap connection timeout is 120 seconds
+Host2: imap connection timeout is 120 seconds
+Host1: imap connection keepalive is on on host1. Use --nokeepalive1 to disable it.
+Host2: imap connection keepalive is on on host2. Use --nokeepalive2 to disable it.
+Host1: IMAP server [premium61.web-hosting.com] port [993] user [post@janrobertmenz.de]
+Host2: IMAP server [mxe97a.netcup.net] port [993] user [post@janrobertmenz.de]
+Host1: connecting and login on host1 [premium61.web-hosting.com] port [993] with user [post@janrobertmenz.de]
+DEBUG: .../IO/Socket/SSL.pm:1177: global error: Undefined SSL object
+DEBUG: .../IO/Socket/SSL.pm:1177: global error: Undefined SSL object
+Host1 IP address: 185.61.154.52 Local IP address: 172.20.10.2
+Host1 banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE NAMESPACE LITERAL+ AUTH=PLAIN AUTH=LOGIN] Dovecot ready.
+Host1 capability before authentication: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE NAMESPACE LITERAL+ AUTH=PLAIN AUTH=LOGIN AUTH
+Host1: premium61.web-hosting.com says it has CAPABILITY for AUTHENTICATE LOGIN
+Host1: success login on [premium61.web-hosting.com] with user [post@janrobertmenz.de] auth [LOGIN] or [LOGIN]
+Host2: connecting and login on host2 [mxe97a.netcup.net] port [993] with user [post@janrobertmenz.de]
+DEBUG: .../IO/Socket/SSL.pm:1177: global error: Undefined SSL object
+DEBUG: .../IO/Socket/SSL.pm:1177: global error: Undefined SSL object
+Host2 IP address: 202.61.233.122 Local IP address: 172.20.10.2
+Host2 banner: * OK [CAPABILITY IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ AUTH=PLAIN AUTH=LOGIN AUTH=DIGEST-MD5 AUTH=CRAM-MD5] Dovecot ready.
+Host2 capability before authentication: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE LITERAL+ AUTH=PLAIN AUTH=LOGIN AUTH=DIGEST-MD5 AUTH=CRAM-MD5 AUTH
+Host2: mxe97a.netcup.net says it has CAPABILITY for AUTHENTICATE LOGIN
+Host2: success login on [mxe97a.netcup.net] with user [post@janrobertmenz.de] auth [LOGIN] or [LOGIN]
+Host1: state Authenticated
+Host2: state Authenticated
+Host1 capability once authenticated: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS THREAD=ORDEREDSUBJECT MULTIAPPEND URL-PARTIAL CATENATE UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS BINARY MOVE SNIPPET=FUZZY PREVIEW=FUZZY PREVIEW STATUS=SIZE SAVEDATE NAMESPACE LITERAL+ NOTIFY SPECIAL-USE COMPRESS=DEFLATE QUOTA THREAD I18NLEVEL CONTEXT SNIPPET PREVIEW STATUS COMPRESS
+Host2 capability once authenticated: IMAP4rev1 SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS THREAD=ORDEREDSUBJECT MULTIAPPEND URL-PARTIAL CATENATE UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS BINARY MOVE SNIPPET=FUZZY PREVIEW=FUZZY PREVIEW STATUS=SIZE SAVEDATE LITERAL+ NOTIFY SPECIAL-USE QUOTA THREAD I18NLEVEL CONTEXT SNIPPET PREVIEW STATUS
+Host1: found ID capability. Sending/receiving ID, presented in raw IMAP for now.
+In order to avoid sending/receiving ID, use option --noid
+Sending: 4 ID ("name" "imapsync" "version" "2.314" "os" "darwin" "vendor" "Gilles LAMIRAL" "support-url" "https://imapsync.lamiral.info/" "date" "23-Sep-2025 16:55:17 +0000" "side" "host1")
+Sent 182 bytes
+Read: 	* ID ("name" "Dovecot")
+  	4 OK ID completed (0.001 + 0.000 secs).
+Host2: found ID capability. Sending/receiving ID, presented in raw IMAP for now.
+In order to avoid sending/receiving ID, use option --noid
+Sending: 4 ID ("name" "imapsync" "version" "2.314" "os" "darwin" "vendor" "Gilles LAMIRAL" "support-url" "https://imapsync.lamiral.info/" "date" "23-Sep-2025 16:55:17 +0000" "side" "host2")
+Sent 182 bytes
+Read: 	* ID ("name" "Dovecot")
+  	4 OK ID completed (0.001 + 0.000 secs).
+
+Host2: QUOTA capability found, presented in raw IMAP on next lines
+Sending: 5 GETQUOTAROOT INBOX
+Sent 22 bytes
+Read: 	5 OK No quota (0.001 + 0.000 secs).
+
+Host2: Quota current storage is 0 bytes. Limit is 0 bytes. So 0 % full
+Host1: Compression is off. Use --compress1 to allow compression on host1
+Host2: Compression is off. Use --compress2 to allow compression on host2
+Compression often generates annoying errors, especially with SSL connexions, Gmail, Office365. So, avoid it.
+Host1: found 10 folders.
+Host2: found 12 folders.
+Host1: guessing separator from folder listing: [.]
+Host1: separator given by NAMESPACE: [.]
+Host2: guessing separator from folder listing: [/]
+Host2: separator given by NAMESPACE: [/]
+Host1: guessing prefix from folder listing: [INBOX.]
+Host1: prefix given by NAMESPACE: [INBOX.]
+Host2: guessing prefix from folder listing: []
+Host2: prefix given by NAMESPACE: []
+Host1: separator and prefix: [.][INBOX.]
+Host2: separator and prefix: [/][]
+Looking at INBOX or Inbox on both sides and deciding of the mapping to apply. Use --nofixInboxINBOX to avoid this behavior.
+INBOX INBOX on both sides so no mapping applied.
+Including all folders found by default. Use --subscribed or --folder or --folderrec or --include to select specific folders. Use --exclude to unselect specific folders.
+Host1: Checking wanted folders exist. Use --nocheckfoldersexist to avoid this check (shared of public namespace targeted).
+Host1: Checking wanted folders are selectable. Use --nocheckselectable to avoid this check.
+Turned off automapping folders ( use --automap to turn on automapping )
+
+++++ Listing folders
+All foldernames are presented between brackets like [X] where X is the foldername.
+When a foldername contains non-ASCII characters it is presented in the form
+[X] = [Y] where
+X is the imap foldername you have to use in command line options and
+Y is the utf8 output just printed for convenience, to recognize it.
+
+Host1: folders list (first the raw imap format then the [X] = [Y]):
+* LIST (\HasChildren) "." INBOX
+* LIST (\HasNoChildren \UnMarked) "." INBOX.Patches
+* LIST (\HasNoChildren \UnMarked) "." "INBOX.Deleted Messages"
+* LIST (\HasNoChildren \UnMarked \Sent) "." "INBOX.Sent Messages"
+* LIST (\HasNoChildren \UnMarked \Archive) "." INBOX.Archive
+* LIST (\HasNoChildren \UnMarked \Junk) "." INBOX.spam
+* LIST (\HasNoChildren \UnMarked) "." INBOX.Junk
+* LIST (\HasNoChildren \UnMarked \Drafts) "." INBOX.Drafts
+* LIST (\HasNoChildren \UnMarked \Sent) "." INBOX.Sent
+* LIST (\HasNoChildren \UnMarked \Trash) "." INBOX.Trash
+19 OK List completed (0.001 + 0.000 secs).
+
+[INBOX]
+[INBOX.Archive]
+[INBOX.Deleted Messages]
+[INBOX.Drafts]
+[INBOX.Junk]
+[INBOX.Patches]
+[INBOX.Sent]
+[INBOX.Sent Messages]
+[INBOX.Trash]
+[INBOX.spam]
+
+Host2: folders list (first the raw imap format then the [X] = [Y]):
+* LIST (\HasNoChildren) "/" spam
+* LIST (\HasNoChildren \Sent) "/" "Sent Messages"
+* LIST (\HasNoChildren) "/" Patches
+* LIST (\HasNoChildren) "/" Junk
+* LIST (\HasNoChildren) "/" "Deleted Messages"
+* LIST (\HasNoChildren \Archive) "/" Archive
+* LIST (\HasNoChildren \Drafts) "/" Drafts
+* LIST (\HasNoChildren \Sent) "/" Sent
+* LIST (\HasNoChildren \Junk) "/" Spam
+* LIST (\HasNoChildren \Trash) "/" Trash
+* LIST (\HasNoChildren \Archive) "/" Archives
+* LIST (\HasNoChildren) "/" INBOX
+10 OK List completed (0.001 + 0.000 secs).
+
+[Archive]
+[Archives]
+[Deleted Messages]
+[Drafts]
+[INBOX]
+[Junk]
+[Patches]
+[Sent]
+[Sent Messages]
+[Spam]
+[Trash]
+[spam]
+
+Folders in host2 not in host1:
+[Spam]
+[Archives]
+
+Checking SEARCH ALL works on both accounts. To avoid that check, use --nochecknoabletosearch
+Host1: checking if SEARCH ALL works on INBOX
+Host1: folder [INBOX] has 2207 messages mentioned by SELECT
+Host1: folder [INBOX] has 2207 messages found by SEARCH ALL
+Host1: folder [INBOX] has the same messages count (2207) by SELECT and SEARCH ALL
+Host2: checking if SEARCH ALL works on INBOX
+Host2: folder [INBOX] has 2206 messages mentioned by SELECT
+Host2: folder [INBOX] has 2206 messages found by SEARCH ALL
+Host2: folder [INBOX] has the same messages count (2206) by SELECT and SEARCH ALL
+Good! SEARCH ALL works on both accounts.
+
+Folders sizes before the synchronization. It can take some time. Be patient.
+You can remove foldersizes listings by using "--nofoldersizes" and "--nofoldersizesatend"
+but then you will also lose the ETA (Estimation Time of Arrival) given after each message copy.
+Host1 folder    1/10 [INBOX]                             Size: 979477637 Messages:  2207 Biggest:  35658514
+Host2 folder    1/10 [INBOX]                             Size: 979465313 Messages:  2206 Biggest:  35658514
+Host2-Host1                                                       -12324              -1                  0
+
+Host1 folder    2/10 [INBOX.Archive]                     Size:         0 Messages:     0 Biggest:         0
+Host2 folder    2/10 [Archive]                           Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    3/10 [INBOX.Deleted Messages]            Size:    116580 Messages:     1 Biggest:    116580
+Host2 folder    3/10 [Deleted Messages]                  Size:    116580 Messages:     1 Biggest:    116580
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    4/10 [INBOX.Drafts]                      Size:         0 Messages:     0 Biggest:         0
+Host2 folder    4/10 [Drafts]                            Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    5/10 [INBOX.Junk]                        Size:         0 Messages:     0 Biggest:         0
+Host2 folder    5/10 [Junk]                              Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    6/10 [INBOX.Patches]                     Size:  30419925 Messages:    37 Biggest:  17156152
+Host2 folder    6/10 [Patches]                           Size:  30419925 Messages:    37 Biggest:  17156152
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    7/10 [INBOX.Sent]                        Size: 677367674 Messages:   821 Biggest:  30197657
+Host2 folder    7/10 [Sent]                              Size: 490217078 Messages:   601 Biggest:  30197657
+Host2-Host1                                                    -187150596            -220                  0
+
+Host1 folder    8/10 [INBOX.Sent Messages]               Size: 295556327 Messages:   226 Biggest:  25212239
+Host2 folder    8/10 [Sent Messages]                     Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                    -295556327            -226          -25212239
+
+Host1 folder    9/10 [INBOX.Trash]                       Size:   6968495 Messages:    61 Biggest:   1101732
+Host2 folder    9/10 [Trash]                             Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                     -6968495             -61           -1101732
+
+Host1 folder   10/10 [INBOX.spam]                        Size:         0 Messages:     0 Biggest:         0
+Host2 folder   10/10 [spam]                              Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 Nb folders:                    10 folders
+Host2 Nb folders:                    10 folders
+
+Host1 Nb messages:                 3353 messages
+Host2 Nb messages:                 2845 messages
+
+Host1 Total size:            1989906638 bytes (1.853 GiB)
+Host2 Total size:            1500218896 bytes (1.397 GiB)
+
+Host1 Biggest message:         35658514 bytes (34.007 MiB)
+Host2 Biggest message:         35658514 bytes (34.007 MiB)
+
+Time spent on sizing:         8.1 seconds
+++++ Looping on each one of 10 folders to sync
+ETA: Dienstag 11 November 2025-11-11 11:06:30 +0100 CET  0 s  3353/3353 msgs left
+Folder    1/10 [INBOX]                             -> [INBOX]                            
+Host1: folder [INBOX] has 2207 messages in total (mentioned by SELECT)
+Host2: folder [INBOX] has 2206 messages in total (mentioned by SELECT)
+Host2: folder [INBOX] permanentflags: 
+Host1: folder [INBOX] considering 2207 messages
+Host2: folder [INBOX] considering 2206 messages
+Host1: folder [INBOX] selected 2207 messages, duplicates 0
+Host2: folder [INBOX] selected 2206 messages, duplicates 0
+msg INBOX/4452 {12324}        copied to INBOX/2207       0.21 msgs/s  2.585 KiB/s 12.035 KiB copied ETA: Dienstag 11 November 2025-11-11 12:35:30 +0100 CET  5336 s  1146/3353 msgs left
+ETA: Dienstag 11 November 2025-11-11 12:35:52 +0100 CET  5357 s  1146/3353 msgs left
+Folder    2/10 [INBOX.Archive]                     -> [Archive]                          
+Host1: folder [INBOX.Archive] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Archive] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Archive] permanentflags: 
+Host1: folder [INBOX.Archive] considering 0 messages
+Host2: folder [Archive] considering 0 messages
+Host1: folder [INBOX.Archive] selected 0 messages, duplicates 0
+Host2: folder [Archive] selected 0 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 12:41:13 +0100 CET  5679 s  1146/3353 msgs left
+Folder    3/10 [INBOX.Deleted Messages]            -> [Deleted Messages]                 
+Host1: folder [INBOX.Deleted Messages] has 1 messages in total (mentioned by SELECT)
+Host2: folder [Deleted Messages] has 1 messages in total (mentioned by SELECT)
+Host2: folder [Deleted Messages] permanentflags: 
+Host1: folder [INBOX.Deleted Messages] considering 1 messages
+Host2: folder [Deleted Messages] considering 1 messages
+Host1: folder [INBOX.Deleted Messages] selected 1 messages, duplicates 0
+Host2: folder [Deleted Messages] selected 1 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 12:51:27 +0100 CET  6292 s  1145/3353 msgs left
+Folder    4/10 [INBOX.Drafts]                      -> [Drafts]                           
+Host1: folder [INBOX.Drafts] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Drafts] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Drafts] permanentflags: 
+Host1: folder [INBOX.Drafts] considering 0 messages
+Host2: folder [Drafts] considering 0 messages
+Host1: folder [INBOX.Drafts] selected 0 messages, duplicates 0
+Host2: folder [Drafts] selected 0 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 12:56:47 +0100 CET  6611 s  1145/3353 msgs left
+Folder    5/10 [INBOX.Junk]                        -> [Junk]                             
+Host1: folder [INBOX.Junk] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Junk] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Junk] permanentflags: 
+Host1: folder [INBOX.Junk] considering 0 messages
+Host2: folder [Junk] considering 0 messages
+Host1: folder [INBOX.Junk] selected 0 messages, duplicates 0
+Host2: folder [Junk] selected 0 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 13:02:11 +0100 CET  6935 s  1145/3353 msgs left
+Folder    6/10 [INBOX.Patches]                     -> [Patches]                          
+Host1: folder [INBOX.Patches] has 37 messages in total (mentioned by SELECT)
+Host2: folder [Patches] has 37 messages in total (mentioned by SELECT)
+Host2: folder [Patches] permanentflags: 
+Host1: folder [INBOX.Patches] considering 37 messages
+Host2: folder [Patches] considering 37 messages
+Host1: folder [INBOX.Patches] selected 37 messages, duplicates 0
+Host2: folder [Patches] selected 37 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 13:10:42 +0100 CET  7446 s  1108/3353 msgs left
+Folder    7/10 [INBOX.Sent]                        -> [Sent]                             
+Host1: folder [INBOX.Sent] has 821 messages in total (mentioned by SELECT)
+Host2: folder [Sent] has 601 messages in total (mentioned by SELECT)
+Host2: folder [Sent] permanentflags: 
+Host1: folder [INBOX.Sent] considering 821 messages
+Host2: folder [Sent] considering 601 messages
+Host1: folder [INBOX.Sent] selected 821 messages, duplicates 3
+Host2: folder [Sent] selected 601 messages, duplicates 0
+msg INBOX.Sent/614 {3414554}       copied to Sent/602        0.20 msgs/s  327.765 KiB/s 3.268 MiB copied ETA: Dienstag 11 November 2025-11-11 11:49:28 +0100 CET  2568 s  503/3353 msgs left
+msg INBOX.Sent/615 {2535}          copied to Sent/603        0.29 msgs/s  322.405 KiB/s 3.271 MiB copied ETA: Dienstag 11 November 2025-11-11 11:35:39 +0100 CET  1738 s  502/3353 msgs left
+msg INBOX.Sent/616 {13693}         copied to Sent/604        0.38 msgs/s  315.472 KiB/s 3.284 MiB copied ETA: Dienstag 11 November 2025-11-11 11:28:56 +0100 CET  1335 s  501/3353 msgs left
+msg INBOX.Sent/617 {26761}         copied to Sent/605        0.46 msgs/s  312.047 KiB/s 3.309 MiB copied ETA: Dienstag 11 November 2025-11-11 11:24:47 +0100 CET  1086 s  500/3353 msgs left
+msg INBOX.Sent/618 {3561318}       copied to Sent/606        0.45 msgs/s  510.566 KiB/s 6.705 MiB copied ETA: Dienstag 11 November 2025-11-11 11:25:22 +0100 CET  1118 s  499/3353 msgs left
+msg INBOX.Sent/619 {1921}          copied to Sent/607        0.51 msgs/s  503.886 KiB/s 6.707 MiB copied ETA: Dienstag 11 November 2025-11-11 11:22:53 +0100 CET  970 s  498/3353 msgs left
+msg INBOX.Sent/620 {790292}        copied to Sent/608        0.54 msgs/s  512.855 KiB/s 7.461 MiB copied ETA: Dienstag 11 November 2025-11-11 11:22:10 +0100 CET  925 s  497/3353 msgs left
+msg INBOX.Sent/621 {508850}        copied to Sent/609        0.58 msgs/s  526.567 KiB/s 7.946 MiB copied ETA: Dienstag 11 November 2025-11-11 11:20:57 +0100 CET  852 s  496/3353 msgs left
+msg INBOX.Sent/622 {26946}         copied to Sent/610        0.64 msgs/s  519.985 KiB/s 7.972 MiB copied ETA: Dienstag 11 November 2025-11-11 11:19:43 +0100 CET  777 s  495/3353 msgs left
+msg INBOX.Sent/623 {3497123}       copied to Sent/611        0.61 msgs/s  639.543 KiB/s 11.307 MiB copied ETA: Dienstag 11 November 2025-11-11 11:20:21 +0100 CET  813 s  494/3353 msgs left
+msg INBOX.Sent/624 {2346}          copied to Sent/612        0.66 msgs/s  633.914 KiB/s 11.309 MiB copied ETA: Dienstag 11 November 2025-11-11 11:19:19 +0100 CET  751 s  493/3353 msgs left
+msg INBOX.Sent/625 {1792939}       copied to Sent/613        0.65 msgs/s  669.845 KiB/s 13.019 MiB copied ETA: Dienstag 11 November 2025-11-11 11:19:23 +0100 CET  753 s  492/3353 msgs left
+msg INBOX.Sent/626 {14536}         copied to Sent/614        0.70 msgs/s  663.631 KiB/s 13.033 MiB copied ETA: Dienstag 11 November 2025-11-11 11:18:35 +0100 CET  705 s  491/3353 msgs left
+msg INBOX.Sent/627 {14698}         copied to Sent/615        0.74 msgs/s  657.725 KiB/s 13.047 MiB copied ETA: Dienstag 11 November 2025-11-11 11:17:54 +0100 CET  664 s  490/3353 msgs left
+msg INBOX.Sent/628 {24156}         copied to Sent/616        0.78 msgs/s  652.779 KiB/s 13.070 MiB copied ETA: Dienstag 11 November 2025-11-11 11:17:17 +0100 CET  627 s  489/3353 msgs left
+msg INBOX.Sent/629 {2154224}       copied to Sent/617        0.78 msgs/s  706.794 KiB/s 15.125 MiB copied ETA: Dienstag 11 November 2025-11-11 11:17:21 +0100 CET  629 s  488/3353 msgs left
+msg INBOX.Sent/630 {2508}          copied to Sent/618        0.81 msgs/s  700.538 KiB/s 15.127 MiB copied ETA: Dienstag 11 November 2025-11-11 11:16:50 +0100 CET  598 s  487/3353 msgs left
+msg INBOX.Sent/631 {4815071}       copied to Sent/619        0.75 msgs/s  800.857 KiB/s 19.719 MiB copied ETA: Dienstag 11 November 2025-11-11 11:17:40 +0100 CET  645 s  486/3353 msgs left
+msg INBOX.Sent/632 {3317}          copied to Sent/620        0.79 msgs/s  794.776 KiB/s 19.722 MiB copied ETA: Dienstag 11 November 2025-11-11 11:17:12 +0100 CET  616 s  485/3353 msgs left
+msg INBOX.Sent/633 {13766}         copied to Sent/621        0.82 msgs/s  787.206 KiB/s 19.735 MiB copied ETA: Dienstag 11 November 2025-11-11 11:16:47 +0100 CET  592 s  484/3353 msgs left
+msg INBOX.Sent/634 {3668374}       copied to Sent/622        0.79 msgs/s  854.219 KiB/s 23.234 MiB copied ETA: Dienstag 11 November 2025-11-11 11:17:09 +0100 CET  611 s  483/3353 msgs left
+msg INBOX.Sent/635 {8160}          copied to Sent/623        0.82 msgs/s  849.041 KiB/s 23.241 MiB copied ETA: Dienstag 11 November 2025-11-11 11:16:45 +0100 CET  587 s  482/3353 msgs left
+msg INBOX.Sent/636 {14849}         copied to Sent/624        0.85 msgs/s  843.418 KiB/s 23.256 MiB copied ETA: Dienstag 11 November 2025-11-11 11:16:24 +0100 CET  566 s  481/3353 msgs left
+msg INBOX.Sent/637 {28468}         copied to Sent/625        0.88 msgs/s  838.310 KiB/s 23.283 MiB copied ETA: Dienstag 11 November 2025-11-11 11:16:04 +0100 CET  546 s  480/3353 msgs left
+msg INBOX.Sent/638 {46650}         copied to Sent/626        0.91 msgs/s  833.878 KiB/s 23.327 MiB copied ETA: Dienstag 11 November 2025-11-11 11:15:46 +0100 CET  528 s  479/3353 msgs left
+msg INBOX.Sent/639 {4554115}       copied to Sent/627        0.88 msgs/s  922.042 KiB/s 27.670 MiB copied ETA: Dienstag 11 November 2025-11-11 11:16:05 +0100 CET  544 s  478/3353 msgs left
+msg INBOX.Sent/640 {7874687}       copied to Sent/628        0.81 msgs/s  1.015 MiB/s 35.180 MiB copied ETA: Dienstag 11 November 2025-11-11 11:16:55 +0100 CET  590 s  477/3353 msgs left
+msg INBOX.Sent/641 {34309}         copied to Sent/629        0.83 msgs/s  1.003 MiB/s 35.213 MiB copied ETA: Dienstag 11 November 2025-11-11 11:16:41 +0100 CET  576 s  476/3353 msgs left
+msg INBOX.Sent/642 {6796574}       copied to Sent/630        0.78 msgs/s  1.082 MiB/s 41.695 MiB copied ETA: Dienstag 11 November 2025-11-11 11:17:19 +0100 CET  610 s  475/3353 msgs left
+msg INBOX.Sent/643 {2230}          copied to Sent/631        0.80 msgs/s  1.077 MiB/s 41.697 MiB copied ETA: Dienstag 11 November 2025-11-11 11:17:01 +0100 CET  592 s  474/3353 msgs left
+msg INBOX.Sent/644 {78819}         copied to Sent/632        0.82 msgs/s  1.068 MiB/s 41.772 MiB copied ETA: Dienstag 11 November 2025-11-11 11:16:47 +0100 CET  578 s  473/3353 msgs left
+msg INBOX.Sent/645 {6598}          copied to Sent/633        0.84 msgs/s  1.063 MiB/s 41.778 MiB copied ETA: Dienstag 11 November 2025-11-11 11:16:32 +0100 CET  562 s  472/3353 msgs left
+msg INBOX.Sent/646 {485911}        copied to Sent/634        0.85 msgs/s  1.060 MiB/s 42.242 MiB copied ETA: Dienstag 11 November 2025-11-11 11:16:22 +0100 CET  552 s  471/3353 msgs left
+msg INBOX.Sent/647 {485911}        copied to Sent/635        0.87 msgs/s  1.060 MiB/s 42.705 MiB copied ETA: Dienstag 11 November 2025-11-11 11:16:11 +0100 CET  541 s  470/3353 msgs left
+msg INBOX.Sent/648 {265746}        copied to Sent/636        0.89 msgs/s  1.059 MiB/s 42.959 MiB copied ETA: Dienstag 11 November 2025-11-11 11:15:59 +0100 CET  529 s  469/3353 msgs left
+msg INBOX.Sent/649 {106068}        copied to Sent/637        0.91 msgs/s  1.055 MiB/s 43.060 MiB copied ETA: Dienstag 11 November 2025-11-11 11:15:47 +0100 CET  516 s  468/3353 msgs left
+msg INBOX.Sent/650 {32657}         copied to Sent/638        0.93 msgs/s  1.050 MiB/s 43.091 MiB copied ETA: Dienstag 11 November 2025-11-11 11:15:35 +0100 CET  504 s  467/3353 msgs left
+msg INBOX.Sent/651 {178372}        copied to Sent/639        0.94 msgs/s  1.046 MiB/s 43.261 MiB copied ETA: Dienstag 11 November 2025-11-11 11:15:25 +0100 CET  494 s  466/3353 msgs left
+msg INBOX.Sent/652 {25962}         copied to Sent/640        0.96 msgs/s  1.040 MiB/s 43.286 MiB copied ETA: Dienstag 11 November 2025-11-11 11:15:15 +0100 CET  484 s  465/3353 msgs left
+msg INBOX.Sent/653 {28459}         copied to Sent/641        0.98 msgs/s  1.036 MiB/s 43.313 MiB copied ETA: Dienstag 11 November 2025-11-11 11:15:05 +0100 CET  473 s  464/3353 msgs left
+msg INBOX.Sent/654 {2210}          copied to Sent/642        1.00 msgs/s  1.031 MiB/s 43.315 MiB copied ETA: Dienstag 11 November 2025-11-11 11:14:55 +0100 CET  463 s  463/3353 msgs left
+msg INBOX.Sent/655 {4263}          copied to Sent/643        1.02 msgs/s  1.027 MiB/s 43.319 MiB copied ETA: Dienstag 11 November 2025-11-11 11:14:45 +0100 CET  453 s  462/3353 msgs left
+msg INBOX.Sent/656 {2019}          copied to Sent/644        1.04 msgs/s  1.021 MiB/s 43.321 MiB copied ETA: Dienstag 11 November 2025-11-11 11:14:37 +0100 CET  445 s  461/3353 msgs left
+msg INBOX.Sent/657 {14230}         copied to Sent/645        1.05 msgs/s  1.015 MiB/s 43.335 MiB copied ETA: Dienstag 11 November 2025-11-11 11:14:29 +0100 CET  436 s  460/3353 msgs left
+msg INBOX.Sent/658 {15122}         copied to Sent/646        1.07 msgs/s  1.012 MiB/s 43.349 MiB copied ETA: Dienstag 11 November 2025-11-11 11:14:20 +0100 CET  428 s  459/3353 msgs left
+msg INBOX.Sent/659 {1864}          copied to Sent/647        1.09 msgs/s  1.007 MiB/s 43.351 MiB copied ETA: Dienstag 11 November 2025-11-11 11:14:12 +0100 CET  419 s  458/3353 msgs left
+msg INBOX.Sent/660 {1712}          copied to Sent/648        1.11 msgs/s  1.003 MiB/s 43.352 MiB copied ETA: Dienstag 11 November 2025-11-11 11:14:05 +0100 CET  412 s  457/3353 msgs left
+msg INBOX.Sent/661 {1996}          copied to Sent/649        1.13 msgs/s  0.998 MiB/s 43.354 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:58 +0100 CET  404 s  456/3353 msgs left
+msg INBOX.Sent/662 {1669}          copied to Sent/650        1.15 msgs/s  0.994 MiB/s 43.356 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:50 +0100 CET  397 s  455/3353 msgs left
+msg INBOX.Sent/663 {1398}          copied to Sent/651        1.16 msgs/s  0.990 MiB/s 43.357 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:44 +0100 CET  390 s  454/3353 msgs left
+msg INBOX.Sent/664 {25547}         copied to Sent/652        1.18 msgs/s  0.986 MiB/s 43.382 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:37 +0100 CET  383 s  453/3353 msgs left
+msg INBOX.Sent/665 {974256}        copied to Sent/653        1.19 msgs/s  0.994 MiB/s 44.311 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:35 +0100 CET  380 s  452/3353 msgs left
+msg INBOX.Sent/666 {24410}         copied to Sent/654        1.21 msgs/s  0.991 MiB/s 44.334 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:28 +0100 CET  374 s  451/3353 msgs left
+msg INBOX.Sent/667 {11966}         copied to Sent/655        1.22 msgs/s  0.986 MiB/s 44.345 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:23 +0100 CET  368 s  450/3353 msgs left
+msg INBOX.Sent/668 {1941572}       copied to Sent/656        1.22 msgs/s  1.008 MiB/s 46.197 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:23 +0100 CET  368 s  449/3353 msgs left
+msg INBOX.Sent/669 {5565276}       copied to Sent/657        1.15 msgs/s  1.041 MiB/s 51.504 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:48 +0100 CET  389 s  448/3353 msgs left
+msg INBOX.Sent/670 {6095}          copied to Sent/658        1.17 msgs/s  1.037 MiB/s 51.510 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:42 +0100 CET  383 s  447/3353 msgs left
+msg INBOX.Sent/671 {9172}          copied to Sent/659        1.18 msgs/s  1.033 MiB/s 51.519 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:37 +0100 CET  377 s  446/3353 msgs left
+msg INBOX.Sent/672 {4144}          copied to Sent/660        1.20 msgs/s  1.030 MiB/s 51.523 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:31 +0100 CET  371 s  445/3353 msgs left
+msg INBOX.Sent/673 {1669}          copied to Sent/661        1.21 msgs/s  1.026 MiB/s 51.525 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:26 +0100 CET  366 s  444/3353 msgs left
+msg INBOX.Sent/674 {6693}          copied to Sent/662        1.23 msgs/s  1.022 MiB/s 51.531 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:21 +0100 CET  360 s  443/3353 msgs left
+msg INBOX.Sent/675 {27664}         copied to Sent/663        1.24 msgs/s  1.018 MiB/s 51.557 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:16 +0100 CET  355 s  442/3353 msgs left
+msg INBOX.Sent/676 {2812}          copied to Sent/664        1.26 msgs/s  1.015 MiB/s 51.560 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:11 +0100 CET  350 s  441/3353 msgs left
+msg INBOX.Sent/677 {49963}         copied to Sent/665        1.27 msgs/s  1.008 MiB/s 51.608 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:08 +0100 CET  347 s  440/3353 msgs left
+msg INBOX.Sent/678 {3809}          copied to Sent/666        1.28 msgs/s  1.004 MiB/s 51.611 MiB copied ETA: Dienstag 11 November 2025-11-11 11:13:03 +0100 CET  342 s  439/3353 msgs left
+msg INBOX.Sent/679 {10563}         copied to Sent/667        1.30 msgs/s  0.999 MiB/s 51.621 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:59 +0100 CET  338 s  438/3353 msgs left
+msg INBOX.Sent/680 {13768}         copied to Sent/668        1.31 msgs/s  0.996 MiB/s 51.634 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:55 +0100 CET  333 s  437/3353 msgs left
+msg INBOX.Sent/681 {5232}          copied to Sent/669        1.33 msgs/s  0.992 MiB/s 51.639 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:51 +0100 CET  329 s  436/3353 msgs left
+msg INBOX.Sent/682 {6474}          copied to Sent/670        1.34 msgs/s  0.989 MiB/s 51.646 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:47 +0100 CET  325 s  435/3353 msgs left
+msg INBOX.Sent/683 {30982}         copied to Sent/671        1.35 msgs/s  0.985 MiB/s 51.675 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:43 +0100 CET  321 s  434/3353 msgs left
+msg INBOX.Sent/684 {132841}        copied to Sent/672        1.37 msgs/s  0.982 MiB/s 51.802 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:40 +0100 CET  317 s  433/3353 msgs left
+msg INBOX.Sent/685 {2032}          copied to Sent/673        1.38 msgs/s  0.979 MiB/s 51.804 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:36 +0100 CET  313 s  432/3353 msgs left
+msg INBOX.Sent/686 {2615}          copied to Sent/674        1.39 msgs/s  998.871 KiB/s 51.806 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:32 +0100 CET  309 s  431/3353 msgs left
+msg INBOX.Sent/687 {5066}          copied to Sent/675        1.41 msgs/s  995.618 KiB/s 51.811 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:29 +0100 CET  306 s  430/3353 msgs left
+msg INBOX.Sent/688 {2704}          copied to Sent/676        1.42 msgs/s  991.875 KiB/s 51.814 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:25 +0100 CET  302 s  429/3353 msgs left
+msg INBOX.Sent/689 {921566}        copied to Sent/677        1.42 msgs/s  996.283 KiB/s 52.693 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:25 +0100 CET  301 s  428/3353 msgs left
+msg INBOX.Sent/690 {5403}          copied to Sent/678        1.44 msgs/s  992.887 KiB/s 52.698 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:22 +0100 CET  298 s  427/3353 msgs left
+msg INBOX.Sent/691 {7919}          copied to Sent/679        1.45 msgs/s  989.742 KiB/s 52.705 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:19 +0100 CET  294 s  426/3353 msgs left
+msg INBOX.Sent/692 {5136}          copied to Sent/680        1.46 msgs/s  985.654 KiB/s 52.710 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:16 +0100 CET  291 s  425/3353 msgs left
+msg INBOX.Sent/693 {5571}          copied to Sent/681        1.47 msgs/s  982.593 KiB/s 52.715 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:12 +0100 CET  288 s  424/3353 msgs left
+msg INBOX.Sent/694 {6078}          copied to Sent/682        1.49 msgs/s  978.554 KiB/s 52.721 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:10 +0100 CET  285 s  423/3353 msgs left
+msg INBOX.Sent/695 {3755}          copied to Sent/683        1.50 msgs/s  975.106 KiB/s 52.725 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:07 +0100 CET  282 s  422/3353 msgs left
+msg INBOX.Sent/696 {4242}          copied to Sent/684        1.51 msgs/s  971.292 KiB/s 52.729 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:04 +0100 CET  279 s  421/3353 msgs left
+msg INBOX.Sent/697 {6817}          copied to Sent/685        1.52 msgs/s  967.697 KiB/s 52.735 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:01 +0100 CET  276 s  420/3353 msgs left
+msg INBOX.Sent/698 {17355}         copied to Sent/686        1.53 msgs/s  962.847 KiB/s 52.752 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:59 +0100 CET  273 s  419/3353 msgs left
+msg INBOX.Sent/699 {22394}         copied to Sent/687        1.54 msgs/s  957.000 KiB/s 52.773 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:58 +0100 CET  271 s  418/3353 msgs left
+msg INBOX.Sent/700 {11504}         copied to Sent/688        1.55 msgs/s  953.997 KiB/s 52.784 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:55 +0100 CET  268 s  417/3353 msgs left
+msg INBOX.Sent/701 {13979}         copied to Sent/689        1.56 msgs/s  950.325 KiB/s 52.798 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:53 +0100 CET  266 s  416/3353 msgs left
+msg INBOX.Sent/702 {3486376}       copied to Sent/690        1.53 msgs/s  979.248 KiB/s 56.122 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:59 +0100 CET  271 s  415/3353 msgs left
+msg INBOX.Sent/704 {5817}          copied to Sent/691        1.54 msgs/s  971.973 KiB/s 56.128 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:58 +0100 CET  269 s  414/3353 msgs left
+msg INBOX.Sent/705 {6537}          copied to Sent/692        1.55 msgs/s  968.890 KiB/s 56.134 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:56 +0100 CET  266 s  413/3353 msgs left
+msg INBOX.Sent/706 {16744}         copied to Sent/693        1.56 msgs/s  965.246 KiB/s 56.150 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:53 +0100 CET  264 s  412/3353 msgs left
+msg INBOX.Sent/707 {3975078}       copied to Sent/694        1.53 msgs/s  0.977 MiB/s 59.941 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:00 +0100 CET  268 s  411/3353 msgs left
+msg INBOX.Sent/708 {3092}          copied to Sent/695        1.54 msgs/s  997.119 KiB/s 59.944 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:57 +0100 CET  266 s  410/3353 msgs left
+msg INBOX.Sent/709 {16067}         copied to Sent/696        1.55 msgs/s  993.339 KiB/s 59.959 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:55 +0100 CET  263 s  409/3353 msgs left
+msg INBOX.Sent/710 {36790}         copied to Sent/697        1.56 msgs/s  989.393 KiB/s 59.995 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:53 +0100 CET  261 s  408/3353 msgs left
+msg INBOX.Sent/711 {251379}        copied to Sent/698        1.57 msgs/s  985.440 KiB/s 60.234 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:52 +0100 CET  260 s  407/3353 msgs left
+msg INBOX.Sent/712 {6096}          copied to Sent/699        1.58 msgs/s  982.728 KiB/s 60.240 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:50 +0100 CET  257 s  406/3353 msgs left
+msg INBOX.Sent/713 {8516}          copied to Sent/700        1.59 msgs/s  979.098 KiB/s 60.248 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:48 +0100 CET  255 s  405/3353 msgs left
+msg INBOX.Sent/714 {6539}          copied to Sent/701        1.60 msgs/s  975.905 KiB/s 60.254 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:46 +0100 CET  253 s  404/3353 msgs left
+msg INBOX.Sent/715 {4837}          copied to Sent/702        1.61 msgs/s  973.165 KiB/s 60.259 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:44 +0100 CET  251 s  403/3353 msgs left
+msg INBOX.Sent/716 {5658}          copied to Sent/703        1.62 msgs/s  970.111 KiB/s 60.264 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:42 +0100 CET  248 s  402/3353 msgs left
+msg INBOX.Sent/717 {4841}          copied to Sent/704        1.63 msgs/s  967.217 KiB/s 60.269 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:40 +0100 CET  246 s  401/3353 msgs left
+msg INBOX.Sent/718 {19686}         copied to Sent/705        1.64 msgs/s  964.273 KiB/s 60.288 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:38 +0100 CET  244 s  400/3353 msgs left
+msg INBOX.Sent/719 {5509}          copied to Sent/706        1.65 msgs/s  961.554 KiB/s 60.293 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:36 +0100 CET  242 s  399/3353 msgs left
+msg INBOX.Sent/720 {33192}         copied to Sent/707        1.66 msgs/s  958.697 KiB/s 60.325 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:34 +0100 CET  240 s  398/3353 msgs left
+msg INBOX.Sent/721 {9534}          copied to Sent/708        1.67 msgs/s  956.195 KiB/s 60.334 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:32 +0100 CET  238 s  397/3353 msgs left
+msg INBOX.Sent/722 {6065}          copied to Sent/709        1.68 msgs/s  953.386 KiB/s 60.340 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:30 +0100 CET  235 s  396/3353 msgs left
+msg INBOX.Sent/723 {15183}         copied to Sent/710        1.69 msgs/s  950.927 KiB/s 60.354 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:28 +0100 CET  233 s  395/3353 msgs left
+msg INBOX.Sent/724 {7075}          copied to Sent/711        1.70 msgs/s  948.430 KiB/s 60.361 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:26 +0100 CET  231 s  394/3353 msgs left
+msg INBOX.Sent/725 {2943883}       copied to Sent/712        1.68 msgs/s  971.064 KiB/s 63.168 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:30 +0100 CET  234 s  393/3353 msgs left
+msg INBOX.Sent/726 {143284}        copied to Sent/713        1.69 msgs/s  969.797 KiB/s 63.305 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:29 +0100 CET  232 s  392/3353 msgs left
+msg INBOX.Sent/727 {3411}          copied to Sent/714        1.70 msgs/s  967.462 KiB/s 63.308 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:27 +0100 CET  230 s  391/3353 msgs left
+msg INBOX.Sent/728 {14482}         copied to Sent/715        1.71 msgs/s  965.013 KiB/s 63.322 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:25 +0100 CET  228 s  390/3353 msgs left
+msg INBOX.Sent/729 {6296912}       copied to Sent/716        1.67 msgs/s  0.996 MiB/s 69.327 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:33 +0100 CET  233 s  389/3353 msgs left
+msg INBOX.Sent/730 {23585}         copied to Sent/717        1.68 msgs/s  0.994 MiB/s 69.350 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:31 +0100 CET  231 s  388/3353 msgs left
+msg INBOX.Sent/731 {6083}          copied to Sent/718        1.69 msgs/s  0.991 MiB/s 69.356 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:29 +0100 CET  230 s  387/3353 msgs left
+msg INBOX.Sent/732 {6081}          copied to Sent/719        1.70 msgs/s  0.989 MiB/s 69.361 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:28 +0100 CET  228 s  386/3353 msgs left
+msg INBOX.Sent/733 {3121}          copied to Sent/720        1.71 msgs/s  0.986 MiB/s 69.364 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:26 +0100 CET  226 s  385/3353 msgs left
+msg INBOX.Sent/734 {11956}         copied to Sent/721        1.71 msgs/s  0.983 MiB/s 69.376 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:24 +0100 CET  224 s  384/3353 msgs left
+msg INBOX.Sent/735 {4164201}       copied to Sent/722        1.69 msgs/s  1.016 MiB/s 73.347 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:29 +0100 CET  227 s  383/3353 msgs left
+msg INBOX.Sent/736 {13008}         copied to Sent/723        1.70 msgs/s  1.013 MiB/s 73.359 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:27 +0100 CET  225 s  382/3353 msgs left
+msg INBOX.Sent/737 {19599}         copied to Sent/724        1.71 msgs/s  1.011 MiB/s 73.378 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:26 +0100 CET  223 s  381/3353 msgs left
+msg INBOX.Sent/738 {17327}         copied to Sent/725        1.72 msgs/s  1.007 MiB/s 73.395 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:24 +0100 CET  222 s  380/3353 msgs left
+msg INBOX.Sent/739 {126825}        copied to Sent/726        1.72 msgs/s  1.005 MiB/s 73.516 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:23 +0100 CET  220 s  379/3353 msgs left
+msg INBOX.Sent/740 {887737}        copied to Sent/727        1.72 msgs/s  1.009 MiB/s 74.362 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:23 +0100 CET  219 s  378/3353 msgs left
+msg INBOX.Sent/741 {5794676}       copied to Sent/728        1.69 msgs/s  1.055 MiB/s 79.888 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:29 +0100 CET  223 s  377/3353 msgs left
+msg INBOX.Sent/742 {1846}          copied to Sent/729        1.70 msgs/s  1.052 MiB/s 79.890 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:27 +0100 CET  221 s  376/3353 msgs left
+msg INBOX.Sent/743 {8375}          copied to Sent/730        1.71 msgs/s  1.050 MiB/s 79.898 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:26 +0100 CET  220 s  375/3353 msgs left
+msg INBOX.Sent/744 {10052}         copied to Sent/731        1.72 msgs/s  1.047 MiB/s 79.908 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:24 +0100 CET  218 s  374/3353 msgs left
+msg INBOX.Sent/745 {14095}         copied to Sent/732        1.73 msgs/s  1.045 MiB/s 79.921 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:23 +0100 CET  216 s  373/3353 msgs left
+msg INBOX.Sent/746 {17990}         copied to Sent/733        1.73 msgs/s  1.042 MiB/s 79.938 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:21 +0100 CET  215 s  372/3353 msgs left
+msg INBOX.Sent/747 {177441}        copied to Sent/734        1.74 msgs/s  1.039 MiB/s 80.108 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:20 +0100 CET  213 s  371/3353 msgs left
+msg INBOX.Sent/748 {22591}         copied to Sent/735        1.75 msgs/s  1.037 MiB/s 80.129 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:19 +0100 CET  212 s  370/3353 msgs left
+msg INBOX.Sent/749 {21092}         copied to Sent/736        1.75 msgs/s  1.034 MiB/s 80.149 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:18 +0100 CET  210 s  369/3353 msgs left
+msg INBOX.Sent/750 {22193}         copied to Sent/737        1.76 msgs/s  1.031 MiB/s 80.170 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:16 +0100 CET  209 s  368/3353 msgs left
+msg INBOX.Sent/751 {30305}         copied to Sent/738        1.77 msgs/s  1.029 MiB/s 80.199 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:15 +0100 CET  207 s  367/3353 msgs left
+msg INBOX.Sent/752 {48057}         copied to Sent/739        1.78 msgs/s  1.026 MiB/s 80.245 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:14 +0100 CET  206 s  366/3353 msgs left
+msg INBOX.Sent/753 {3275902}       copied to Sent/740        1.75 msgs/s  1.045 MiB/s 83.369 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:18 +0100 CET  208 s  365/3353 msgs left
+msg INBOX.Sent/754 {11625}         copied to Sent/741        1.76 msgs/s  1.042 MiB/s 83.380 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:17 +0100 CET  207 s  364/3353 msgs left
+msg INBOX.Sent/755 {16509}         copied to Sent/742        1.77 msgs/s  1.038 MiB/s 83.396 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:16 +0100 CET  205 s  363/3353 msgs left
+msg INBOX.Sent/756 {35730}         copied to Sent/743        1.77 msgs/s  1.035 MiB/s 83.430 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:14 +0100 CET  204 s  362/3353 msgs left
+msg INBOX.Sent/757 {71893}         copied to Sent/744        1.78 msgs/s  1.032 MiB/s 83.499 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:14 +0100 CET  203 s  361/3353 msgs left
+msg INBOX.Sent/758 {45698}         copied to Sent/745        1.79 msgs/s  1.030 MiB/s 83.542 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:12 +0100 CET  201 s  360/3353 msgs left
+msg INBOX.Sent/759 {4401}          copied to Sent/746        1.80 msgs/s  1.028 MiB/s 83.547 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:11 +0100 CET  200 s  359/3353 msgs left
+msg INBOX.Sent/760 {39399}         copied to Sent/747        1.80 msgs/s  1.025 MiB/s 83.584 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:10 +0100 CET  199 s  358/3353 msgs left
+msg INBOX.Sent/761 {87347}         copied to Sent/748        1.81 msgs/s  1.023 MiB/s 83.667 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:09 +0100 CET  197 s  357/3353 msgs left
+msg INBOX.Sent/762 {40925}         copied to Sent/749        1.82 msgs/s  1.021 MiB/s 83.706 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:08 +0100 CET  196 s  356/3353 msgs left
+msg INBOX.Sent/763 {3186908}       copied to Sent/750        1.80 msgs/s  1.041 MiB/s 86.746 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:11 +0100 CET  197 s  355/3353 msgs left
+msg INBOX.Sent/764 {3093603}       copied to Sent/751        1.78 msgs/s  1.058 MiB/s 89.696 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:13 +0100 CET  199 s  354/3353 msgs left
+msg INBOX.Sent/765 {81944}         copied to Sent/752        1.79 msgs/s  1.056 MiB/s 89.774 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:12 +0100 CET  197 s  353/3353 msgs left
+msg INBOX.Sent/766 {173165}        copied to Sent/753        1.79 msgs/s  1.055 MiB/s 89.939 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:11 +0100 CET  196 s  352/3353 msgs left
+msg INBOX.Sent/767 {958446}        copied to Sent/754        1.79 msgs/s  1.058 MiB/s 90.853 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:11 +0100 CET  196 s  351/3353 msgs left
+msg INBOX.Sent/768 {288987}        copied to Sent/755        1.80 msgs/s  1.058 MiB/s 91.129 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:10 +0100 CET  194 s  350/3353 msgs left
+msg INBOX.Sent/769 {13091}         copied to Sent/756        1.81 msgs/s  1.056 MiB/s 91.141 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:09 +0100 CET  193 s  349/3353 msgs left
+msg INBOX.Sent/770 {38720}         copied to Sent/757        1.81 msgs/s  1.054 MiB/s 91.178 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:08 +0100 CET  192 s  348/3353 msgs left
+msg INBOX.Sent/771 {229384}        copied to Sent/758        1.82 msgs/s  1.053 MiB/s 91.397 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:07 +0100 CET  191 s  347/3353 msgs left
+msg INBOX.Sent/772 {44938}         copied to Sent/759        1.83 msgs/s  1.050 MiB/s 91.440 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:06 +0100 CET  189 s  346/3353 msgs left
+msg INBOX.Sent/773 {7781}          copied to Sent/760        1.83 msgs/s  1.048 MiB/s 91.447 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:05 +0100 CET  188 s  345/3353 msgs left
+msg INBOX.Sent/774 {874647}        copied to Sent/761        1.83 msgs/s  1.051 MiB/s 92.282 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:05 +0100 CET  188 s  344/3353 msgs left
+msg INBOX.Sent/775 {2227}          copied to Sent/762        1.84 msgs/s  1.049 MiB/s 92.284 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:04 +0100 CET  186 s  343/3353 msgs left
+msg INBOX.Sent/776 {12767}         copied to Sent/763        1.85 msgs/s  1.046 MiB/s 92.296 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:03 +0100 CET  185 s  342/3353 msgs left
+msg INBOX.Sent/777 {11634}         copied to Sent/764        1.85 msgs/s  1.044 MiB/s 92.307 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:02 +0100 CET  184 s  341/3353 msgs left
+msg INBOX.Sent/778 {1286975}       copied to Sent/765        1.85 msgs/s  1.050 MiB/s 93.534 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:03 +0100 CET  184 s  340/3353 msgs left
+msg INBOX.Sent/779 {1676097}       copied to Sent/766        1.85 msgs/s  1.058 MiB/s 95.133 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:04 +0100 CET  184 s  339/3353 msgs left
+msg INBOX.Sent/780 {5875}          copied to Sent/767        1.85 msgs/s  1.056 MiB/s 95.138 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:02 +0100 CET  182 s  338/3353 msgs left
+msg INBOX.Sent/781 {1765}          copied to Sent/768        1.86 msgs/s  1.053 MiB/s 95.140 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:02 +0100 CET  181 s  337/3353 msgs left
+msg INBOX.Sent/782 {3912}          copied to Sent/769        1.87 msgs/s  1.050 MiB/s 95.144 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:01 +0100 CET  180 s  336/3353 msgs left
+msg INBOX.Sent/783 {6749}          copied to Sent/770        1.87 msgs/s  1.048 MiB/s 95.150 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:00 +0100 CET  179 s  335/3353 msgs left
+msg INBOX.Sent/784 {10237950}      copied to Sent/771        1.82 msgs/s  1.115 MiB/s 104.914 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:08 +0100 CET  184 s  334/3353 msgs left
+msg INBOX.Sent/785 {5624798}       copied to Sent/772        1.78 msgs/s  1.142 MiB/s 110.278 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:13 +0100 CET  187 s  333/3353 msgs left
+msg INBOX.Sent/786 {11252744}      copied to Sent/773        1.72 msgs/s  1.200 MiB/s 121.010 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:24 +0100 CET  193 s  332/3353 msgs left
+msg INBOX.Sent/787 {82181}         copied to Sent/774        1.71 msgs/s  1.190 MiB/s 121.088 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:25 +0100 CET  193 s  331/3353 msgs left
+msg INBOX.Sent/788 {1699}          copied to Sent/775        1.72 msgs/s  1.188 MiB/s 121.090 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:24 +0100 CET  192 s  330/3353 msgs left
+msg INBOX.Sent/789 {12084}         copied to Sent/776        1.72 msgs/s  1.185 MiB/s 121.101 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:23 +0100 CET  191 s  329/3353 msgs left
+msg INBOX.Sent/790 {274215}        copied to Sent/777        1.72 msgs/s  1.182 MiB/s 121.363 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:23 +0100 CET  190 s  328/3353 msgs left
+msg INBOX.Sent/791 {30345}         copied to Sent/778        1.73 msgs/s  1.180 MiB/s 121.391 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:22 +0100 CET  189 s  327/3353 msgs left
+msg INBOX.Sent/792 {22715189}      copied to Sent/779        1.60 msgs/s  1.276 MiB/s 143.054 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:46 +0100 CET  204 s  326/3353 msgs left
+msg INBOX.Sent/793 {671348}        copied to Sent/780        1.59 msgs/s  1.272 MiB/s 143.695 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:47 +0100 CET  204 s  325/3353 msgs left
+msg INBOX.Sent/794 {673361}        copied to Sent/781        1.59 msgs/s  1.272 MiB/s 144.337 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:47 +0100 CET  203 s  324/3353 msgs left
+msg INBOX.Sent/795 {3719485}       copied to Sent/782        1.58 msgs/s  1.285 MiB/s 147.884 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:49 +0100 CET  204 s  323/3353 msgs left
+msg INBOX.Sent/796 {3351647}       copied to Sent/783        1.57 msgs/s  1.294 MiB/s 151.080 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:52 +0100 CET  205 s  322/3353 msgs left
+msg INBOX.Sent/797 {5676463}       copied to Sent/784        1.54 msgs/s  1.310 MiB/s 156.494 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:58 +0100 CET  208 s  321/3353 msgs left
+msg INBOX.Sent/798 {84989}         copied to Sent/785        1.54 msgs/s  1.302 MiB/s 156.575 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:58 +0100 CET  208 s  320/3353 msgs left
+msg INBOX.Sent/799 {86013}         copied to Sent/786        1.54 msgs/s  1.295 MiB/s 156.657 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:58 +0100 CET  208 s  319/3353 msgs left
+msg INBOX.Sent/800 {145055}        copied to Sent/787        1.54 msgs/s  1.290 MiB/s 156.795 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:58 +0100 CET  207 s  318/3353 msgs left
+msg INBOX.Sent/801 {400643}        copied to Sent/788        1.54 msgs/s  1.288 MiB/s 157.177 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:58 +0100 CET  206 s  317/3353 msgs left
+msg INBOX.Sent/802 {139587}        copied to Sent/789        1.55 msgs/s  1.286 MiB/s 157.310 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:57 +0100 CET  205 s  316/3353 msgs left
+msg INBOX.Sent/803 {28926}         copied to Sent/790        1.55 msgs/s  1.283 MiB/s 157.338 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:56 +0100 CET  203 s  315/3353 msgs left
+msg INBOX.Sent/804 {28104}         copied to Sent/791        1.56 msgs/s  1.282 MiB/s 157.365 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:55 +0100 CET  202 s  314/3353 msgs left
+msg INBOX.Sent/805 {9768}          copied to Sent/792        1.56 msgs/s  1.280 MiB/s 157.374 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:53 +0100 CET  200 s  313/3353 msgs left
+msg INBOX.Sent/806 {368402}        copied to Sent/793        1.56 msgs/s  1.278 MiB/s 157.726 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:53 +0100 CET  199 s  312/3353 msgs left
+msg INBOX.Sent/807 {585441}        copied to Sent/794        1.57 msgs/s  1.278 MiB/s 158.284 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:52 +0100 CET  198 s  311/3353 msgs left
+msg INBOX.Sent/808 {16895}         copied to Sent/795        1.57 msgs/s  1.276 MiB/s 158.300 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:51 +0100 CET  197 s  310/3353 msgs left
+msg INBOX.Sent/809 {4134952}       copied to Sent/796        1.56 msgs/s  1.288 MiB/s 162.243 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:55 +0100 CET  199 s  309/3353 msgs left
+msg INBOX.Sent/810 {13570}         copied to Sent/797        1.56 msgs/s  1.284 MiB/s 162.256 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:54 +0100 CET  198 s  308/3353 msgs left
+msg INBOX.Sent/811 {26185}         copied to Sent/798        1.56 msgs/s  1.282 MiB/s 162.281 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:53 +0100 CET  196 s  307/3353 msgs left
+msg INBOX.Sent/812 {4306}          copied to Sent/799        1.57 msgs/s  1.280 MiB/s 162.285 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:52 +0100 CET  195 s  306/3353 msgs left
+msg INBOX.Sent/813 {7574}          copied to Sent/800        1.57 msgs/s  1.278 MiB/s 162.293 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:51 +0100 CET  194 s  305/3353 msgs left
+msg INBOX.Sent/814 {84956}         copied to Sent/801        1.58 msgs/s  1.275 MiB/s 162.374 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:50 +0100 CET  193 s  304/3353 msgs left
+msg INBOX.Sent/815 {138251}        copied to Sent/802        1.58 msgs/s  1.273 MiB/s 162.505 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:49 +0100 CET  191 s  303/3353 msgs left
+msg INBOX.Sent/816 {79664}         copied to Sent/803        1.59 msgs/s  1.271 MiB/s 162.581 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:48 +0100 CET  190 s  302/3353 msgs left
+msg INBOX.Sent/817 {79650}         copied to Sent/804        1.59 msgs/s  1.269 MiB/s 162.657 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:47 +0100 CET  189 s  301/3353 msgs left
+msg INBOX.Sent/818 {316959}        copied to Sent/805        1.59 msgs/s  1.267 MiB/s 162.960 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:47 +0100 CET  188 s  300/3353 msgs left
+msg INBOX.Sent/819 {192651}        copied to Sent/806        1.60 msgs/s  1.266 MiB/s 163.143 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:46 +0100 CET  187 s  299/3353 msgs left
+msg INBOX.Sent/820 {192776}        copied to Sent/807        1.60 msgs/s  1.265 MiB/s 163.327 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:45 +0100 CET  186 s  298/3353 msgs left
+msg INBOX.Sent/821 {23986}         copied to Sent/808        1.61 msgs/s  1.263 MiB/s 163.350 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:44 +0100 CET  185 s  297/3353 msgs left
+msg INBOX.Sent/822 {356186}        copied to Sent/809        1.61 msgs/s  1.263 MiB/s 163.690 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:43 +0100 CET  184 s  296/3353 msgs left
+msg INBOX.Sent/823 {63821}         copied to Sent/810        1.62 msgs/s  1.260 MiB/s 163.751 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:42 +0100 CET  183 s  295/3353 msgs left
+msg INBOX.Sent/824 {76091}         copied to Sent/811        1.62 msgs/s  1.258 MiB/s 163.823 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:42 +0100 CET  181 s  294/3353 msgs left
+msg INBOX.Sent/825 {103132}        copied to Sent/812        1.63 msgs/s  1.257 MiB/s 163.922 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:41 +0100 CET  180 s  293/3353 msgs left
+msg INBOX.Sent/826 {2239272}       copied to Sent/813        1.62 msgs/s  1.261 MiB/s 166.057 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:42 +0100 CET  181 s  292/3353 msgs left
+msg INBOX.Sent/827 {188285}        copied to Sent/814        1.62 msgs/s  1.259 MiB/s 166.237 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:41 +0100 CET  179 s  291/3353 msgs left
+msg INBOX.Sent/828 {5585984}       copied to Sent/815        1.60 msgs/s  1.273 MiB/s 171.564 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:46 +0100 CET  182 s  290/3353 msgs left
+msg INBOX.Sent/829 {4441}          copied to Sent/816        1.60 msgs/s  1.271 MiB/s 171.568 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:45 +0100 CET  181 s  289/3353 msgs left
+msg INBOX.Sent/830 {6834468}       copied to Sent/817        1.56 msgs/s  1.282 MiB/s 178.086 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:53 +0100 CET  184 s  288/3353 msgs left
+msg INBOX.Sent/831 {1709}          copied to Sent/818        1.57 msgs/s  1.281 MiB/s 178.088 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:52 +0100 CET  183 s  287/3353 msgs left
+ETA: Dienstag 11 November 2025-11-11 11:11:52 +0100 CET  183 s  287/3353 msgs left
+Folder    8/10 [INBOX.Sent Messages]               -> [Sent Messages]                    
+Host1: folder [INBOX.Sent Messages] has 226 messages in total (mentioned by SELECT)
+Host2: folder [Sent Messages] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Sent Messages] permanentflags: 
+Host1: folder [INBOX.Sent Messages] considering 226 messages
+Host2: folder [Sent Messages] considering 0 messages
+Host1: folder [INBOX.Sent Messages] selected 226 messages, duplicates 0
+Host2: folder [Sent Messages] selected 0 messages, duplicates 0
+msg INBOX.Sent Messages/1 {2947}            copied to Sent Messages/1          1.56 msgs/s  1.273 MiB/s 178.090 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:53 +0100 CET  183 s  286/3353 msgs left
+msg INBOX.Sent Messages/2 {6759}            copied to Sent Messages/2          1.57 msgs/s  1.270 MiB/s 178.097 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:52 +0100 CET  182 s  285/3353 msgs left
+msg INBOX.Sent Messages/3 {10707}           copied to Sent Messages/3          1.57 msgs/s  1.268 MiB/s 178.107 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:51 +0100 CET  180 s  284/3353 msgs left
+msg INBOX.Sent Messages/4 {859020}          copied to Sent Messages/4          1.57 msgs/s  1.266 MiB/s 178.926 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:52 +0100 CET  180 s  283/3353 msgs left
+msg INBOX.Sent Messages/5 {6423}            copied to Sent Messages/5          1.58 msgs/s  1.264 MiB/s 178.932 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:51 +0100 CET  179 s  282/3353 msgs left
+msg INBOX.Sent Messages/6 {9375}            copied to Sent Messages/6          1.58 msgs/s  1.261 MiB/s 178.941 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:50 +0100 CET  178 s  281/3353 msgs left
+msg INBOX.Sent Messages/7 {27350}           copied to Sent Messages/7          1.58 msgs/s  1.259 MiB/s 178.967 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:49 +0100 CET  177 s  280/3353 msgs left
+msg INBOX.Sent Messages/8 {381247}          copied to Sent Messages/8          1.58 msgs/s  1.257 MiB/s 179.331 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:49 +0100 CET  176 s  279/3353 msgs left
+msg INBOX.Sent Messages/9 {36468}           copied to Sent Messages/9          1.59 msgs/s  1.255 MiB/s 179.366 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:48 +0100 CET  175 s  278/3353 msgs left
+msg INBOX.Sent Messages/10 {948228}         copied to Sent Messages/10         1.59 msgs/s  1.255 MiB/s 180.270 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:48 +0100 CET  175 s  277/3353 msgs left
+msg INBOX.Sent Messages/11 {12755487}       copied to Sent Messages/11         1.54 msgs/s  1.292 MiB/s 192.435 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:58 +0100 CET  180 s  276/3353 msgs left
+msg INBOX.Sent Messages/12 {45717}          copied to Sent Messages/12         1.54 msgs/s  1.289 MiB/s 192.478 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:58 +0100 CET  179 s  275/3353 msgs left
+msg INBOX.Sent Messages/13 {205094}         copied to Sent Messages/13         1.54 msgs/s  1.286 MiB/s 192.674 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:57 +0100 CET  178 s  274/3353 msgs left
+msg INBOX.Sent Messages/14 {35115}          copied to Sent Messages/14         1.55 msgs/s  1.284 MiB/s 192.707 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:57 +0100 CET  177 s  273/3353 msgs left
+msg INBOX.Sent Messages/15 {21604}          copied to Sent Messages/15         1.55 msgs/s  1.283 MiB/s 192.728 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:56 +0100 CET  175 s  272/3353 msgs left
+msg INBOX.Sent Messages/16 {3982734}        copied to Sent Messages/16         1.54 msgs/s  1.294 MiB/s 196.526 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:58 +0100 CET  176 s  271/3353 msgs left
+msg INBOX.Sent Messages/17 {4551}           copied to Sent Messages/17         1.54 msgs/s  1.292 MiB/s 196.531 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:57 +0100 CET  175 s  270/3353 msgs left
+msg INBOX.Sent Messages/18 {17545}          copied to Sent Messages/18         1.55 msgs/s  1.289 MiB/s 196.547 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:56 +0100 CET  174 s  269/3353 msgs left
+msg INBOX.Sent Messages/19 {12539168}       copied to Sent Messages/19         1.51 msgs/s  1.329 MiB/s 208.506 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:04 +0100 CET  177 s  268/3353 msgs left
+msg INBOX.Sent Messages/20 {10059909}       copied to Sent Messages/20         1.47 msgs/s  1.350 MiB/s 218.099 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:13 +0100 CET  181 s  267/3353 msgs left
+msg INBOX.Sent Messages/21 {16198}          copied to Sent Messages/21         1.48 msgs/s  1.348 MiB/s 218.115 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:12 +0100 CET  180 s  266/3353 msgs left
+msg INBOX.Sent Messages/22 {23601}          copied to Sent Messages/22         1.48 msgs/s  1.346 MiB/s 218.137 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:11 +0100 CET  179 s  265/3353 msgs left
+msg INBOX.Sent Messages/23 {16446}          copied to Sent Messages/23         1.48 msgs/s  1.344 MiB/s 218.153 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:10 +0100 CET  178 s  264/3353 msgs left
+msg INBOX.Sent Messages/24 {8394}           copied to Sent Messages/24         1.49 msgs/s  1.342 MiB/s 218.161 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:09 +0100 CET  177 s  263/3353 msgs left
+msg INBOX.Sent Messages/25 {4839}           copied to Sent Messages/25         1.49 msgs/s  1.341 MiB/s 218.166 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:08 +0100 CET  175 s  262/3353 msgs left
+msg INBOX.Sent Messages/26 {13373}          copied to Sent Messages/26         1.50 msgs/s  1.339 MiB/s 218.178 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:07 +0100 CET  174 s  261/3353 msgs left
+msg INBOX.Sent Messages/27 {2707166}        copied to Sent Messages/27         1.49 msgs/s  1.342 MiB/s 220.760 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:09 +0100 CET  175 s  260/3353 msgs left
+msg INBOX.Sent Messages/28 {2710135}        copied to Sent Messages/28         1.48 msgs/s  1.346 MiB/s 223.345 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:10 +0100 CET  175 s  259/3353 msgs left
+msg INBOX.Sent Messages/29 {42521}          copied to Sent Messages/29         1.48 msgs/s  1.343 MiB/s 223.385 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:10 +0100 CET  174 s  258/3353 msgs left
+msg INBOX.Sent Messages/30 {31528}          copied to Sent Messages/30         1.49 msgs/s  1.341 MiB/s 223.415 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:09 +0100 CET  173 s  257/3353 msgs left
+msg INBOX.Sent Messages/31 {9784}           copied to Sent Messages/31         1.49 msgs/s  1.340 MiB/s 223.425 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:08 +0100 CET  171 s  256/3353 msgs left
+msg INBOX.Sent Messages/32 {16534}          copied to Sent Messages/32         1.50 msgs/s  1.338 MiB/s 223.441 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:07 +0100 CET  170 s  255/3353 msgs left
+msg INBOX.Sent Messages/33 {14625}          copied to Sent Messages/33         1.50 msgs/s  1.336 MiB/s 223.454 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:06 +0100 CET  169 s  254/3353 msgs left
+msg INBOX.Sent Messages/34 {6069}           copied to Sent Messages/34         1.51 msgs/s  1.335 MiB/s 223.460 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:05 +0100 CET  168 s  253/3353 msgs left
+msg INBOX.Sent Messages/35 {8673}           copied to Sent Messages/35         1.51 msgs/s  1.333 MiB/s 223.469 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:05 +0100 CET  167 s  252/3353 msgs left
+msg INBOX.Sent Messages/36 {4130164}        copied to Sent Messages/36         1.50 msgs/s  1.342 MiB/s 227.407 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:07 +0100 CET  167 s  251/3353 msgs left
+msg INBOX.Sent Messages/37 {7963}           copied to Sent Messages/37         1.50 msgs/s  1.340 MiB/s 227.415 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:06 +0100 CET  166 s  250/3353 msgs left
+msg INBOX.Sent Messages/38 {3876}           copied to Sent Messages/38         1.51 msgs/s  1.339 MiB/s 227.419 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:05 +0100 CET  165 s  249/3353 msgs left
+msg INBOX.Sent Messages/39 {11137}          copied to Sent Messages/39         1.51 msgs/s  1.337 MiB/s 227.429 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:04 +0100 CET  164 s  248/3353 msgs left
+msg INBOX.Sent Messages/40 {19638}          copied to Sent Messages/40         1.52 msgs/s  1.336 MiB/s 227.448 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:03 +0100 CET  163 s  247/3353 msgs left
+msg INBOX.Sent Messages/41 {32195}          copied to Sent Messages/41         1.52 msgs/s  1.334 MiB/s 227.479 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:02 +0100 CET  162 s  246/3353 msgs left
+msg INBOX.Sent Messages/42 {20317}          copied to Sent Messages/42         1.52 msgs/s  1.333 MiB/s 227.498 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:02 +0100 CET  161 s  245/3353 msgs left
+msg INBOX.Sent Messages/43 {989349}         copied to Sent Messages/43         1.52 msgs/s  1.332 MiB/s 228.442 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:02 +0100 CET  160 s  244/3353 msgs left
+msg INBOX.Sent Messages/44 {15085}          copied to Sent Messages/44         1.53 msgs/s  1.330 MiB/s 228.456 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:01 +0100 CET  159 s  243/3353 msgs left
+msg INBOX.Sent Messages/45 {12429}          copied to Sent Messages/45         1.53 msgs/s  1.329 MiB/s 228.468 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:00 +0100 CET  158 s  242/3353 msgs left
+msg INBOX.Sent Messages/46 {46526}          copied to Sent Messages/46         1.53 msgs/s  1.327 MiB/s 228.512 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:59 +0100 CET  157 s  241/3353 msgs left
+msg INBOX.Sent Messages/47 {24271}          copied to Sent Messages/47         1.54 msgs/s  1.326 MiB/s 228.535 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:58 +0100 CET  156 s  240/3353 msgs left
+msg INBOX.Sent Messages/48 {12135}          copied to Sent Messages/48         1.54 msgs/s  1.324 MiB/s 228.547 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:58 +0100 CET  155 s  239/3353 msgs left
+msg INBOX.Sent Messages/49 {11579}          copied to Sent Messages/49         1.55 msgs/s  1.323 MiB/s 228.558 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:57 +0100 CET  154 s  238/3353 msgs left
+msg INBOX.Sent Messages/50 {2682}           copied to Sent Messages/50         1.55 msgs/s  1.321 MiB/s 228.561 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:56 +0100 CET  153 s  237/3353 msgs left
+msg INBOX.Sent Messages/51 {21317}          copied to Sent Messages/51         1.55 msgs/s  1.320 MiB/s 228.581 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:55 +0100 CET  152 s  236/3353 msgs left
+msg INBOX.Sent Messages/52 {12906}          copied to Sent Messages/52         1.56 msgs/s  1.318 MiB/s 228.593 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:54 +0100 CET  151 s  235/3353 msgs left
+msg INBOX.Sent Messages/53 {18733}          copied to Sent Messages/53         1.56 msgs/s  1.317 MiB/s 228.611 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:54 +0100 CET  150 s  234/3353 msgs left
+msg INBOX.Sent Messages/54 {10638}          copied to Sent Messages/54         1.56 msgs/s  1.315 MiB/s 228.621 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:53 +0100 CET  149 s  233/3353 msgs left
+msg INBOX.Sent Messages/55 {1996}           copied to Sent Messages/55         1.57 msgs/s  1.313 MiB/s 228.623 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:52 +0100 CET  148 s  232/3353 msgs left
+msg INBOX.Sent Messages/56 {3345}           copied to Sent Messages/56         1.57 msgs/s  1.312 MiB/s 228.626 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:51 +0100 CET  147 s  231/3353 msgs left
+msg INBOX.Sent Messages/57 {1696872}        copied to Sent Messages/57         1.57 msgs/s  1.312 MiB/s 230.245 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:52 +0100 CET  147 s  230/3353 msgs left
+msg INBOX.Sent Messages/58 {9182}           copied to Sent Messages/58         1.57 msgs/s  1.311 MiB/s 230.253 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:51 +0100 CET  146 s  229/3353 msgs left
+msg INBOX.Sent Messages/59 {14043}          copied to Sent Messages/59         1.58 msgs/s  1.309 MiB/s 230.267 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:51 +0100 CET  145 s  228/3353 msgs left
+msg INBOX.Sent Messages/60 {6289}           copied to Sent Messages/60         1.58 msgs/s  1.308 MiB/s 230.273 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:50 +0100 CET  144 s  227/3353 msgs left
+msg INBOX.Sent Messages/61 {42303}          copied to Sent Messages/61         1.58 msgs/s  1.306 MiB/s 230.313 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:49 +0100 CET  143 s  226/3353 msgs left
+msg INBOX.Sent Messages/62 {48705}          copied to Sent Messages/62         1.59 msgs/s  1.305 MiB/s 230.359 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:48 +0100 CET  142 s  225/3353 msgs left
+msg INBOX.Sent Messages/63 {9132}           copied to Sent Messages/63         1.59 msgs/s  1.303 MiB/s 230.368 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:48 +0100 CET  141 s  224/3353 msgs left
+msg INBOX.Sent Messages/64 {78842}          copied to Sent Messages/64         1.59 msgs/s  1.302 MiB/s 230.443 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:47 +0100 CET  140 s  223/3353 msgs left
+msg INBOX.Sent Messages/65 {72211}          copied to Sent Messages/65         1.60 msgs/s  1.300 MiB/s 230.512 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:46 +0100 CET  139 s  222/3353 msgs left
+msg INBOX.Sent Messages/66 {63705}          copied to Sent Messages/66         1.60 msgs/s  1.299 MiB/s 230.573 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:46 +0100 CET  138 s  221/3353 msgs left
+msg INBOX.Sent Messages/67 {3213}           copied to Sent Messages/67         1.60 msgs/s  1.298 MiB/s 230.576 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:45 +0100 CET  137 s  220/3353 msgs left
+msg INBOX.Sent Messages/68 {6555}           copied to Sent Messages/68         1.61 msgs/s  1.296 MiB/s 230.582 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:44 +0100 CET  136 s  219/3353 msgs left
+msg INBOX.Sent Messages/69 {5295}           copied to Sent Messages/69         1.61 msgs/s  1.295 MiB/s 230.587 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:43 +0100 CET  135 s  218/3353 msgs left
+msg INBOX.Sent Messages/70 {2647}           copied to Sent Messages/70         1.62 msgs/s  1.294 MiB/s 230.590 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:42 +0100 CET  134 s  217/3353 msgs left
+msg INBOX.Sent Messages/71 {40646}          copied to Sent Messages/71         1.62 msgs/s  1.293 MiB/s 230.629 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:42 +0100 CET  133 s  216/3353 msgs left
+msg INBOX.Sent Messages/72 {5978}           copied to Sent Messages/72         1.62 msgs/s  1.291 MiB/s 230.634 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:41 +0100 CET  132 s  215/3353 msgs left
+msg INBOX.Sent Messages/73 {2614}           copied to Sent Messages/73         1.63 msgs/s  1.290 MiB/s 230.637 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:40 +0100 CET  132 s  214/3353 msgs left
+msg INBOX.Sent Messages/74 {1156198}        copied to Sent Messages/74         1.62 msgs/s  1.289 MiB/s 231.739 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:41 +0100 CET  131 s  213/3353 msgs left
+msg INBOX.Sent Messages/75 {1154084}        copied to Sent Messages/75         1.62 msgs/s  1.290 MiB/s 232.840 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:41 +0100 CET  131 s  212/3353 msgs left
+msg INBOX.Sent Messages/76 {44444}          copied to Sent Messages/76         1.63 msgs/s  1.288 MiB/s 232.882 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:40 +0100 CET  130 s  211/3353 msgs left
+msg INBOX.Sent Messages/77 {11087}          copied to Sent Messages/77         1.63 msgs/s  1.287 MiB/s 232.893 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:40 +0100 CET  129 s  210/3353 msgs left
+msg INBOX.Sent Messages/78 {55829}          copied to Sent Messages/78         1.63 msgs/s  1.286 MiB/s 232.946 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:39 +0100 CET  128 s  209/3353 msgs left
+msg INBOX.Sent Messages/79 {63866}          copied to Sent Messages/79         1.64 msgs/s  1.284 MiB/s 233.007 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:38 +0100 CET  127 s  208/3353 msgs left
+msg INBOX.Sent Messages/80 {3027}           copied to Sent Messages/80         1.64 msgs/s  1.283 MiB/s 233.010 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:38 +0100 CET  126 s  207/3353 msgs left
+msg INBOX.Sent Messages/81 {8587}           copied to Sent Messages/81         1.64 msgs/s  1.282 MiB/s 233.018 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:37 +0100 CET  125 s  206/3353 msgs left
+msg INBOX.Sent Messages/82 {2674}           copied to Sent Messages/82         1.65 msgs/s  1.279 MiB/s 233.021 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:37 +0100 CET  125 s  205/3353 msgs left
+msg INBOX.Sent Messages/83 {2517308}        copied to Sent Messages/83         1.64 msgs/s  1.282 MiB/s 235.422 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:38 +0100 CET  124 s  204/3353 msgs left
+msg INBOX.Sent Messages/84 {2837}           copied to Sent Messages/84         1.64 msgs/s  1.281 MiB/s 235.424 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:37 +0100 CET  124 s  203/3353 msgs left
+msg INBOX.Sent Messages/85 {2524}           copied to Sent Messages/85         1.65 msgs/s  1.279 MiB/s 235.427 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:37 +0100 CET  123 s  202/3353 msgs left
+msg INBOX.Sent Messages/86 {3417}           copied to Sent Messages/86         1.65 msgs/s  1.278 MiB/s 235.430 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:36 +0100 CET  122 s  201/3353 msgs left
+msg INBOX.Sent Messages/87 {5193732}        copied to Sent Messages/87         1.63 msgs/s  1.283 MiB/s 240.383 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:40 +0100 CET  123 s  200/3353 msgs left
+msg INBOX.Sent Messages/88 {11762}          copied to Sent Messages/88         1.63 msgs/s  1.282 MiB/s 240.394 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:39 +0100 CET  122 s  199/3353 msgs left
+msg INBOX.Sent Messages/89 {9984}           copied to Sent Messages/89         1.64 msgs/s  1.281 MiB/s 240.404 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:39 +0100 CET  121 s  198/3353 msgs left
+msg INBOX.Sent Messages/90 {4156}           copied to Sent Messages/90         1.64 msgs/s  1.279 MiB/s 240.408 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:38 +0100 CET  120 s  197/3353 msgs left
+msg INBOX.Sent Messages/91 {48959}          copied to Sent Messages/91         1.64 msgs/s  1.277 MiB/s 240.454 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:38 +0100 CET  119 s  196/3353 msgs left
+msg INBOX.Sent Messages/92 {50472}          copied to Sent Messages/92         1.64 msgs/s  1.275 MiB/s 240.503 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:37 +0100 CET  119 s  195/3353 msgs left
+msg INBOX.Sent Messages/93 {7187}           copied to Sent Messages/93         1.65 msgs/s  1.274 MiB/s 240.509 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:37 +0100 CET  118 s  194/3353 msgs left
+msg INBOX.Sent Messages/94 {6272}           copied to Sent Messages/94         1.65 msgs/s  1.272 MiB/s 240.515 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:36 +0100 CET  117 s  193/3353 msgs left
+msg INBOX.Sent Messages/95 {5694}           copied to Sent Messages/95         1.65 msgs/s  1.271 MiB/s 240.521 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:35 +0100 CET  116 s  192/3353 msgs left
+msg INBOX.Sent Messages/96 {5181}           copied to Sent Messages/96         1.66 msgs/s  1.269 MiB/s 240.526 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:35 +0100 CET  115 s  191/3353 msgs left
+msg INBOX.Sent Messages/97 {30877}          copied to Sent Messages/97         1.66 msgs/s  1.268 MiB/s 240.555 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:34 +0100 CET  114 s  190/3353 msgs left
+msg INBOX.Sent Messages/98 {1910}           copied to Sent Messages/98         1.66 msgs/s  1.267 MiB/s 240.557 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:33 +0100 CET  114 s  189/3353 msgs left
+msg INBOX.Sent Messages/99 {3626}           copied to Sent Messages/99         1.67 msgs/s  1.265 MiB/s 240.560 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:33 +0100 CET  113 s  188/3353 msgs left
+msg INBOX.Sent Messages/100 {13402}         copied to Sent Messages/100        1.67 msgs/s  1.264 MiB/s 240.573 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:32 +0100 CET  112 s  187/3353 msgs left
+msg INBOX.Sent Messages/101 {7124}          copied to Sent Messages/101        1.67 msgs/s  1.263 MiB/s 240.580 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:32 +0100 CET  111 s  186/3353 msgs left
+msg INBOX.Sent Messages/102 {8683}          copied to Sent Messages/102        1.68 msgs/s  1.262 MiB/s 240.588 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:31 +0100 CET  110 s  185/3353 msgs left
+msg INBOX.Sent Messages/103 {12517}         copied to Sent Messages/103        1.68 msgs/s  1.260 MiB/s 240.600 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:30 +0100 CET  109 s  184/3353 msgs left
+msg INBOX.Sent Messages/104 {4447}          copied to Sent Messages/104        1.68 msgs/s  1.259 MiB/s 240.604 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:30 +0100 CET  109 s  183/3353 msgs left
+msg INBOX.Sent Messages/105 {223077}        copied to Sent Messages/105        1.69 msgs/s  1.258 MiB/s 240.817 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:29 +0100 CET  108 s  182/3353 msgs left
+msg INBOX.Sent Messages/106 {22046}         copied to Sent Messages/106        1.69 msgs/s  1.256 MiB/s 240.838 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:29 +0100 CET  107 s  181/3353 msgs left
+msg INBOX.Sent Messages/107 {10807}         copied to Sent Messages/107        1.69 msgs/s  1.255 MiB/s 240.849 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:28 +0100 CET  106 s  180/3353 msgs left
+msg INBOX.Sent Messages/108 {7281}          copied to Sent Messages/108        1.70 msgs/s  1.254 MiB/s 240.856 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:28 +0100 CET  105 s  179/3353 msgs left
+msg INBOX.Sent Messages/109 {151201}        copied to Sent Messages/109        1.70 msgs/s  1.253 MiB/s 241.000 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:27 +0100 CET  105 s  178/3353 msgs left
+msg INBOX.Sent Messages/110 {1722}          copied to Sent Messages/110        1.70 msgs/s  1.251 MiB/s 241.001 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:27 +0100 CET  104 s  177/3353 msgs left
+msg INBOX.Sent Messages/111 {10574}         copied to Sent Messages/111        1.71 msgs/s  1.249 MiB/s 241.011 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:26 +0100 CET  103 s  176/3353 msgs left
+msg INBOX.Sent Messages/112 {8045}          copied to Sent Messages/112        1.71 msgs/s  1.248 MiB/s 241.019 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:25 +0100 CET  102 s  175/3353 msgs left
+msg INBOX.Sent Messages/113 {13463}         copied to Sent Messages/113        1.71 msgs/s  1.247 MiB/s 241.032 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:25 +0100 CET  102 s  174/3353 msgs left
+msg INBOX.Sent Messages/114 {10708}         copied to Sent Messages/114        1.72 msgs/s  1.246 MiB/s 241.042 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:24 +0100 CET  101 s  173/3353 msgs left
+msg INBOX.Sent Messages/115 {27421}         copied to Sent Messages/115        1.72 msgs/s  1.244 MiB/s 241.068 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:24 +0100 CET  100 s  172/3353 msgs left
+msg INBOX.Sent Messages/116 {29840}         copied to Sent Messages/116        1.72 msgs/s  1.243 MiB/s 241.097 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:23 +0100 CET  99 s  171/3353 msgs left
+msg INBOX.Sent Messages/117 {3663559}       copied to Sent Messages/117        1.71 msgs/s  1.249 MiB/s 244.591 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:25 +0100 CET  99 s  170/3353 msgs left
+msg INBOX.Sent Messages/118 {6423642}       copied to Sent Messages/118        1.69 msgs/s  1.261 MiB/s 250.717 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:29 +0100 CET  100 s  169/3353 msgs left
+msg INBOX.Sent Messages/119 {151744}        copied to Sent Messages/119        1.69 msgs/s  1.258 MiB/s 250.861 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:29 +0100 CET  99 s  168/3353 msgs left
+msg INBOX.Sent Messages/120 {1919}          copied to Sent Messages/120        1.69 msgs/s  1.257 MiB/s 250.863 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:28 +0100 CET  99 s  167/3353 msgs left
+msg INBOX.Sent Messages/121 {6903}          copied to Sent Messages/121        1.70 msgs/s  1.256 MiB/s 250.870 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:27 +0100 CET  98 s  166/3353 msgs left
+msg INBOX.Sent Messages/122 {6561}          copied to Sent Messages/122        1.70 msgs/s  1.255 MiB/s 250.876 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:27 +0100 CET  97 s  165/3353 msgs left
+msg INBOX.Sent Messages/123 {2118}          copied to Sent Messages/123        1.70 msgs/s  1.254 MiB/s 250.878 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:26 +0100 CET  96 s  164/3353 msgs left
+msg INBOX.Sent Messages/124 {13675}         copied to Sent Messages/124        1.71 msgs/s  1.253 MiB/s 250.891 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:26 +0100 CET  95 s  163/3353 msgs left
+msg INBOX.Sent Messages/125 {3298}          copied to Sent Messages/125        1.71 msgs/s  1.252 MiB/s 250.894 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:25 +0100 CET  95 s  162/3353 msgs left
+msg INBOX.Sent Messages/126 {8618511}       copied to Sent Messages/126        1.69 msgs/s  1.272 MiB/s 259.114 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:29 +0100 CET  95 s  161/3353 msgs left
+msg INBOX.Sent Messages/127 {5771}          copied to Sent Messages/127        1.69 msgs/s  1.271 MiB/s 259.119 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:28 +0100 CET  95 s  160/3353 msgs left
+msg INBOX.Sent Messages/128 {14264}         copied to Sent Messages/128        1.69 msgs/s  1.269 MiB/s 259.133 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:28 +0100 CET  94 s  159/3353 msgs left
+msg INBOX.Sent Messages/129 {14302}         copied to Sent Messages/129        1.70 msgs/s  1.267 MiB/s 259.146 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:28 +0100 CET  93 s  158/3353 msgs left
+msg INBOX.Sent Messages/130 {28478}         copied to Sent Messages/130        1.70 msgs/s  1.266 MiB/s 259.173 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:27 +0100 CET  92 s  157/3353 msgs left
+msg INBOX.Sent Messages/131 {2730}          copied to Sent Messages/131        1.70 msgs/s  1.264 MiB/s 259.176 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:27 +0100 CET  92 s  156/3353 msgs left
+msg INBOX.Sent Messages/132 {18089074}      copied to Sent Messages/132        1.64 msgs/s  1.298 MiB/s 276.427 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:37 +0100 CET  94 s  155/3353 msgs left
+msg INBOX.Sent Messages/133 {2597927}       copied to Sent Messages/133        1.64 msgs/s  1.299 MiB/s 278.905 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:39 +0100 CET  94 s  154/3353 msgs left
+msg INBOX.Sent Messages/134 {3327}          copied to Sent Messages/134        1.64 msgs/s  1.298 MiB/s 278.908 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:38 +0100 CET  93 s  153/3353 msgs left
+msg INBOX.Sent Messages/135 {26489}         copied to Sent Messages/135        1.64 msgs/s  1.297 MiB/s 278.933 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:38 +0100 CET  93 s  152/3353 msgs left
+msg INBOX.Sent Messages/136 {4472}          copied to Sent Messages/136        1.64 msgs/s  1.296 MiB/s 278.937 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:37 +0100 CET  92 s  151/3353 msgs left
+msg INBOX.Sent Messages/137 {37673}         copied to Sent Messages/137        1.65 msgs/s  1.294 MiB/s 278.973 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:37 +0100 CET  91 s  150/3353 msgs left
+msg INBOX.Sent Messages/138 {2112795}       copied to Sent Messages/138        1.64 msgs/s  1.296 MiB/s 280.988 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:38 +0100 CET  91 s  149/3353 msgs left
+msg INBOX.Sent Messages/139 {3336}          copied to Sent Messages/139        1.64 msgs/s  1.295 MiB/s 280.991 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:37 +0100 CET  90 s  148/3353 msgs left
+msg INBOX.Sent Messages/140 {2068412}       copied to Sent Messages/140        1.64 msgs/s  1.297 MiB/s 282.964 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:38 +0100 CET  90 s  147/3353 msgs left
+msg INBOX.Sent Messages/141 {96950}         copied to Sent Messages/141        1.64 msgs/s  1.296 MiB/s 283.056 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:37 +0100 CET  89 s  146/3353 msgs left
+msg INBOX.Sent Messages/142 {749866}        copied to Sent Messages/142        1.64 msgs/s  1.295 MiB/s 283.772 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:37 +0100 CET  88 s  145/3353 msgs left
+msg INBOX.Sent Messages/143 {2452}          copied to Sent Messages/143        1.65 msgs/s  1.294 MiB/s 283.774 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:37 +0100 CET  87 s  144/3353 msgs left
+msg INBOX.Sent Messages/144 {744021}        copied to Sent Messages/144        1.65 msgs/s  1.293 MiB/s 284.483 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:37 +0100 CET  87 s  143/3353 msgs left
+msg INBOX.Sent Messages/145 {4666}          copied to Sent Messages/145        1.65 msgs/s  1.292 MiB/s 284.488 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:36 +0100 CET  86 s  142/3353 msgs left
+msg INBOX.Sent Messages/146 {100427}        copied to Sent Messages/146        1.65 msgs/s  1.291 MiB/s 284.584 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:36 +0100 CET  85 s  141/3353 msgs left
+msg INBOX.Sent Messages/147 {15720767}      copied to Sent Messages/147        1.61 msgs/s  1.319 MiB/s 299.576 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:44 +0100 CET  87 s  140/3353 msgs left
+msg INBOX.Sent Messages/148 {10602}         copied to Sent Messages/148        1.61 msgs/s  1.318 MiB/s 299.586 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:44 +0100 CET  86 s  139/3353 msgs left
+msg INBOX.Sent Messages/149 {11418}         copied to Sent Messages/149        1.61 msgs/s  1.317 MiB/s 299.597 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:43 +0100 CET  86 s  138/3353 msgs left
+msg INBOX.Sent Messages/150 {2486617}       copied to Sent Messages/150        1.61 msgs/s  1.318 MiB/s 301.969 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:44 +0100 CET  85 s  137/3353 msgs left
+msg INBOX.Sent Messages/151 {7240}          copied to Sent Messages/151        1.61 msgs/s  1.317 MiB/s 301.976 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:44 +0100 CET  84 s  136/3353 msgs left
+msg INBOX.Sent Messages/152 {2820709}       copied to Sent Messages/152        1.60 msgs/s  1.321 MiB/s 304.666 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:45 +0100 CET  84 s  135/3353 msgs left
+msg INBOX.Sent Messages/153 {12651}         copied to Sent Messages/153        1.61 msgs/s  1.320 MiB/s 304.678 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:44 +0100 CET  83 s  134/3353 msgs left
+msg INBOX.Sent Messages/154 {1273325}       copied to Sent Messages/154        1.61 msgs/s  1.321 MiB/s 305.892 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:44 +0100 CET  83 s  133/3353 msgs left
+msg INBOX.Sent Messages/155 {3988520}       copied to Sent Messages/155        1.60 msgs/s  1.327 MiB/s 309.696 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:46 +0100 CET  83 s  132/3353 msgs left
+msg INBOX.Sent Messages/156 {23188824}      copied to Sent Messages/156        1.54 msgs/s  1.364 MiB/s 331.810 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:58 +0100 CET  85 s  131/3353 msgs left
+msg INBOX.Sent Messages/157 {22575020}      copied to Sent Messages/157        1.49 msgs/s  1.402 MiB/s 353.340 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:09 +0100 CET  87 s  130/3353 msgs left
+msg INBOX.Sent Messages/158 {3550}          copied to Sent Messages/158        1.49 msgs/s  1.401 MiB/s 353.343 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:09 +0100 CET  87 s  129/3353 msgs left
+msg INBOX.Sent Messages/159 {2118223}       copied to Sent Messages/159        1.49 msgs/s  1.400 MiB/s 355.363 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:10 +0100 CET  86 s  128/3353 msgs left
+msg INBOX.Sent Messages/160 {5062}          copied to Sent Messages/160        1.49 msgs/s  1.399 MiB/s 355.368 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:09 +0100 CET  85 s  127/3353 msgs left
+msg INBOX.Sent Messages/161 {2329654}       copied to Sent Messages/161        1.48 msgs/s  1.401 MiB/s 357.590 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:10 +0100 CET  85 s  126/3353 msgs left
+msg INBOX.Sent Messages/162 {9109}          copied to Sent Messages/162        1.49 msgs/s  1.400 MiB/s 357.598 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:09 +0100 CET  84 s  125/3353 msgs left
+msg INBOX.Sent Messages/163 {99398}         copied to Sent Messages/163        1.49 msgs/s  1.398 MiB/s 357.693 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:09 +0100 CET  83 s  124/3353 msgs left
+msg INBOX.Sent Messages/164 {64041}         copied to Sent Messages/164        1.49 msgs/s  1.397 MiB/s 357.754 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:09 +0100 CET  82 s  123/3353 msgs left
+msg INBOX.Sent Messages/165 {4096}          copied to Sent Messages/165        1.49 msgs/s  1.396 MiB/s 357.758 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:08 +0100 CET  82 s  122/3353 msgs left
+msg INBOX.Sent Messages/166 {3497225}       copied to Sent Messages/166        1.49 msgs/s  1.400 MiB/s 361.093 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:09 +0100 CET  81 s  121/3353 msgs left
+msg INBOX.Sent Messages/167 {5756}          copied to Sent Messages/167        1.49 msgs/s  1.399 MiB/s 361.099 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:08 +0100 CET  80 s  120/3353 msgs left
+msg INBOX.Sent Messages/168 {9158257}       copied to Sent Messages/168        1.47 msgs/s  1.412 MiB/s 369.833 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:13 +0100 CET  81 s  119/3353 msgs left
+msg INBOX.Sent Messages/169 {27719}         copied to Sent Messages/169        1.48 msgs/s  1.411 MiB/s 369.859 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:12 +0100 CET  80 s  118/3353 msgs left
+msg INBOX.Sent Messages/170 {6838}          copied to Sent Messages/170        1.48 msgs/s  1.410 MiB/s 369.866 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:11 +0100 CET  79 s  117/3353 msgs left
+msg INBOX.Sent Messages/171 {24230}         copied to Sent Messages/171        1.48 msgs/s  1.408 MiB/s 369.889 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:11 +0100 CET  78 s  116/3353 msgs left
+msg INBOX.Sent Messages/172 {2214690}       copied to Sent Messages/172        1.48 msgs/s  1.409 MiB/s 372.001 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:12 +0100 CET  78 s  115/3353 msgs left
+msg INBOX.Sent Messages/173 {43751}         copied to Sent Messages/173        1.48 msgs/s  1.408 MiB/s 372.043 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:11 +0100 CET  77 s  114/3353 msgs left
+msg INBOX.Sent Messages/174 {5484800}       copied to Sent Messages/174        1.47 msgs/s  1.415 MiB/s 377.273 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:13 +0100 CET  77 s  113/3353 msgs left
+msg INBOX.Sent Messages/175 {3840247}       copied to Sent Messages/175        1.46 msgs/s  1.420 MiB/s 380.936 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:15 +0100 CET  76 s  112/3353 msgs left
+msg INBOX.Sent Messages/176 {2179633}       copied to Sent Messages/176        1.46 msgs/s  1.422 MiB/s 383.014 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:15 +0100 CET  76 s  111/3353 msgs left
+msg INBOX.Sent Messages/177 {4964}          copied to Sent Messages/177        1.47 msgs/s  1.421 MiB/s 383.019 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:15 +0100 CET  75 s  110/3353 msgs left
+msg INBOX.Sent Messages/178 {12624}         copied to Sent Messages/178        1.47 msgs/s  1.420 MiB/s 383.031 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:14 +0100 CET  74 s  109/3353 msgs left
+msg INBOX.Sent Messages/179 {4911}          copied to Sent Messages/179        1.47 msgs/s  1.418 MiB/s 383.036 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:13 +0100 CET  73 s  108/3353 msgs left
+msg INBOX.Sent Messages/180 {32179}         copied to Sent Messages/180        1.47 msgs/s  1.417 MiB/s 383.066 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:13 +0100 CET  73 s  107/3353 msgs left
+msg INBOX.Sent Messages/181 {8157}          copied to Sent Messages/181        1.48 msgs/s  1.416 MiB/s 383.074 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:12 +0100 CET  72 s  106/3353 msgs left
+msg INBOX.Sent Messages/182 {7553400}       copied to Sent Messages/182        1.47 msgs/s  1.430 MiB/s 390.278 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:15 +0100 CET  72 s  105/3353 msgs left
+msg INBOX.Sent Messages/183 {43179}         copied to Sent Messages/183        1.47 msgs/s  1.428 MiB/s 390.319 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:14 +0100 CET  71 s  104/3353 msgs left
+msg INBOX.Sent Messages/184 {50154}         copied to Sent Messages/184        1.47 msgs/s  1.427 MiB/s 390.367 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:14 +0100 CET  70 s  103/3353 msgs left
+msg INBOX.Sent Messages/185 {6260667}       copied to Sent Messages/185        1.46 msgs/s  1.437 MiB/s 396.337 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:16 +0100 CET  70 s  102/3353 msgs left
+msg INBOX.Sent Messages/186 {25180351}      copied to Sent Messages/186        1.42 msgs/s  1.480 MiB/s 420.351 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:25 +0100 CET  71 s  101/3353 msgs left
+msg INBOX.Sent Messages/187 {52887}         copied to Sent Messages/187        1.42 msgs/s  1.478 MiB/s 420.402 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:25 +0100 CET  70 s  100/3353 msgs left
+msg INBOX.Sent Messages/188 {68469}         copied to Sent Messages/188        1.43 msgs/s  1.477 MiB/s 420.467 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:24 +0100 CET  69 s  99/3353 msgs left
+msg INBOX.Sent Messages/189 {7337}          copied to Sent Messages/189        1.43 msgs/s  1.475 MiB/s 420.474 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:24 +0100 CET  69 s  98/3353 msgs left
+msg INBOX.Sent Messages/190 {11685}         copied to Sent Messages/190        1.43 msgs/s  1.475 MiB/s 420.485 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:23 +0100 CET  68 s  97/3353 msgs left
+msg INBOX.Sent Messages/191 {25212239}      copied to Sent Messages/191        1.39 msgs/s  1.513 MiB/s 444.529 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:33 +0100 CET  69 s  96/3353 msgs left
+msg INBOX.Sent Messages/192 {113536}        copied to Sent Messages/192        1.39 msgs/s  1.511 MiB/s 444.638 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:32 +0100 CET  68 s  95/3353 msgs left
+msg INBOX.Sent Messages/193 {88410}         copied to Sent Messages/193        1.40 msgs/s  1.510 MiB/s 444.722 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:32 +0100 CET  67 s  94/3353 msgs left
+msg INBOX.Sent Messages/194 {68154}         copied to Sent Messages/194        1.40 msgs/s  1.509 MiB/s 444.787 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:31 +0100 CET  67 s  93/3353 msgs left
+msg INBOX.Sent Messages/195 {48207}         copied to Sent Messages/195        1.40 msgs/s  1.507 MiB/s 444.833 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:31 +0100 CET  66 s  92/3353 msgs left
+msg INBOX.Sent Messages/196 {146681}        copied to Sent Messages/196        1.40 msgs/s  1.506 MiB/s 444.973 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:30 +0100 CET  65 s  91/3353 msgs left
+msg INBOX.Sent Messages/197 {162329}        copied to Sent Messages/197        1.40 msgs/s  1.505 MiB/s 445.128 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:30 +0100 CET  64 s  90/3353 msgs left
+msg INBOX.Sent Messages/198 {160053}        copied to Sent Messages/198        1.41 msgs/s  1.504 MiB/s 445.280 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:29 +0100 CET  63 s  89/3353 msgs left
+msg INBOX.Sent Messages/199 {140782}        copied to Sent Messages/199        1.41 msgs/s  1.503 MiB/s 445.415 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:29 +0100 CET  63 s  88/3353 msgs left
+msg INBOX.Sent Messages/200 {11719}         copied to Sent Messages/200        1.41 msgs/s  1.502 MiB/s 445.426 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:28 +0100 CET  62 s  87/3353 msgs left
+msg INBOX.Sent Messages/201 {489907}        copied to Sent Messages/201        1.41 msgs/s  1.502 MiB/s 445.893 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:28 +0100 CET  61 s  86/3353 msgs left
+msg INBOX.Sent Messages/202 {531844}        copied to Sent Messages/202        1.41 msgs/s  1.502 MiB/s 446.400 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:27 +0100 CET  60 s  85/3353 msgs left
+msg INBOX.Sent Messages/203 {464766}        copied to Sent Messages/203        1.41 msgs/s  1.501 MiB/s 446.843 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:27 +0100 CET  59 s  84/3353 msgs left
+msg INBOX.Sent Messages/204 {144047}        copied to Sent Messages/204        1.42 msgs/s  1.500 MiB/s 446.981 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:27 +0100 CET  59 s  83/3353 msgs left
+msg INBOX.Sent Messages/205 {68641}         copied to Sent Messages/205        1.42 msgs/s  1.499 MiB/s 447.046 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:26 +0100 CET  58 s  82/3353 msgs left
+msg INBOX.Sent Messages/206 {83673}         copied to Sent Messages/206        1.42 msgs/s  1.497 MiB/s 447.126 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:26 +0100 CET  57 s  81/3353 msgs left
+msg INBOX.Sent Messages/207 {1286622}       copied to Sent Messages/207        1.42 msgs/s  1.497 MiB/s 448.353 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:26 +0100 CET  56 s  80/3353 msgs left
+msg INBOX.Sent Messages/208 {1913108}       copied to Sent Messages/208        1.42 msgs/s  1.498 MiB/s 450.177 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:26 +0100 CET  56 s  79/3353 msgs left
+msg INBOX.Sent Messages/209 {835445}        copied to Sent Messages/209        1.42 msgs/s  1.499 MiB/s 450.974 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:26 +0100 CET  55 s  78/3353 msgs left
+msg INBOX.Sent Messages/210 {962044}        copied to Sent Messages/210        1.42 msgs/s  1.499 MiB/s 451.892 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:26 +0100 CET  54 s  77/3353 msgs left
+msg INBOX.Sent Messages/211 {12141}         copied to Sent Messages/211        1.42 msgs/s  1.498 MiB/s 451.903 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:25 +0100 CET  53 s  76/3353 msgs left
+msg INBOX.Sent Messages/212 {3263}          copied to Sent Messages/212        1.42 msgs/s  1.497 MiB/s 451.906 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:24 +0100 CET  53 s  75/3353 msgs left
+msg INBOX.Sent Messages/213 {32345}         copied to Sent Messages/213        1.43 msgs/s  1.495 MiB/s 451.937 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:24 +0100 CET  52 s  74/3353 msgs left
+msg INBOX.Sent Messages/214 {8236340}       copied to Sent Messages/214        1.41 msgs/s  1.503 MiB/s 459.792 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:28 +0100 CET  52 s  73/3353 msgs left
+msg INBOX.Sent Messages/215 {3117}          copied to Sent Messages/215        1.41 msgs/s  1.501 MiB/s 459.795 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:27 +0100 CET  51 s  72/3353 msgs left
+msg INBOX.Sent Messages/216 {23058}         copied to Sent Messages/216        1.42 msgs/s  1.500 MiB/s 459.817 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:27 +0100 CET  50 s  71/3353 msgs left
+msg INBOX.Sent Messages/217 {32983}         copied to Sent Messages/217        1.42 msgs/s  1.499 MiB/s 459.848 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:26 +0100 CET  49 s  70/3353 msgs left
+msg INBOX.Sent Messages/218 {9586}          copied to Sent Messages/218        1.42 msgs/s  1.498 MiB/s 459.858 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:26 +0100 CET  49 s  69/3353 msgs left
+msg INBOX.Sent Messages/219 {20537}         copied to Sent Messages/219        1.42 msgs/s  1.496 MiB/s 459.877 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:25 +0100 CET  48 s  68/3353 msgs left
+msg INBOX.Sent Messages/220 {17510}         copied to Sent Messages/220        1.42 msgs/s  1.495 MiB/s 459.894 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:25 +0100 CET  47 s  67/3353 msgs left
+msg INBOX.Sent Messages/221 {2537}          copied to Sent Messages/221        1.43 msgs/s  1.493 MiB/s 459.896 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:24 +0100 CET  46 s  66/3353 msgs left
+msg INBOX.Sent Messages/222 {14739}         copied to Sent Messages/222        1.43 msgs/s  1.492 MiB/s 459.910 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:24 +0100 CET  46 s  65/3353 msgs left
+msg INBOX.Sent Messages/223 {4544}          copied to Sent Messages/223        1.43 msgs/s  1.492 MiB/s 459.915 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:23 +0100 CET  45 s  64/3353 msgs left
+msg INBOX.Sent Messages/224 {2795}          copied to Sent Messages/224        1.43 msgs/s  1.491 MiB/s 459.917 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:22 +0100 CET  44 s  63/3353 msgs left
+msg INBOX.Sent Messages/225 {17008}         copied to Sent Messages/225        1.43 msgs/s  1.490 MiB/s 459.934 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:22 +0100 CET  43 s  62/3353 msgs left
+msg INBOX.Sent Messages/226 {19420}         copied to Sent Messages/226        1.44 msgs/s  1.489 MiB/s 459.952 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:21 +0100 CET  42 s  61/3353 msgs left
+ETA: Dienstag 11 November 2025-11-11 11:12:21 +0100 CET  42 s  61/3353 msgs left
+Folder    9/10 [INBOX.Trash]                       -> [Trash]                            
+Host1: folder [INBOX.Trash] has 61 messages in total (mentioned by SELECT)
+Host2: folder [Trash] has 0 messages in total (mentioned by SELECT)
+Host2: folder [Trash] permanentflags: 
+Host1: folder [INBOX.Trash] considering 61 messages
+Host2: folder [Trash] considering 0 messages
+Host1: folder [INBOX.Trash] selected 61 messages, duplicates 0
+Host2: folder [Trash] selected 0 messages, duplicates 0
+msg INBOX.Trash/2151 {258996}       copied to Trash/1          1.44 msgs/s  1.485 MiB/s 460.199 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:22 +0100 CET  42 s  60/3353 msgs left
+msg INBOX.Trash/2152 {100034}       copied to Trash/2          1.44 msgs/s  1.484 MiB/s 460.294 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:21 +0100 CET  41 s  59/3353 msgs left
+msg INBOX.Trash/2153 {43065}        copied to Trash/3          1.44 msgs/s  1.483 MiB/s 460.336 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:21 +0100 CET  40 s  58/3353 msgs left
+msg INBOX.Trash/2154 {147782}       copied to Trash/4          1.44 msgs/s  1.481 MiB/s 460.476 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:20 +0100 CET  40 s  57/3353 msgs left
+msg INBOX.Trash/2155 {77220}        copied to Trash/5          1.44 msgs/s  1.479 MiB/s 460.550 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:20 +0100 CET  39 s  56/3353 msgs left
+msg INBOX.Trash/2156 {6174}         copied to Trash/6          1.44 msgs/s  1.478 MiB/s 460.556 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:20 +0100 CET  38 s  55/3353 msgs left
+msg INBOX.Trash/2157 {273293}       copied to Trash/7          1.44 msgs/s  1.473 MiB/s 460.817 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:20 +0100 CET  37 s  54/3353 msgs left
+msg INBOX.Trash/2158 {6027}         copied to Trash/8          1.44 msgs/s  1.472 MiB/s 460.822 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:20 +0100 CET  37 s  53/3353 msgs left
+msg INBOX.Trash/2159 {75002}        copied to Trash/9          1.45 msgs/s  1.471 MiB/s 460.894 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:19 +0100 CET  36 s  52/3353 msgs left
+msg INBOX.Trash/2160 {1101732}      copied to Trash/10         1.45 msgs/s  1.471 MiB/s 461.945 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:19 +0100 CET  35 s  51/3353 msgs left
+msg INBOX.Trash/2161 {147645}       copied to Trash/11         1.45 msgs/s  1.470 MiB/s 462.085 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:19 +0100 CET  35 s  50/3353 msgs left
+msg INBOX.Trash/2162 {12300}        copied to Trash/12         1.45 msgs/s  1.468 MiB/s 462.097 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:18 +0100 CET  34 s  49/3353 msgs left
+msg INBOX.Trash/2163 {106048}       copied to Trash/13         1.45 msgs/s  1.468 MiB/s 462.198 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:18 +0100 CET  33 s  48/3353 msgs left
+msg INBOX.Trash/2164 {64420}        copied to Trash/14         1.45 msgs/s  1.467 MiB/s 462.260 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:17 +0100 CET  32 s  47/3353 msgs left
+msg INBOX.Trash/2165 {46986}        copied to Trash/15         1.46 msgs/s  1.466 MiB/s 462.305 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:17 +0100 CET  32 s  46/3353 msgs left
+msg INBOX.Trash/2166 {48188}        copied to Trash/16         1.46 msgs/s  1.464 MiB/s 462.350 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:17 +0100 CET  31 s  45/3353 msgs left
+msg INBOX.Trash/2167 {48195}        copied to Trash/17         1.46 msgs/s  1.463 MiB/s 462.396 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:16 +0100 CET  30 s  44/3353 msgs left
+msg INBOX.Trash/2168 {118412}       copied to Trash/18         1.46 msgs/s  1.463 MiB/s 462.509 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:16 +0100 CET  29 s  43/3353 msgs left
+msg INBOX.Trash/2169 {18513}        copied to Trash/19         1.46 msgs/s  1.461 MiB/s 462.527 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:15 +0100 CET  29 s  42/3353 msgs left
+msg INBOX.Trash/2170 {178477}       copied to Trash/20         1.46 msgs/s  1.460 MiB/s 462.697 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:15 +0100 CET  28 s  41/3353 msgs left
+msg INBOX.Trash/2171 {32534}        copied to Trash/21         1.47 msgs/s  1.459 MiB/s 462.728 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:14 +0100 CET  27 s  40/3353 msgs left
+msg INBOX.Trash/2172 {118871}       copied to Trash/22         1.47 msgs/s  1.458 MiB/s 462.842 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:14 +0100 CET  27 s  39/3353 msgs left
+msg INBOX.Trash/2173 {31934}        copied to Trash/23         1.47 msgs/s  1.458 MiB/s 462.872 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:13 +0100 CET  26 s  38/3353 msgs left
+msg INBOX.Trash/2174 {200827}       copied to Trash/24         1.47 msgs/s  1.457 MiB/s 463.064 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:13 +0100 CET  25 s  37/3353 msgs left
+msg INBOX.Trash/2175 {1735}         copied to Trash/25         1.47 msgs/s  1.456 MiB/s 463.065 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:12 +0100 CET  24 s  36/3353 msgs left
+msg INBOX.Trash/2176 {1731}         copied to Trash/26         1.48 msgs/s  1.455 MiB/s 463.067 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:12 +0100 CET  24 s  35/3353 msgs left
+msg INBOX.Trash/2177 {133202}       copied to Trash/27         1.48 msgs/s  1.454 MiB/s 463.194 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:11 +0100 CET  23 s  34/3353 msgs left
+msg INBOX.Trash/2178 {1731}         copied to Trash/28         1.48 msgs/s  1.454 MiB/s 463.196 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:11 +0100 CET  22 s  33/3353 msgs left
+msg INBOX.Trash/2179 {42383}        copied to Trash/29         1.48 msgs/s  1.453 MiB/s 463.236 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:10 +0100 CET  22 s  32/3353 msgs left
+msg INBOX.Trash/2180 {133164}       copied to Trash/30         1.49 msgs/s  1.452 MiB/s 463.363 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:10 +0100 CET  21 s  31/3353 msgs left
+msg INBOX.Trash/2181 {120653}       copied to Trash/31         1.49 msgs/s  1.451 MiB/s 463.478 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:09 +0100 CET  20 s  30/3353 msgs left
+msg INBOX.Trash/2182 {6224}         copied to Trash/32         1.49 msgs/s  1.451 MiB/s 463.484 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:09 +0100 CET  19 s  29/3353 msgs left
+msg INBOX.Trash/2183 {97425}        copied to Trash/33         1.49 msgs/s  1.450 MiB/s 463.577 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:08 +0100 CET  19 s  28/3353 msgs left
+msg INBOX.Trash/2184 {227291}       copied to Trash/34         1.49 msgs/s  1.449 MiB/s 463.794 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:08 +0100 CET  18 s  27/3353 msgs left
+msg INBOX.Trash/2185 {128362}       copied to Trash/35         1.50 msgs/s  1.448 MiB/s 463.916 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:08 +0100 CET  17 s  26/3353 msgs left
+msg INBOX.Trash/2186 {135192}       copied to Trash/36         1.50 msgs/s  1.447 MiB/s 464.045 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:07 +0100 CET  17 s  25/3353 msgs left
+msg INBOX.Trash/2187 {133212}       copied to Trash/37         1.50 msgs/s  1.446 MiB/s 464.172 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:07 +0100 CET  16 s  24/3353 msgs left
+msg INBOX.Trash/2188 {102740}       copied to Trash/38         1.50 msgs/s  1.446 MiB/s 464.270 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:06 +0100 CET  15 s  23/3353 msgs left
+msg INBOX.Trash/2189 {184724}       copied to Trash/39         1.50 msgs/s  1.445 MiB/s 464.446 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:06 +0100 CET  15 s  22/3353 msgs left
+msg INBOX.Trash/2190 {277561}       copied to Trash/40         1.50 msgs/s  1.444 MiB/s 464.711 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:06 +0100 CET  14 s  21/3353 msgs left
+msg INBOX.Trash/2191 {120660}       copied to Trash/41         1.51 msgs/s  1.443 MiB/s 464.826 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:05 +0100 CET  13 s  20/3353 msgs left
+msg INBOX.Trash/2192 {227297}       copied to Trash/42         1.51 msgs/s  1.443 MiB/s 465.043 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:05 +0100 CET  13 s  19/3353 msgs left
+msg INBOX.Trash/2193 {97422}        copied to Trash/43         1.51 msgs/s  1.442 MiB/s 465.136 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:04 +0100 CET  12 s  18/3353 msgs left
+msg INBOX.Trash/2194 {296135}       copied to Trash/44         1.51 msgs/s  1.442 MiB/s 465.418 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:04 +0100 CET  11 s  17/3353 msgs left
+msg INBOX.Trash/2195 {128361}       copied to Trash/45         1.51 msgs/s  1.441 MiB/s 465.540 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:04 +0100 CET  11 s  16/3353 msgs left
+msg INBOX.Trash/2196 {117942}       copied to Trash/46         1.52 msgs/s  1.440 MiB/s 465.653 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:03 +0100 CET  10 s  15/3353 msgs left
+msg INBOX.Trash/2197 {37789}        copied to Trash/47         1.52 msgs/s  1.439 MiB/s 465.689 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:03 +0100 CET  9 s  14/3353 msgs left
+msg INBOX.Trash/2198 {84416}        copied to Trash/48         1.52 msgs/s  1.438 MiB/s 465.770 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:02 +0100 CET  9 s  13/3353 msgs left
+msg INBOX.Trash/2199 {14812}        copied to Trash/49         1.52 msgs/s  1.438 MiB/s 465.784 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:02 +0100 CET  8 s  12/3353 msgs left
+msg INBOX.Trash/2200 {1683}         copied to Trash/50         1.52 msgs/s  1.437 MiB/s 465.785 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:01 +0100 CET  7 s  11/3353 msgs left
+msg INBOX.Trash/2201 {139346}       copied to Trash/51         1.53 msgs/s  1.436 MiB/s 465.918 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:01 +0100 CET  7 s  10/3353 msgs left
+msg INBOX.Trash/2202 {103848}       copied to Trash/52         1.53 msgs/s  1.435 MiB/s 466.017 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:01 +0100 CET  6 s  9/3353 msgs left
+msg INBOX.Trash/2203 {113881}       copied to Trash/53         1.53 msgs/s  1.434 MiB/s 466.126 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:00 +0100 CET  5 s  8/3353 msgs left
+msg INBOX.Trash/2204 {32655}        copied to Trash/54         1.53 msgs/s  1.434 MiB/s 466.157 MiB copied ETA: Dienstag 11 November 2025-11-11 11:12:00 +0100 CET  5 s  7/3353 msgs left
+msg INBOX.Trash/2205 {6494}         copied to Trash/55         1.53 msgs/s  1.433 MiB/s 466.163 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:59 +0100 CET  4 s  6/3353 msgs left
+msg INBOX.Trash/2206 {37780}        copied to Trash/56         1.54 msgs/s  1.432 MiB/s 466.199 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:59 +0100 CET  3 s  5/3353 msgs left
+msg INBOX.Trash/2207 {87029}        copied to Trash/57         1.54 msgs/s  1.431 MiB/s 466.282 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:58 +0100 CET  3 s  4/3353 msgs left
+msg INBOX.Trash/2208 {108874}       copied to Trash/58         1.54 msgs/s  1.430 MiB/s 466.386 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:58 +0100 CET  2 s  3/3353 msgs left
+msg INBOX.Trash/2209 {37783}        copied to Trash/59         1.54 msgs/s  1.429 MiB/s 466.422 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:58 +0100 CET  1 s  2/3353 msgs left
+msg INBOX.Trash/2210 {173009}       copied to Trash/60         1.54 msgs/s  1.429 MiB/s 466.587 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:57 +0100 CET  1 s  1/3353 msgs left
+msg INBOX.Trash/2211 {11274}        copied to Trash/61         1.55 msgs/s  1.428 MiB/s 466.598 MiB copied ETA: Dienstag 11 November 2025-11-11 11:11:57 +0100 CET  0 s  0/3353 msgs left
+ETA: Dienstag 11 November 2025-11-11 11:11:57 +0100 CET  0 s  0/3353 msgs left
+Folder   10/10 [INBOX.spam]                        -> [spam]                             
+Host1: folder [INBOX.spam] has 0 messages in total (mentioned by SELECT)
+Host2: folder [spam] has 0 messages in total (mentioned by SELECT)
+Host2: folder [spam] permanentflags: 
+Host1: folder [INBOX.spam] considering 0 messages
+Host2: folder [spam] considering 0 messages
+Host1: folder [INBOX.spam] selected 0 messages, duplicates 0
+Host2: folder [spam] selected 0 messages, duplicates 0
+ETA: Dienstag 11 November 2025-11-11 11:11:57 +0100 CET  0 s  0/3353 msgs left
+++++ End looping on each folder
+
+Folders sizes after the synchronization.
+You can remove this foldersizes listing by using  "--nofoldersizesatend"
+Host1 folder    1/10 [INBOX]                             Size: 979477637 Messages:  2207 Biggest:  35658514
+Host2 folder    1/10 [INBOX]                             Size: 979477637 Messages:  2207 Biggest:  35658514
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    2/10 [INBOX.Archive]                     Size:         0 Messages:     0 Biggest:         0
+Host2 folder    2/10 [Archive]                           Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    3/10 [INBOX.Deleted Messages]            Size:    116580 Messages:     1 Biggest:    116580
+Host2 folder    3/10 [Deleted Messages]                  Size:    116580 Messages:     1 Biggest:    116580
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    4/10 [INBOX.Drafts]                      Size:         0 Messages:     0 Biggest:         0
+Host2 folder    4/10 [Drafts]                            Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    5/10 [INBOX.Junk]                        Size:         0 Messages:     0 Biggest:         0
+Host2 folder    5/10 [Junk]                              Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    6/10 [INBOX.Patches]                     Size:  30419925 Messages:    37 Biggest:  17156152
+Host2 folder    6/10 [Patches]                           Size:  30419925 Messages:    37 Biggest:  17156152
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    7/10 [INBOX.Sent]                        Size: 677367674 Messages:   821 Biggest:  30197657
+Host2 folder    7/10 [Sent]                              Size: 676943142 Messages:   818 Biggest:  30197657
+Host2-Host1                                                      -424532              -3                  0
+
+Host1 folder    8/10 [INBOX.Sent Messages]               Size: 295556327 Messages:   226 Biggest:  25212239
+Host2 folder    8/10 [Sent Messages]                     Size: 295556327 Messages:   226 Biggest:  25212239
+Host2-Host1                                                            0               0                  0
+
+Host1 folder    9/10 [INBOX.Trash]                       Size:   6968495 Messages:    61 Biggest:   1101732
+Host2 folder    9/10 [Trash]                             Size:   6968495 Messages:    61 Biggest:   1101732
+Host2-Host1                                                            0               0                  0
+
+Host1 folder   10/10 [INBOX.spam]                        Size:         0 Messages:     0 Biggest:         0
+Host2 folder   10/10 [spam]                              Size:         0 Messages:     0 Biggest:         0
+Host2-Host1                                                            0               0                  0
+
+Host1 Nb folders:                    10 folders
+Host2 Nb folders:                    10 folders
+
+Host1 Nb messages:                 3353 messages
+Host2 Nb messages:                 3350 messages
+
+Host1 Total size:            1989906638 bytes (1.853 GiB)
+Host2 Total size:            1989482106 bytes (1.853 GiB)
+
+Host1 Biggest message:         35658514 bytes (34.007 MiB)
+Host2 Biggest message:         35658514 bytes (34.007 MiB)
+
+Time spent on sizing:         4.6 seconds
+++++ Statistics
+Transfer started on                     : Dienstag 11 November 2025-11-11 11:06:22 +0100 CET
+Transfer ended on                       : Dienstag 11 November 2025-11-11 11:12:02 +0100 CET
+Transfer time                           : 339.8 sec
+Folders synced                          : 10/10 synced
+Folders deleted on host2                : 0 
+Messages transferred                    : 505 
+Messages skipped                        : 2848
+Messages found duplicate on host1       : 3
+Messages found duplicate on host2       : 0
+Messages found crossduplicate on host2  : 0
+Messages void (noheader) on host1       : 0  
+Messages void (noheader) on host2       : 0
+Messages found in host1 not in host2    : 0 messages
+Messages found in host2 not in host1    : 0 messages
+Messages deleted on host1               : 0
+Messages deleted on host2               : 0
+Total bytes transferred                 : 489263210 (466.598 MiB)
+Total bytes skipped                     : 1500218896 (1.397 GiB)
+Message rate                            : 1.5 messages/s
+Average bandwidth rate                  : 1406.3 KiB/s
+Reconnections to host1                  : 0
+Reconnections to host2                  : 0
+Memory consumption at the end           : 7171.5 MiB (*time 676.8 MiB*h) (started with 190.7 MiB)
+Load end is                             : 3.98 19.51 27.71 on 10 cores
+CPU time and %cpu                       : 106.33 sec 31.3 %cpu 3.1 %allcpus
+Biggest message transferred             : 25212239 bytes (24.044 MiB)
+Memory/biggest message ratio            : 298.3
+Start difference host2 - host1          : -508 messages, -489687742 bytes (-467.003 MiB)
+Final difference host2 - host1          : -3 messages, -424532 bytes (-414.582 KiB)
+The sync looks good, all 3350 identified messages in host1 are on host2.
+There is no unidentified message on host1.
+The sync is strict, all 3350 identified messages in host2 are on host1.
+Detected 0 errors
+This imapsync is up to date. ( local 2.314 >= official 2.314 )( Use --noreleasecheck to avoid this release check. )
+Homepage: https://imapsync.lamiral.info/
+Exiting with return value 0 (EX_OK: successful termination) 0/50 nb_errors/max_errors PID 67696
+Removing pidfile /Users/d071390/tmp/imapsync.pid
+Log file is LOG_imapsync/2025_11_11_11_06_22_379_post_janrobertmenz_de_post_janrobertmenz_de.txt ( to change it, use --logfile filepath ; or use --nolog to turn off logging )

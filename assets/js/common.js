@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   'use strict';
 
   var html = document.querySelector('html'),
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Zoom Image
   ======================= */
   const lightense = document.querySelector(".page__content img, .post__content img"),
-  imageLink = document.querySelectorAll(".page__content a img, .post__content a img");
+    imageLink = document.querySelectorAll(".page__content a img, .post__content a img");
 
   if (imageLink) {
     for (var i = 0; i < imageLink.length; i++) imageLink[i].parentNode.classList.add("image-link");
@@ -87,8 +87,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   if (lightense) {
     Lightense(".page__content img:not(.no-lightense), .post__content img:not(.no-lightense)", {
-    padding: 60,
-    offset: 30
+      padding: 60,
+      offset: 30
     });
   }
 
@@ -142,5 +142,18 @@ document.addEventListener("DOMContentLoaded", function() {
       })
     }
   });
+
+  /* =======================
+  // Random Article Link Color
+  ======================= */
+  const colors = [
+    'hsl(200, 70%, 50%)', // Blue
+    'hsl(340, 70%, 50%)', // Red
+    '#FFEEAD',            // Yellow
+    'hsl(140, 70%, 50%)', // Green
+    '#9B59B6'             // Purple
+  ];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.documentElement.style.setProperty('--random-article-color', randomColor);
 
 });

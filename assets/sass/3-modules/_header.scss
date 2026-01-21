@@ -10,6 +10,16 @@
     @media only screen and (max-width: $tablet) {
       padding: 40px $base-spacing-unit;
     }
+
+    &.header__inner--lego {
+      padding-top: 53px;
+      padding-bottom: 53px;
+
+      @media only screen and (max-width: $tablet) {
+        padding-top: 33px;
+        padding-bottom: 33px;
+      }
+    }
   }
 }
 
@@ -33,7 +43,7 @@
 }
 
 .logo__image {
-  max-height: 50px;
+  max-height: 75px;
 }
 
 /* Nav */
@@ -206,34 +216,33 @@
         background: var(--link-color);
       }
 
-      // Custom colors per user request: Blue, Red, Yellow, Green, Purple
       &.nav__link--home {
         &::after {
-          background: hsl(200, 70%, 50%); // Blue
+          background: hsl(0, 70%, 50%); // Red
         }
       }
 
       &.nav__link--blog {
         &::after {
-          background: hsl(340, 70%, 50%); // Red
+          background: hsl(120, 70%, 50%); // Green
         }
       }
 
-      &.nav__link--homelab {
+      &.nav__link--lab {
         &::after {
-          background: #FFEEAD; // Yellow
+          background: hsl(240, 70%, 50%); // Blue
         }
       }
 
       &.nav__link--about {
         &::after {
-          background: hsl(140, 70%, 50%); // Green
+          background: hsl(48, 100%, 50%); // Yellow
         }
       }
 
       &.nav__link--contact {
         &::after {
-          background: #9B59B6; // Purple
+          background: hsl(180, 70%, 50%); // Cyan
         }
       }
     }
@@ -301,4 +310,11 @@
   .toggle-moon {
     display: none;
   }
+}
+
+/* Lego Logo Specifics */
+.logo__image--lego {
+  height: 50px;
+  width: auto;
+  vertical-align: middle;
 }

@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: joluc-de-ingress
+  namespace: default
+  annotations:
+    # kubernetes.io/ingress.class: traefik # Deprecated in newer k8s, using ingressClassName
+    traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+spec:
+  ingressClassName: traefik
+  rules:
+  - host: joluc.de
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: joluc-de
+            port:
+              number: 80

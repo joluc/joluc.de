@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -117,7 +119,7 @@ img,
     font-weight: normal;
     text-align: center;
     color: var(--heading-font-color);
-  
+
     a {
       font-weight: 500;
       border-bottom: 1px solid var(--border-color);
@@ -128,7 +130,7 @@ img,
         border-color: var(--link-color-hover);
       }
     }
-  
+
     @media only screen and (max-width: $mobile) {
       margin-top: 12px;
     }
@@ -144,6 +146,8 @@ a {
     color: var(--link-color-hover);
   }
 }
+
+
 
 hr {
   width: 100%;
@@ -182,6 +186,7 @@ table th {
 table tr {
   background-color: var(--tr-color);
   transition: all .3s ease;
+
   &:nth-child(even) {
     background-color: transparent;
   }

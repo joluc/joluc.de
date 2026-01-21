@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: joluc-de
+  namespace: default
+  labels:
+    app: joluc-de
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: joluc-de
+  template:
+    metadata:
+      labels:
+        app: joluc-de
+    spec:
+      containers:
+      - name: joluc-de
+        image: ghcr.io/joluc/joluc.de:latest # Placeholder image
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "10m"
+          limits:
+            memory: "64Mi"
+            cpu: "50m"

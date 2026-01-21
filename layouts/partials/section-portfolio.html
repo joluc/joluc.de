@@ -7,6 +7,9 @@
         <div class="section__head">
           <h2 class="section__title">{{ .Site.Params.portfolio.portfolio__title }}</h2>
           <div class="portfolio__view">
+            <div class="portfolio__refresh" title="Refresh Charts">
+              <img src="/images/refresh.png" alt="Refresh" class="refresh-icon">
+            </div>
             <div class="portfolio__toggle">
               <div class="icon">
                 <div class="icon-bar"></div>
@@ -26,30 +29,33 @@
       <div class="row">
 
         <!-- Chart 1: CPU -->
-        <div class="col col-4 col-d-6 col-t-12" style="margin-bottom: 30px;">
+        <div class="col col-4 col-d-6 col-t-12">
           <div style="text-align: center; margin-bottom: 10px; font-weight: bold;">CPU Usage</div>
           <div id="status-cpu" style="text-align: center; color: #888;">Loading...</div>
           <div style="position: relative; height: 250px; width: 100%;">
             <canvas id="chartCPU"></canvas>
           </div>
+          <br>
         </div>
 
         <!-- Chart 2: Memory -->
-        <div class="col col-4 col-d-6 col-t-12" style="margin-bottom: 30px;">
+        <div class="col col-4 col-d-6 col-t-12">
           <div style="text-align: center; margin-bottom: 10px; font-weight: bold;">Memory Usage</div>
           <div id="status-mem" style="text-align: center; color: #888;">Loading...</div>
           <div style="position: relative; height: 250px; width: 100%;">
             <canvas id="chartMem"></canvas>
           </div>
+          <br>
         </div>
 
         <!-- Chart 3: Goroutines -->
-        <div class="col col-4 col-d-6 col-t-12" style="margin-bottom: 30px;">
+        <div class="col col-4 col-d-6 col-t-12">
           <div style="text-align: center; margin-bottom: 10px; font-weight: bold;">Goroutines</div>
           <div id="status-go" style="text-align: center; color: #888;">Loading...</div>
           <div style="position: relative; height: 250px; width: 100%;">
             <canvas id="chartGo"></canvas>
           </div>
+          <br>
         </div>
 
       </div>
@@ -73,9 +79,11 @@
         // For 3h, we used 3600s
         const step = 3600;
 
-        loadChart('chartCPU', 'status-cpu', 'rate(process_cpu_seconds_total[1m])', 'CPU', 200, start, now, step);
-        loadChart('chartMem', 'status-mem', 'process_resident_memory_bytes', 'Bytes', 340, start, now, step);
-        loadChart('chartGo', 'status-go', 'go_goroutines', 'Routines', 140, start, now, step);
+        return Promise.all([
+          loadChart('chartCPU', 'status-cpu', 'rate(process_cpu_seconds_total[1m])', 'CPU', 0, start, now, step),
+          loadChart('chartMem', 'status-mem', 'process_resident_memory_bytes', 'Bytes', 120, start, now, step),
+          loadChart('chartGo', 'status-go', 'go_goroutines', 'Routines', 240, start, now, step)
+        ]);
       }
 
       function loadChart(canvasId, statusId, query, label, colorHue, start, now, step) {
@@ -89,7 +97,7 @@
           statusDiv.innerText = 'Loading...';
         }
 
-        fetch(`https://prometheus.demo.prometheus.io/api/v1/query_range?query=${encodeURIComponent(query)}&start=${start}&end=${now}&step=${step}`)
+        return fetch('https://prometheus.demo.prometheus.io/api/v1/query_range?query=' + encodeURIComponent(query) + '&start=' + start + '&end=' + now + '&step=' + step)
           .then(res => {
             if (!res.ok) throw new Error(res.statusText);
             return res.json();
@@ -110,7 +118,7 @@
                 return date.getHours().toString().padStart(2, '0') + ':' + date.getMinutes().toString().padStart(2, '0');
               });
               const points = result.values.map(v => parseFloat(v[1]));
-              const color = `hsl(${colorHue}, 70%, 50%)`;
+              const color = 'hsl(' + colorHue + ', 70%, 50%)';
 
               chartInstances[canvasId] = new Chart(ctx, {
                 type: 'line',
@@ -130,6 +138,10 @@
                 options: {
                   responsive: true,
                   maintainAspectRatio: false,
+                  interaction: {
+                    mode: 'index',
+                    intersect: false,
+                  },
                   plugins: {
                     legend: { display: false }
                   },
@@ -187,6 +199,27 @@
             // Revert to 3 hours
             fetchAllCharts(3);
           }
+        });
+      }
+
+      // Handle Refresh Click
+      const refreshBtn = document.querySelector('.portfolio__refresh');
+      const refreshIcon = refreshBtn ? refreshBtn.querySelector('.refresh-icon') : null;
+
+      if (refreshBtn && refreshIcon) {
+        refreshBtn.addEventListener('click', function () {
+          if (refreshBtn.classList.contains('is-spinning')) return;
+
+          refreshBtn.classList.add('is-spinning');
+
+          const onAnimationEnd = () => {
+            refreshBtn.classList.remove('is-spinning');
+            refreshIcon.removeEventListener('animationend', onAnimationEnd);
+          };
+
+          refreshIcon.addEventListener('animationend', onAnimationEnd);
+
+          fetchAllCharts(isExpanded ? 24 : 3);
         });
       }
     });

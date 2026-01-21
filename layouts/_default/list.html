@@ -15,11 +15,11 @@
       </div>
     </div>
   </div>
-  
+
   <div class="container">
     <div class="row animate">
       {{ range .Data.Pages }}
-        {{ partial "article-content.html" . }}
+      {{ partial "article-content.html" . }}
       {{ end }}
     </div>
   </div>
@@ -48,14 +48,16 @@
 
 <div class="container">
   <div class="row animate">
-    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts" ) }}
+    {{ $paginator := .Paginate (where .Pages "Params.hidden" "!=" true) }}
     {{ range $paginator.Pages }}
-      {{ partial "article-content.html" . }}
+    {{ partial "article-content.html" . }}
     {{ end }}
   </div>
 </div>
 
+{{ if ne .Section "lab" }}
 {{ partial "pagination.html" . }}
+{{ end }}
 
 {{ partial "section-subscribe.html" . }}
 

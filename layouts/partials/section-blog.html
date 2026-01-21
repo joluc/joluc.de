@@ -7,7 +7,7 @@
         <div class="section__info">
           <div class="section__head">
             <h2 class="section__title">Recent posts</h2>
-            <a class="section__link" href="/posts">View all posts</a>
+            <a class="section__link" href="/blog">View all posts</a>
           </div>
         </div>
       </div>
@@ -16,9 +16,9 @@
 
   <div class="container">
     <div class="row">
-      {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts" | first 3 ) }}
+      {{ $paginator := .Paginate (where .Site.RegularPages "Type" "blog" | first 3 ) }}
       {{ range $paginator.Pages }}
-        {{ partial "article-content.html" . }}
+      {{ partial "article-content.html" . }}
       {{ end }}
     </div>
   </div>

@@ -2,11 +2,16 @@
 <header class="header">
   <div class="container">
     <div class="row">
-      <div class="header__inner col col-12">
+      <div class="header__inner col col-12 {{ if .Params.show_lego_logo }}header__inner--lego{{ end }}">
 
         <div class="logo">
           <a class="logo__link" href="{{ .Site.BaseURL }}">
+            {{ if .Params.show_lego_logo }}
+            {{ $legoLogo := "/images/joluc_lego.png" | relURL }}
+            <img class="logo__image logo__image--lego" src="{{ $legoLogo }}" alt="joluc logo">
+            {{ else }}
             joluc
+            {{ end }}
           </a>
         </div>
 

@@ -1,8 +1,52 @@
 /* Portfolio */
 .portfolio__view {
+  display: flex;
+  align-items: center;
   padding-left: 20px;
   border-radius: 0;
   background: var(--background-color);
+}
+
+.portfolio__refresh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 48px;
+  height: 48px;
+  margin-right: 20px;
+  padding: 0;
+  border-radius: 0;
+  background: var(--background-alt-color);
+  transition: transform 0.15s ease;
+  cursor: pointer;
+
+  .refresh-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+
+    .dark-mode & {
+      filter: invert(1);
+    }
+  }
+
+  &.is-spinning .refresh-icon {
+    animation: spin 1s ease;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .portfolio__toggle {
@@ -46,7 +90,7 @@
     will-change: transform;
     transition: all 0.15s ease;
   }
-  
+
   &:before {
     left: 0;
     transform: translateX(-9px);
@@ -71,7 +115,7 @@
       left: 0;
       transform: translateX(-15px);
     }
-    
+
     &:after {
       right: 0;
       transform: translateX(15px);
@@ -92,7 +136,7 @@
 
     @media only screen and (max-width: $tablet) {
       .portfolio__link {
-         padding-top: 87%;
+        padding-top: 87%;
       }
     }
   }
@@ -122,7 +166,7 @@
     }
 
     .portfolio__icon {
-      transform: translate(-50%, -50%) scale(1,1);
+      transform: translate(-50%, -50%) scale(1, 1);
       opacity: 1;
       visibility: visible;
     }
@@ -149,7 +193,7 @@
   z-index: 1;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(.3,.3);
+  transform: translate(-50%, -50%) scale(.3, .3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,7 +205,7 @@
   background: var(--border-color-alt);
   opacity: 0;
   visibility: hidden;
-  transition: all .35s ease, transform .35s cubic-bezier(.175,.885,.32,1.275) 0s;
+  transition: all .35s ease, transform .35s cubic-bezier(.175, .885, .32, 1.275) 0s;
 }
 
 .portfolio__image {

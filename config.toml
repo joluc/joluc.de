@@ -35,13 +35,13 @@ timeout = 60000
   [[menu.main]]
     identifier = "blog"
     name = "blog"
-    url = "/posts/"
+    url = "/blog/"
     weight = 2
 
   [[menu.main]]
-    identifier = "homelab"
+    identifier = "lab"
     name = "lab"
-    url = "/homelab/"
+    url = "/lab/"
     weight = 3
 
   [[menu.main]]
@@ -56,17 +56,13 @@ timeout = 60000
     url = "/contact/"
     weight = 5
 
-  #[[menu.main]]
-  #  identifier = "elements"
-  #  name = "Elements"
-  #  url = "/elements/"
-  #  weight = 5
+
 
 
   #-------------------------------
   # Hero Settings
   [params.hero]
-    hero__title = "Hey, I am joluc!"
+    hero__title = "Hi, I'm joluc!"
     hero__description = "Cloud-native software developer with a deep love for signals, data patterns, and crafting meaning from noise. I live at the intersection of code,  infrastructure, and observability, transforming metrics, logs and traces into systems that guide teams from chaos → clarity → decisions."
 
 
@@ -93,12 +89,7 @@ timeout = 60000
 
   #-------------------------------
   # Subscribe Settings
-  #[params.mailchimp]
-  #  mailchimp__title = "Get updates and digital art inspiration" # Add your Title
-  #  mailchimp__identifier = "frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3" # Add your MailChimp form identifier. For example - frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3
-  #  mailchimp__input__text = "Email address" # Add your input text.
-  #  mailchimp__button__text = "Subscribe" # Add your button text.
-  #  mailchimp__bg__color = "#f2eef8" # To change the color of the figure, add a hexadecimal color code (HEX). For example - "#f2eef8".
+
 
   #-------------------------------
   # Footer Settings
@@ -120,35 +111,7 @@ timeout = 60000
     link = "https://instagram.com/joluc"
     color = "#e4405f"
 
-  #[[params.social]]
-  #  icon = "ion-logo-twitter"
-  #  name = "Twitter"
-  #  link = "https://twitter.com"
-  #  color = "#55acee"
 
-  #[[params.social]]
-  #  icon = "ion-logo-facebook"
-  #  name = "Facebook"
-  #  link = "https://facebook.com"
-  #  color = "#3b5999"
-
-  #[[params.social]]
-  #  icon = "ion-logo-pinterest"
-  #  name = "Pinterest"
-  #  link = "https://pinterest.com"
-  #  color = "#bd081c"
-
-  #[[params.social]]
-  #  icon = "ion-logo-dribbble"
-  #  name = "Dribbble"
-  #  link = "https://dribbble.com"
-  #  color = "#ea4c89"
-
-  #[[params.social]]
-  #  icon = "ion-logo-vimeo"
-  #  name = "Vimeo"
-  #  link = "https://vimeo.com"
-  #  color = "#1393cd"
 
   # Example of adding a new link to the footer section:
   # [[params.social]]
@@ -170,8 +133,7 @@ timeout = 60000
 
   #-------------------------------
   # Comment Section (Disqus)
-  #[params.disqus]
-  #  disqusShortname = "anvodstudio-demo" # Add your shortname for Disqus Comment. For example anvodstudio-demo
+
 
 
 [markup]
@@ -184,3 +146,6 @@ timeout = 60000
   codeFences = true
   guessSyntax = true
   noClasses = false
+
+[permalinks]
+  blog = "/blog/:year/:month/:slug/"

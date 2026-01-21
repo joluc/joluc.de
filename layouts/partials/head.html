@@ -3,14 +3,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
-  <link rel="icon" type="image/png" sizes="96x96" href="{{ "favicon-96x96.png" | relURL }}">
+  <!-- Favicon -->
+  <link rel="icon" href="{{ "favicon.ico" | relURL }}">
 
   <title>{{ if not .IsHome }}{{ humanize .Title }} | {{ end }}{{ .Site.Title }}</title>
   <meta name="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}{{end}}">
+  {{ if .Params.noindex }}<meta name="robots" content="noindex">{{ end }}
 
   <!-- Canonical URL -->
   <link rel="canonical" href="{{ .Permalink }}">

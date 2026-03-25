@@ -6,27 +6,30 @@
       <div class="col col-12">
 
         <div class="footer__inner">
-        {{ if .Site.Params.social }}
+          {{ if .Site.Params.social }}
           {{ with .Site.Params.social }}
           <div class="social">
             <ul class="social__list list-reset">
               {{ range . }}
               <li class="social__item">
-                <a class="social__link" href="{{ .link }}" target="_blank" rel="noopener" aria-label="{{ .name }} link"><i class="ion {{ .icon }}" style="color: {{ .color }};"></i> {{ .name }}</a>
+                <a class="social__link" href="{{ .link }}" target="_blank" rel="noopener"
+                  aria-label="{{ .name }} link"><i class="ion {{ .icon }}" style="color: {{ .color }};"></i> {{ .name
+                  }}</a>
               </li>
               {{ end }}
             </ul>
           </div>
           {{ end }}
-        {{ end }}
+          {{ end }}
         </div>
 
         <div class="footer__info">
-          <div class="copyright">{{ dateFormat "2006" now }} &copy; <a href="/">{{ .Site.Title }}</a>. All Right Reserved. Published with <a href="https://gohugo.io/">Hugo</a>. <a href="/impressum/">Impressum</a></div>
+          <div class="copyright">© {{ dateFormat "2006" now }} <a href="/">joluc.de</a> · <a
+              href="/impressum/">Impressum</a> · <a href="/build/"><code>8519e97d</code></a></div>
         </div>
 
       </div>
     </div>
   </div>
-  </footer>
+</footer>
 <!-- end footer -->

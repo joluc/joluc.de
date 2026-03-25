@@ -10,7 +10,7 @@
             {{ $legoLogo := "/images/joluc_lego.png" | relURL }}
             <img class="logo__image logo__image--lego" src="{{ $legoLogo }}" alt="joluc logo">
             {{ else }}
-            joluc
+            <span class="logo__text" data-text="joluc">joluc</span>
             {{ end }}
           </a>
         </div>
@@ -23,7 +23,14 @@
             <div class="nav__title">Menu</div>
             <ul class="nav__list list-reset">
               {{ range.Site.Menus.main }}
-              {{ $active := eq $.RelPermalink (.URL | relLangURL) }}
+              {{ $menuURL := .URL | relLangURL }}
+              {{ $isHome := eq $menuURL "/" }}
+              {{ $active := false }}
+              {{ if $isHome }}
+              {{ $active = eq $.RelPermalink $menuURL }}
+              {{ else }}
+              {{ $active = or (eq $.RelPermalink $menuURL) (hasPrefix $.RelPermalink $menuURL) }}
+              {{ end }}
               <li class="nav__item">
                 <a href="{{ .URL }}"
                   class="nav__link nav__link--{{ .Identifier | lower }} {{ if $active }}nav__link--current{{ end }}">{{
@@ -48,9 +55,5 @@
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-
 </header>
 <!-- end header -->

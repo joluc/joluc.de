@@ -7,6 +7,31 @@
   background: var(--background-color);
 }
 
+.portfolio__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 48px;
+  height: 48px;
+  margin-left: 20px;
+  padding: 0;
+  border-radius: 0;
+  background: var(--background-alt-color);
+  transition: transform 0.15s ease;
+  cursor: pointer;
+  text-decoration: none;
+
+  .info-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--heading-font-color);
+  }
+
+  @media only screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+
 .portfolio__refresh {
   display: flex;
   justify-content: center;

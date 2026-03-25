@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dig:*)",
+      "WebSearch",
+      "Bash(kubectl get:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

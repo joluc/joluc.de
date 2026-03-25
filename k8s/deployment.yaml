@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: joluc-de
-        image: ghcr.io/joluc/joluc.de:latest # Placeholder image
+        image: ghcr.io/joluc/joluc.de:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -28,3 +28,15 @@ spec:
           limits:
             memory: "64Mi"
             cpu: "50m"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5

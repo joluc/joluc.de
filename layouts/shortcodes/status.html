@@ -1,0 +1,83 @@
+{{- /* Uptime Kuma Status Shortcode */ -}}
+{{- $statusUrl := .Get "url" | default "https://status.joluc.de" -}}
+{{- $slug := .Get "slug" | default "main" -}}
+
+<div class="status-board" data-status-url="{{ $statusUrl }}" data-slug="{{ $slug }}">
+  <div class="status-board__header">
+    <h3 class="status-board__title">Service Status</h3>
+    <a href="{{ $statusUrl }}" target="_blank" rel="noopener" class="status-board__link">
+      View full status page <i class="ion ion-ios-arrow-forward"></i>
+    </a>
+  </div>
+  <div class="status-board__services">
+    <div class="status-board__loading">
+      <span class="status-board__spinner"></span>
+      Loading status...
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const board = document.querySelector('.status-board');
+  if (!board) return;
+
+  const statusUrl = board.dataset.statusUrl;
+  const slug = board.dataset.slug;
+  const container = board.querySelector('.status-board__services');
+
+  async function fetchStatus() {
+    try {
+      const response = await fetch(`${statusUrl}/api/status-page/${slug}`);
+      if (!response.ok) throw new Error('Failed to fetch status');
+      const data = await response.json();
+      renderServices(data);
+    } catch (err) {
+      console.error('Status fetch error:', err);
+      container.innerHTML = `
+        <div class="status-board__error">
+          <i class="ion ion-ios-warning"></i>
+          Unable to load status
+        </div>
+      `;
+    }
+  }
+
+  function renderServices(data) {
+    const publicGroupList = data.publicGroupList || [];
+
+    if (publicGroupList.length === 0) {
+      container.innerHTML = '<div class="status-board__empty">No services configured</div>';
+      return;
+    }
+
+    let html = '';
+
+    publicGroupList.forEach(group => {
+      const monitors = group.monitorList || [];
+
+      monitors.forEach(monitor => {
+        const status = monitor.status;
+        const name = monitor.name;
+        const statusClass = status === 1 ? 'up' : status === 0 ? 'down' : 'pending';
+        const statusText = status === 1 ? 'Online' : status === 0 ? 'Offline' : 'Pending';
+        const icon = status === 1 ? 'ion-ios-checkmark-circle' : status === 0 ? 'ion-ios-close-circle' : 'ion-ios-time';
+
+        html += `
+          <div class="status-item status-item--${statusClass}">
+            <i class="ion ${icon} status-item__icon"></i>
+            <span class="status-item__name">${name}</span>
+            <span class="status-item__status">${statusText}</span>
+          </div>
+        `;
+      });
+    });
+
+    container.innerHTML = html || '<div class="status-board__empty">No monitors found</div>';
+  }
+
+  fetchStatus();
+  // Refresh every 60 seconds
+  setInterval(fetchStatus, 60000);
+})();
+</script>

@@ -1,62 +1,47 @@
-# My Personal Blog
+# joluc.de
 
-Welcome to my personal blog where I share insights, tutorials, and thoughts about software development, DevOps, and technology. This blog is built with Hugo and uses the elegant Clancy theme to provide a clean, modern reading experience.
+Personal website and blog about cloud engineering, observability, and software development.
 
-* * *
+## Features
 
-### About This Blog
+- Cloud engineering insights and tutorials
+- Observability and monitoring best practices
+- Live Prometheus metrics dashboard
+- Blog with technical articles
+- Portfolio section
 
-This is my personal space where I write about:
-
-- **Software Development** - Programming tips, best practices, and tutorials
-- **DevOps & Infrastructure** - Docker, Kubernetes, CI/CD, and deployment strategies
-- **Technology Insights** - Thoughts on modern development practices and tools
-- **Learning Journey** - Sharing knowledge and experiences from my development career
-
-* * *
-
-### Blog Features
-
-- **Clean Design** - Minimalistic and focused on content readability
-- **Responsive Layout** - Optimized for all devices and screen sizes
-- **Fast Performance** - Built with Hugo for lightning-fast loading times
-- **Syntax Highlighting** - Code examples with proper syntax highlighting
-- **Portfolio Section** - Showcasing my projects and work
-- **Tag System** - Organized content with easy navigation
-- **Contact Form** - Get in touch for collaborations or questions
-
-* * *
-
-### Local Development
-
-To run this blog locally:
+## Local Development
 
 ```bash
-# Install Hugo (if not already installed)
-# Visit: https://gohugo.io/installation/
+# Start development server
+hugo server
 
-# Clone the repository
-git clone <your-repo-url>
-cd joluc.de
-
-# Start the development server
-hugo server --disableFastRender
-
-# Visit http://localhost:1313
+# Build for production
+hugo --minify
 ```
 
-* * *
+## Deployment
 
-### Deployment
+### Docker
 
-This blog is deployed on Netlify with automatic builds from the main branch. The `netlify.toml` file contains the build configuration.
+```bash
+docker build -t joluc-de .
+docker run -p 8080:80 joluc-de
+```
 
-* * *
+### Kubernetes
 
-### Contact
+```bash
+kubectl apply -f k8s/
+```
 
-Feel free to reach out through the contact form or connect with me on social media. I'm always interested in discussing technology, development practices, and potential collaborations.
+## Tech Stack
 
----
+- [Hugo](https://gohugo.io/) - Static site generator
+- [Chart.js](https://www.chartjs.org/) - Charts for metrics visualization
+- nginx - Production web server
+- Kubernetes - Container orchestration
 
-*Built with ❤️ using [Hugo](https://gohugo.io/) and the [Clancy theme](https://clancy-hugo.netlify.app/)*
+## License
+
+MIT

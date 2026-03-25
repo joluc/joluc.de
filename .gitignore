@@ -1,0 +1,31 @@
+# Hugo build output
+/public/
+/resources/_gen/
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Private documentation
+.docs/
+
+# Hugo cache
+.hugo_build.lock
+
+# Python
+.venv/
+
+# Private content
+content/lego.md

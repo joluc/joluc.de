@@ -42,6 +42,99 @@
   }
 }
 
+.logo__text {
+  position: relative;
+  display: inline-block;
+  animation: subtle-glitch 8s infinite;
+
+  &::before,
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+  &::before {
+    color: rgb(255, 0, 0);
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    animation: glitch-top 8s infinite;
+  }
+
+  &::after {
+    color: rgb(0, 255, 255);
+    clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+    animation: glitch-bottom 8s infinite;
+  }
+}
+
+@keyframes subtle-glitch {
+  0%, 92%, 100% {
+    transform: none;
+  }
+  93% {
+    transform: translateX(-2px);
+  }
+  93.5% {
+    transform: translateX(2px);
+  }
+  94% {
+    transform: translateX(-1px);
+  }
+  94.5%, 95% {
+    transform: none;
+  }
+}
+
+@keyframes glitch-top {
+  0%, 92%, 95%, 100% {
+    opacity: 0;
+    transform: none;
+  }
+  93% {
+    opacity: 0.8;
+    transform: translateX(-3px);
+  }
+  93.5% {
+    opacity: 0.6;
+    transform: translateX(2px);
+  }
+  94% {
+    opacity: 0.4;
+    transform: translateX(-1px);
+  }
+  94.5% {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+@keyframes glitch-bottom {
+  0%, 92%, 95%, 100% {
+    opacity: 0;
+    transform: none;
+  }
+  93% {
+    opacity: 0.8;
+    transform: translateX(3px);
+  }
+  93.5% {
+    opacity: 0.6;
+    transform: translateX(-2px);
+  }
+  94% {
+    opacity: 0.4;
+    transform: translateX(1px);
+  }
+  94.5% {
+    opacity: 0;
+    transform: none;
+  }
+}
+
 .logo__image {
   max-height: 75px;
 }

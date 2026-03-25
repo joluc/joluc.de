@@ -9,6 +9,10 @@ image: "/images/gallery-image.jpg"
 
 Welcome to my homelab—a constantly evolving infrastructure that serves as my testing ground for cloud technologies, observability tools, and distributed systems. This is where I experiment, learn, and break things (safely) to understand how modern infrastructure works.
 
+## Live Status
+
+{{< status url="https://status.joluc.de" slug="webhosting" >}}
+
 ## Current Infrastructure
 
 ### Hardware Stack

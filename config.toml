@@ -3,13 +3,15 @@
 baseURL = "https://joluc.de"
 languageCode = "en-us"
 title = "Joluc.de - Cloud Engineering & Observability"
-googleAnalytics = "G-SPZ7BV0K85" # Add your identifier. For example UA-99631805-1.
+
 [pagination]
   pagerSize = 6
+
 theme = ["hugo-flex", "hugo-shortcode-gallery"]
 timeout = 60000
+
 [params]
-  logo = "/images/WS.webp" # You can add own logo. For example "/images/logo.png".
+  logo = "/images/WS.webp"
   author = "Jonathan"
   description = "Cloud engineer specializing in observability and signals. Passionate about building monitoring systems that transform telemetry data into actionable insights for production environments."
   galleryLoadJQuery = true
@@ -22,7 +24,8 @@ timeout = 60000
   images = ["/images/og-default.jpg"]
 
 [imaging.exif]
-    includeFields = ".*"
+  includeFields = ".*"
+
 #-------------------------------
 # Main Menu
 [menu]
@@ -56,91 +59,48 @@ timeout = 60000
     url = "/contact/"
     weight = 5
 
+#-------------------------------
+# Hero Settings
+[params.hero]
+  hero__title = "Hi, I'm joluc!"
+  hero__description = "Cloud-native software developer with a deep love for signals, data patterns, and crafting meaning from noise. I live at the intersection of code,  infrastructure, and observability, transforming metrics, logs and traces into systems that guide teams from chaos → clarity → decisions."
 
+#-------------------------------
+# Portfolio Settings
+[params.portfolio]
+  portfolio__title = "Signals"
 
+#-------------------------------
+# Footer Settings
+[[params.social]]
+  icon = "ion-logo-github"
+  name = "GitHub"
+  link = "https://github.com/joluc"
+  color = "#333333"
 
-  #-------------------------------
-  # Hero Settings
-  [params.hero]
-    hero__title = "Hi, I'm joluc!"
-    hero__description = "Cloud-native software developer with a deep love for signals, data patterns, and crafting meaning from noise. I live at the intersection of code,  infrastructure, and observability, transforming metrics, logs and traces into systems that guide teams from chaos → clarity → decisions."
+[[params.social]]
+  icon = "ion-logo-linkedin"
+  name = "LinkedIn"
+  link = "https://linkedin.com/in/joluc"
+  color = "#0077b5"
 
+[[params.social]]
+  icon = "ion-logo-instagram"
+  name = "Instagram"
+  link = "https://instagram.com/joluc"
+  color = "#e4405f"
 
-  #-------------------------------
-  # Portfolio Settings
-  [params.portfolio]
-    portfolio__title = "Signals"
+#-------------------------------
+# Contact Settings
+[params.contact]
+  email = "contact@joluc.de"
 
-  [[params.gallery_item]]
-    image = "/images/gallery-image.jpg"
-    title = "Observability Stack"
-    description = "Complete monitoring setup with Prometheus, Grafana, and custom dashboards"
-
-  [[params.gallery_item]]
-    image = "/images/gallery-image.jpg"
-    title = "Distributed Tracing"
-    description = "Jaeger-based tracing system for microservices architecture"
-
-  [[params.gallery_item]]
-    image = "/images/gallery-image.jpg"
-    title = "Cloud Infrastructure"
-    description = "Kubernetes cluster with comprehensive monitoring and alerting"
-
-
-  #-------------------------------
-  # Subscribe Settings
-
-
-  #-------------------------------
-  # Footer Settings
-  [[params.social]]
-    icon = "ion-logo-github"
-    name = "GitHub"
-    link = "https://github.com/joluc"
-    color = "#333333"
-
-  [[params.social]]
-    icon = "ion-logo-linkedin"
-    name = "LinkedIn"
-    link = "https://linkedin.com/in/joluc"
-    color = "#0077b5"
-
-  [[params.social]]
-    icon = "ion-logo-instagram"
-    name = "Instagram"
-    link = "https://instagram.com/joluc"
-    color = "#e4405f"
-
-
-
-  # Example of adding a new link to the footer section:
-  # [[params.social]]
-  #   icon = "ion-logo-youtube"
-  #   name = "Youtube"
-  #   link = "https://youtube.com"
-  #   color = "#ff0000"
-
-  # Other icons can be found at https://ionicons.com/v4/
-
-
-  #-------------------------------
-  # Contact Settings
-  [params.contact]
-    email = "contact@joluc.de" # Add your form_id for contant form
-
-    # NOTE
-    # Clancy comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want.
-
-  #-------------------------------
-  # Comment Section (Disqus)
-
-
-
+#-------------------------------
+# Markup Settings
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-
 
 [markup.highlight]
   codeFences = true

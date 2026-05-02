@@ -94,6 +94,23 @@
   margin-bottom: 16px;
 }
 
+.portfolio__toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 48px;
+  height: 48px;
+  padding: 12px;
+  border-radius: 0;
+  background: var(--background-alt-color);
+  transition: transform 0.15s ease;
+  cursor: pointer;
+
+  @media only screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+
 .icon-bar {
   position: relative;
   width: 4px;
@@ -154,10 +171,6 @@
 .view-list {
 
   .portfolio__gallery {
-    .col {
-      width: 100%;
-    }
-
     .portfolio__link {
       padding-top: 67%;
     }

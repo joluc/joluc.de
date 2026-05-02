@@ -5,9 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   var METRICS_URL = 'https://metrics-proxy.joluc.de/metrics.json';
-  var CHART_COUNT = 3;
+  var COMPACT_COUNT = 3;
+  var COMPACT_POINTS = 12;
   var chartInstances = {};
   var cachedMetrics = null;
+  var isExpanded = false;
 
   var COLORS = [
     'hsl(200, 70%, 50%)',
@@ -31,12 +33,29 @@ document.addEventListener('DOMContentLoaded', function () {
     return a;
   }
 
-  function pickMetrics(metrics) {
-    var shuffled = shuffle(metrics);
-    return shuffled.slice(0, CHART_COUNT);
+  function destroyAllCharts() {
+    Object.keys(chartInstances).forEach(function (key) {
+      chartInstances[key].destroy();
+      delete chartInstances[key];
+    });
   }
 
-  function renderChart(index, metric, color) {
+  function buildChartSlots(count) {
+    var row = document.getElementById('charts-row');
+    row.innerHTML = '';
+    var colClass = isExpanded ? 'col col-12' : 'col col-4 col-d-6 col-t-12';
+    for (var i = 0; i < count; i++) {
+      var col = document.createElement('div');
+      col.className = colClass;
+      col.innerHTML =
+        '<div class="chart-label" id="label-' + i + '"></div>' +
+        '<div class="chart-status" id="status-' + i + '">Loading...</div>' +
+        '<div class="chart-container"><canvas id="chart-' + i + '"></canvas></div>';
+      row.appendChild(col);
+    }
+  }
+
+  function renderChart(index, metric, color, limitPoints) {
     var canvas = document.getElementById('chart-' + index);
     var label = document.getElementById('label-' + index);
     var status = document.getElementById('status-' + index);
@@ -55,11 +74,16 @@ document.addEventListener('DOMContentLoaded', function () {
       chartInstances[index].destroy();
     }
 
-    var labels = metric.series.map(function (p) {
+    var series = metric.series;
+    if (limitPoints && series.length > limitPoints) {
+      series = series.slice(series.length - limitPoints);
+    }
+
+    var labels = series.map(function (p) {
       var d = new Date(p.t * 1000);
       return d.getHours().toString().padStart(2, '0') + ':' + d.getMinutes().toString().padStart(2, '0');
     });
-    var data = metric.series.map(function (p) { return p.v; });
+    var data = series.map(function (p) { return p.v; });
 
     chartInstances[index] = new Chart(canvas.getContext('2d'), {
       type: 'line',
@@ -79,6 +103,9 @@ document.addEventListener('DOMContentLoaded', function () {
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        layout: {
+          padding: { top: 10 }
+        },
         interaction: { mode: 'index', intersect: false },
         plugins: {
           legend: { display: false },
@@ -94,11 +121,12 @@ document.addEventListener('DOMContentLoaded', function () {
           x: {
             display: true,
             grid: { color: 'rgba(255,255,255,0.1)' },
-            ticks: { color: '#aaa', maxTicksLimit: 6, maxRotation: 0 }
+            ticks: { color: '#aaa', maxTicksLimit: isExpanded ? 12 : 6, maxRotation: 0 }
           },
           y: {
-            display: false,
-            grid: { color: 'rgba(255,255,255,0.1)' }
+            display: isExpanded,
+            grid: { color: 'rgba(255,255,255,0.1)' },
+            ticks: { color: '#aaa', maxTicksLimit: 5 }
           }
         }
       }
@@ -106,17 +134,25 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function displayCharts(metrics) {
-    var selected = pickMetrics(metrics);
-    for (var i = 0; i < CHART_COUNT; i++) {
-      renderChart(i, selected[i], COLORS[i % COLORS.length]);
+    destroyAllCharts();
+
+    if (isExpanded) {
+      buildChartSlots(metrics.length);
+      for (var i = 0; i < metrics.length; i++) {
+        renderChart(i, metrics[i], COLORS[i % COLORS.length], null);
+      }
+    } else {
+      var selected = shuffle(metrics).slice(0, COMPACT_COUNT);
+      buildChartSlots(COMPACT_COUNT);
+      for (var i = 0; i < COMPACT_COUNT; i++) {
+        renderChart(i, selected[i], COLORS[i % COLORS.length], COMPACT_POINTS);
+      }
     }
   }
 
   function fetchAndDisplay() {
-    for (var i = 0; i < CHART_COUNT; i++) {
-      var s = document.getElementById('status-' + i);
-      if (s) { s.innerText = 'Loading...'; s.style.display = 'block'; s.style.color = '#888'; }
-    }
+    var count = isExpanded ? 8 : COMPACT_COUNT;
+    buildChartSlots(count);
 
     fetch(METRICS_URL)
       .then(function (res) {
@@ -129,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .catch(function (err) {
         console.error('metrics-proxy fetch failed:', err);
-        for (var i = 0; i < CHART_COUNT; i++) {
+        for (var i = 0; i < count; i++) {
           var s = document.getElementById('status-' + i);
           if (s) { s.innerText = 'Error'; s.style.color = 'red'; s.style.display = 'block'; }
         }
@@ -139,7 +175,21 @@ document.addEventListener('DOMContentLoaded', function () {
   // Initial load
   fetchAndDisplay();
 
-  // Refresh button: re-rolls which charts are shown (re-fetches if data is stale)
+  // Toggle: compact (3 random, sparkline) ↔ expanded (all, full width)
+  var toggleBtn = document.querySelector('.portfolio__toggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      isExpanded = !isExpanded;
+      document.documentElement.classList.toggle('view-list', isExpanded);
+      if (cachedMetrics) {
+        displayCharts(cachedMetrics);
+      } else {
+        fetchAndDisplay();
+      }
+    });
+  }
+
+  // Refresh: re-rolls which charts are shown in compact mode
   var refreshBtn = document.querySelector('.portfolio__refresh');
   var refreshIcon = refreshBtn ? refreshBtn.querySelector('.refresh-icon') : null;
 

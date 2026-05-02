@@ -9,11 +9,6 @@
             <div class="portfolio__refresh" title="Refresh Charts">
               <img src="/images/refresh.png" alt="Refresh" class="refresh-icon">
             </div>
-            <div class="portfolio__toggle">
-              <div class="icon">
-                <div class="icon-bar"></div>
-              </div>
-            </div>
             <a href="/lab/homelab" class="portfolio__info" title="More Info About Signals">
               <span class="info-text">i</span>
             </a>
@@ -27,35 +22,21 @@
 
   <div class="portfolio__gallery animate">
     <div class="container">
-      <div class="row">
-        {{- /* Chart 1: CPU */ -}}
+      <div class="row" id="charts-row">
         <div class="col col-4 col-d-6 col-t-12">
-          <div style="text-align: center; margin-bottom: 10px; font-weight: bold;">CPU Usage</div>
-          <div id="status-cpu" style="text-align: center; color: #888;">Loading...</div>
-          <div style="position: relative; height: 250px; width: 100%;">
-            <canvas id="chartCPU"></canvas>
-          </div>
-          <br>
+          <div class="chart-label" id="label-0"></div>
+          <div class="chart-status" id="status-0">Loading...</div>
+          <div class="chart-container"><canvas id="chart-0"></canvas></div>
         </div>
-
-        {{- /* Chart 2: Memory */ -}}
         <div class="col col-4 col-d-6 col-t-12">
-          <div style="text-align: center; margin-bottom: 10px; font-weight: bold;">Memory Usage</div>
-          <div id="status-mem" style="text-align: center; color: #888;">Loading...</div>
-          <div style="position: relative; height: 250px; width: 100%;">
-            <canvas id="chartMem"></canvas>
-          </div>
-          <br>
+          <div class="chart-label" id="label-1"></div>
+          <div class="chart-status" id="status-1">Loading...</div>
+          <div class="chart-container"><canvas id="chart-1"></canvas></div>
         </div>
-
-        {{- /* Chart 3: Goroutines */ -}}
         <div class="col col-4 col-d-6 col-t-12">
-          <div style="text-align: center; margin-bottom: 10px; font-weight: bold;">Goroutines</div>
-          <div id="status-go" style="text-align: center; color: #888;">Loading...</div>
-          <div style="position: relative; height: 250px; width: 100%;">
-            <canvas id="chartGo"></canvas>
-          </div>
-          <br>
+          <div class="chart-label" id="label-2"></div>
+          <div class="chart-status" id="status-2">Loading...</div>
+          <div class="chart-container"><canvas id="chart-2"></canvas></div>
         </div>
       </div>
     </div>
